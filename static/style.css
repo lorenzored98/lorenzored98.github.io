@@ -1,0 +1,73 @@
+@font-face {
+	src: url("/Merriweather-Bold.woff2") format("woff2");
+	font-family: "Merriweather";
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	src: url("/Sanchez-Regular.woff2") format("woff2");
+	font-family: "Sanchez";
+	font-weight: 400;
+	font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: rgb(200, 200, 200);
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	font-family: "Sanchez";
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Merriweather";
+	font-weight: 700;
+}
+
+p,
+h1,
+h2,
+h3 {
+	overflow-wrap: break-word;
+}
+
+img,
+svg,
+picture,
+canvas {
+	display: block;
+}
+
+#app {
+	min-width: 0px;
+	max-width: 80rem;
+	flex-direction: column;
+	display: flex;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	padding: 2rem;
+}
