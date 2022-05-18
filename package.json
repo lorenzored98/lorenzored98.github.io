@@ -3,11 +3,10 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"build": "svelte-kit build && cd build && copy NUL .nojekyll",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
-		"deploy": "node deploy.cjs"
+		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "1.0.0-next.31",
