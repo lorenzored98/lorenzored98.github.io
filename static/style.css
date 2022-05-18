@@ -2,14 +2,14 @@
 	src: url("/Merriweather-Bold.woff2") format("woff2");
 	font-family: "Merriweather";
 	font-weight: 700;
-	font-display: swap;
+	font-display: block;
 }
 
 @font-face {
 	src: url("/Sanchez-Regular.woff2") format("woff2");
 	font-family: "Sanchez";
 	font-weight: 400;
-	font-display: swap;
+	font-display: block;
 }
 
 * {
@@ -22,6 +22,7 @@
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 a,
@@ -31,14 +32,19 @@ button {
 
 html {
 	font-size: 62.5%;
+	--text-color-bold: rgb(33, 33, 39);
+	--text-color: black;
+	--bg-accent: rgb(255, 209, 255);
+	--bg-accent-2: rgb(255, 242, 187);
 }
 
 body {
-	background-color: rgb(200, 200, 200);
+	background-color: rgb(251, 250, 255);
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 	font-family: "Sanchez";
 	font-weight: 400;
+	color: var(--text-color);
 }
 
 h1,
@@ -46,6 +52,7 @@ h2,
 h3 {
 	font-family: "Merriweather";
 	font-weight: 700;
+	color: var(--text-color-bold);
 }
 
 p,
@@ -70,4 +77,32 @@ canvas {
 	margin: 0 auto;
 	font-size: 1.6rem;
 	padding: 2rem;
+	border: 2px solid red;
+}
+
+h1 {
+	font-size: 4.8rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+p {
+	font-size: 1.8rem;
+}
+
+/* Add effect for the thing that pops up */
+/* Not here tho, do it inside blog posts */
+a {
+}
+
+@media screen and (max-width: 760px) and (orientation: landscape) {
+	#app {
+		max-width: 60rem;
+	}
 }
