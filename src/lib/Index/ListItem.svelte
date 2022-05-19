@@ -16,7 +16,7 @@
 
 <li>
 	<time {datetime}>{date}</time>
-	<a {href} rel="nofollow noreferral noopener"><h3><slot /></h3></a>
+	<a {href}><h3><slot /></h3></a>
 </li>
 
 <style>
@@ -26,27 +26,34 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: flex-start;
+		background-color: var(--bg-color);
+	}
+
+	time,
+	h3 {
+		min-height: 3rem;
+		vertical-align: middle;
+		line-height: 3rem;
+		vertical-align: middle;
+		padding: 0 0.2rem;
 	}
 
 	time {
 		flex-shrink: 0;
-		padding: 0.3rem 0.2rem;
-		background-color: var(--bg-accent-2);
+		background-color: var(--bg-accent);
+		font-variant-numeric: tabular-nums;
 	}
 
 	h3 {
 		margin-left: 2rem;
-		padding: 0.1rem 0.6rem 0 0.6rem;
+	}
+
+	a {
+		outline: none;
 	}
 
 	a:hover,
 	a:focus {
-		background-color: var(--bg-accent-2);
-		outline: none;
-	}
-
-	@media screen and (min-width: 1px) {
-		li {
-		}
+		background-color: var(--bg-accent);
 	}
 </style>

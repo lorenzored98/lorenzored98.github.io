@@ -1,65 +1,51 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
+	import BlankLink from "../lib/Index/BlankLink.svelte";
 </script>
 
 <main>
 	<ol>
 		<h2>2022</h2>
-		<IndexListItem href="/poisson-disk-sampling" timestamp={1652888556}>
+		<IndexListItem href="/poisson-disk-sampling" timestamp={1652960520}>
 			Poisson Disk Sampling
-		</IndexListItem>
-
-		<IndexListItem href="/poisson-disk-sampling" timestamp={1652888556}>
-			1231231231231231231231231
-		</IndexListItem>
-
-		<IndexListItem href="/poisson-disk-sampling" timestamp={1652888556}>
-			Short
-		</IndexListItem>
-
-		<IndexListItem href="/poisson-disk-sampling" timestamp={1652888556}>
-			Incredibly Long and useless text Incredibly Long and useless
-			textIncredibly Long and useless text
-		</IndexListItem>
-
-		<IndexListItem href="/poisson-disk-sampling" timestamp={1652888556}>
-			TEST123 1 1 ab cdee
 		</IndexListItem>
 	</ol>
 </main>
 
 <footer>
-	<h3>Lorenzo Pepe</h3>
-
-	<div>
-		<a
-			href="https://twitter.com/lorenzopepe98"
-			rel="noopener noreferral nofollow"
-			target="_blank"
-		>
-			Twitter
-		</a>
-		<a
-			href="https://github.com/lorenzored98"
-			rel="noopener noreferral nofollow"
-			target="_blank"
-		>
-			Github
-		</a>
-		<a
-			href="https://codesandbox.io/u/lorenzored98"
-			rel="noopener noreferral nofollow"
-			target="_blank"
-		>
-			Code
-		</a>
+	<div class="wrapper">
+		<div class="container">
+			<BlankLink href="mailto:lorenzopepedev@gmail.com">
+				lorenzopepedev@gmail.com
+			</BlankLink>
+			<div>
+				<BlankLink href="https://twitter.com/lorenzopepe98">
+					Twitter
+				</BlankLink>
+				<BlankLink href="https://github.com/lorenzored98">
+					Github
+				</BlankLink>
+				<BlankLink href="https://codesandbox.io/u/lorenzored98">
+					Code
+				</BlankLink>
+			</div>
+		</div>
 	</div>
 </footer>
 
 <style>
+	/* TODO: 
+		Eventually when I have enough links tab will be broken because it will be
+		partially hidden by my footer. Easiest fix is to use js to manage it
+		but try to find a way with css
+	*/
+	main {
+		margin-bottom: 6rem;
+	}
+
 	h2 {
 		font-family: "Sanchez";
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		font-size: 2.4rem;
 	}
 
@@ -68,20 +54,29 @@
 	}
 
 	footer {
-		border-top: 1px solid black;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--bg-color);
+	}
+
+	.wrapper {
+		width: var(--layout-max-width);
+		padding: 0 2rem;
+	}
+
+	.container {
+		border-top: 1px solid #b5b7cb;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem 0;
-	}
+		flex-direction: row;
+		padding: 2rem 0;
 
-	footer a {
-		box-shadow: inset 0 -2px 0 red;
-		transition: box-shadow 0.2s cubic-bezier(0.33, 0.66, 0.66, 1);
-	}
-
-	footer a:hover,
-	a:focus {
-		box-shadow: inset 0 -10px 0 orange;
+		flex-wrap: wrap;
 	}
 </style>
