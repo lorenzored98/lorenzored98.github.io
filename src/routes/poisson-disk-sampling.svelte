@@ -1,32 +1,10 @@
 <script>
+	import Title from "../lib/Posts/Title.svelte";
 </script>
 
-<p>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, dolore
-	incidunt quaerat beatae cupiditate dolores similique voluptatum commodi
-	repellat aperiam autem aliquam, ea dicta facere.
-</p>
+<Title timestamp={1652960520}>Poisson Disk Sampling</Title>
 
-<p>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, dolore
-	incidunt quaerat beatae cupiditate dolores similique voluptatum commodi
-	repellat aperiam autem aliquam, ea dicta facere.
-</p>
+<p>Not a real poisson distribution</p>
 
-<div>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, dolore
-	incidunt quaerat beatae cupiditate dolores similique voluptatum commodi
-	repellat aperiam autem aliquam, ea dicta facere.
-</div>
-
-<p>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, dolore
-	incidunt quaerat beatae cupiditate dolores similique voluptatum commodi
-	repellat aperiam autem aliquam, ea dicta facere.
-</p>
-
-<p>
-	Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, dolore
-	incidunt quaerat beatae cupiditate dolores similique voluptatum commodi
-	repellat aperiam autem aliquam, ea dicta facere.
-</p>
+<style>
+</style>

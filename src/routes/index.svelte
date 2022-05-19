@@ -1,6 +1,6 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
-	import BlankLink from "../lib/Index/BlankLink.svelte";
+	import BlankLink from "../lib/BlankLink.svelte";
 </script>
 
 <main>
@@ -46,7 +46,6 @@
 	h2 {
 		font-family: "Sanchez";
 		margin-bottom: 2rem;
-		font-size: 2.4rem;
 	}
 
 	ol {
@@ -72,11 +71,10 @@
 	.container {
 		border-top: 1px solid #b5b7cb;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
 		padding: 2rem 0;
-
-		flex-wrap: wrap;
 	}
 </style>
