@@ -1,5 +1,9 @@
+<script>
+	export let id;
+</script>
+
 <h2>
-	<slot />
+	<a href="#{id}" {id}><slot /></a>
 </h2>
 
 <style>

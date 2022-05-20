@@ -10,8 +10,7 @@
 	a {
 		box-shadow: inset 0 -0.8rem 0 var(--bg-accent);
 		transition: box-shadow 0.2s cubic-bezier(0.33, 0.66, 0.66, 1);
-		font-size: 1.8rem;
-		margin-bottom: 1rem;
+		font-size: 1.6rem;
 	}
 
 	a:hover,

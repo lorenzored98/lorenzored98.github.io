@@ -22,8 +22,8 @@
 <style>
 	div {
 		display: flex;
-		flex-direction: column;
 		align-self: center;
+		flex-direction: column;
 		margin-bottom: 5rem;
 	}
 
@@ -33,5 +33,6 @@
 
 	time {
 		align-self: flex-end;
+		font-size: 1.4rem;
 	}
 </style>

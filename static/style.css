@@ -27,6 +27,7 @@
 a {
 	text-decoration: none;
 	color: inherit;
+	display: inline-block;
 }
 
 a,
@@ -79,10 +80,9 @@ canvas {
 	max-width: var(--layout-max-width);
 	flex-direction: column;
 	display: flex;
-	margin: 0 auto;
-	font-size: 1.6rem;
-	padding: 2rem;
 	align-items: flex-start;
+	margin: 0 auto;
+	padding: 2rem;
 }
 
 h1 {
@@ -98,7 +98,12 @@ h3 {
 }
 
 p {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
+	margin-bottom: 0.8rem;
+}
+
+time {
+	font-size: 1.6rem;
 }
 
 @media screen and (max-width: 760px) and (orientation: landscape) {
