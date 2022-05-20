@@ -1,6 +1,6 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
-	import BlankLink from "../lib/BlankLink.svelte";
+	import Socials from "$lib/Socials.svelte";
 </script>
 
 <main>
@@ -13,24 +13,7 @@
 </main>
 
 <footer>
-	<div class="wrapper">
-		<div class="container">
-			<BlankLink href="mailto:lorenzopepedev@gmail.com">
-				lorenzopepedev@gmail.com
-			</BlankLink>
-			<div>
-				<BlankLink href="https://twitter.com/lorenzopepe98">
-					Twitter
-				</BlankLink>
-				<BlankLink href="https://github.com/lorenzored98">
-					Github
-				</BlankLink>
-				<BlankLink href="https://codesandbox.io/u/lorenzored98">
-					Code
-				</BlankLink>
-			</div>
-		</div>
-	</div>
+	<div class="wrapper"><Socials /></div>
 </footer>
 
 <style>
@@ -66,15 +49,5 @@
 	.wrapper {
 		width: var(--layout-max-width);
 		padding: 0 2rem;
-	}
-
-	.container {
-		border-top: 1px solid #b5b7cb;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: row;
-		padding: 2rem 0;
 	}
 </style>
