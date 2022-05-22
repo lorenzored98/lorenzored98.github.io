@@ -22,7 +22,7 @@
 }
 
 *:focus {
-	outline: 1px solid black;
+	outline: var(--outline);
 }
 
 a {
@@ -32,7 +32,8 @@ a {
 }
 
 a,
-button {
+button,
+input[type="checkbox"] {
 	cursor: pointer;
 }
 
@@ -44,6 +45,7 @@ html {
 	--bg-color: rgb(251, 250, 255);
 	--bg-accent: rgb(255, 231, 128);
 	--layout-max-width: 80rem;
+	--outline: 1px solid var(--text-color);
 }
 
 body {
