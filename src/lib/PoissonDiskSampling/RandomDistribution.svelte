@@ -97,10 +97,6 @@
 		align-items: flex-start;
 	}
 
-	input {
-		width: 80px;
-	}
-
 	@media only screen and (max-width: 600px) {
 		.container {
 			display: flex;
