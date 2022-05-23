@@ -11,8 +11,11 @@
 	let h = 0;
 	let dpr = 1;
 
-	let radius = 20;
-	let samples = 30;
+	const minRadius = 10;
+	const minSamples = 1;
+
+	let _radius = 20;
+	let _samples = 30;
 	let showGrid = true;
 	let showRadius = true;
 	let pointR = 3;
@@ -21,6 +24,9 @@
 	let points;
 
 	function poisson() {
+		const radius = Math.max(minRadius, Number(_radius));
+		const samples = Math.max(minSamples, Number(_samples));
+
 		const size = radius / Math.SQRT2;
 		const gridSize = Math.floor(w / size) + 1;
 
@@ -73,7 +79,9 @@
 				 */
 				for (let i = 0; i < 25; i++) {
 					if (i === 0 || i === 4 || i === 20 || i === 24) {
-						continue;
+						if (!corners) {
+							continue;
+						}
 					}
 
 					const xDiff = Math.floor((i % 5) - 2);
@@ -135,6 +143,8 @@
 		ctx.strokeStyle = "black";
 		ctx.fillRect(0, 0, w, h);
 
+		const radius = Math.max(minRadius, Number(_radius));
+
 		const size = radius / Math.SQRT2;
 
 		if (showGrid) {
@@ -171,14 +181,6 @@
 	}
 
 	function main() {
-		if (radius < 5 || Number.isNaN(radius)) {
-			radius = 5;
-		}
-
-		if (samples < 1 || Number.isNaN(samples)) {
-			samples = 1;
-		}
-
 		points = poisson();
 		visualize();
 	}
@@ -231,9 +233,9 @@
 			<input
 				id="radius"
 				type="number"
-				bind:value={radius}
+				bind:value={_radius}
 				on:input={main}
-				min={5}
+				min={minRadius}
 				max={100}
 			/>
 		</div>
@@ -242,9 +244,9 @@
 			<input
 				id="samples"
 				type="number"
-				bind:value={samples}
+				bind:value={_samples}
 				on:input={main}
-				min={1}
+				min={minSamples}
 				max={50}
 			/>
 		</div>

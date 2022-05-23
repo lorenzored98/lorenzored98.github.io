@@ -9,12 +9,15 @@
 	let dpr = 1;
 	let w = 0;
 	let h = 0;
-	let nPoints = 200;
+
+	let _nPoints = 200;
 
 	let pointR = 1;
 
 	function main() {
 		if (!ctx) return;
+
+		const nPoints = Number(_nPoints);
 
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
@@ -72,7 +75,7 @@
 			<input
 				id="points"
 				type="number"
-				bind:value={nPoints}
+				bind:value={_nPoints}
 				on:input={main}
 				min={0}
 				max={5000}

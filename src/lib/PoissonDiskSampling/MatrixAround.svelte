@@ -15,7 +15,8 @@
 	let pointR = 1;
 	let points = [];
 
-	let radius = 50;
+	const minRadius = 1;
+	let _radius = 50;
 	let corners = false;
 
 	let pointerX = 0;
@@ -39,6 +40,8 @@
 
 	function visualize() {
 		if (!ctx) return;
+
+		const radius = Math.max(minRadius, Number(_radius));
 
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
@@ -71,8 +74,7 @@
 		const xIndex = Math.floor(pointerX / size);
 		const yIndex = Math.floor(pointerY / size);
 
-		// Could use a radial gradient here.
-		ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
+		ctx.fillStyle = "rgba(255, 200, 25, 0.5)";
 
 		ctx.fillRect(xIndex * size, yIndex * size, size, size);
 		ctx.fillRect(xIndex * size, (yIndex + 1) * size, size, size);
@@ -112,7 +114,7 @@
 		ctx.arc(
 			xIndex * size + size / 2,
 			yIndex * size + size / 2,
-			2,
+			pointR,
 			0,
 			Math.PI * 2
 		);
@@ -147,9 +149,6 @@
 	}
 
 	function main() {
-		if (radius < 1 || Number.isNaN(radius)) {
-			radius = 1;
-		}
 		setup();
 		visualize();
 	}
@@ -208,9 +207,9 @@
 			<input
 				id="radius"
 				type="number"
-				bind:value={radius}
+				bind:value={_radius}
 				on:input={main}
-				min={1}
+				min={minRadius}
 				max={100}
 			/>
 		</div>
