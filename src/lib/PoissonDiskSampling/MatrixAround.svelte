@@ -1,24 +1,53 @@
 <script>
+	import Checkbox from "$lib/Shared/Checkbox.svelte";
 	import { onMount } from "svelte";
-	import Checkbox from "../Shared/Checkbox.svelte";
+	import { randomIntInRange } from "../../utils/math";
 
 	const aspect = 0.5;
 	let canvas;
 	let ctx;
 	let w = 0;
 	let h = 0;
+	let dpr = 1;
+
+	const nPoints = 25;
+	let pointR = 1;
+	let points = [];
 
 	let radius = 50;
 	let corners = false;
 
-	let pointerX = Number.NEGATIVE_INFINITY;
-	let pointerY = Number.NEGATIVE_INFINITY;
+	let pointerX = 0;
+	let pointerY = 0;
 
-	function main() {
+	const TWO_PI = Math.PI * 2;
+	const step = TWO_PI / 32;
+	const n = 3;
+
+	function setup() {
+		points = [];
+
+		pointR = Math.floor(Math.sqrt(w * h) / 120);
+		for (let i = 0; i < nPoints; i++) {
+			const x = randomIntInRange(0, w);
+			const y = randomIntInRange(0, h);
+
+			points.push(x, y);
+		}
+	}
+
+	function visualize() {
 		if (!ctx) return;
 
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
+
+		ctx.fillStyle = "black";
+		for (let i = 0; i < points.length; i += 2) {
+			ctx.beginPath();
+			ctx.arc(points[i], points[i + 1], pointR, 0, Math.PI * 2);
+			ctx.fill();
+		}
 
 		const size = radius / Math.SQRT2;
 
@@ -88,10 +117,6 @@
 		);
 		ctx.fill();
 
-		const TWO_PI = Math.PI * 2;
-		const step = TWO_PI / 128;
-		const n = 3;
-
 		ctx.beginPath();
 
 		for (let angle = 0; angle < TWO_PI; angle += step) {
@@ -120,6 +145,14 @@
 		ctx.stroke();
 	}
 
+	function main() {
+		if (radius < 1 || Number.isNaN(radius)) {
+			radius = 1;
+		}
+		setup();
+		visualize();
+	}
+
 	onMount(() => {
 		ctx = canvas.getContext("2d");
 
@@ -127,9 +160,17 @@
 			w = canvas.clientWidth;
 			h = Math.floor(w * aspect);
 
+			dpr = Math.min(window.devicePixelRatio, 2);
+
+			canvas.style.height = h + "px";
+
+			w *= dpr;
+			h *= dpr;
 			canvas.width = w;
 			canvas.height = h;
-			canvas.style.height = h + "px";
+
+			pointerX = w / 2;
+			pointerY = h / 2;
 
 			main();
 		}
@@ -140,9 +181,9 @@
 		main();
 
 		function pointerMove(e) {
-			pointerX = Math.max(0, e.offsetX);
-			pointerY = Math.max(0, e.offsetY);
-			main();
+			pointerX = Math.max(0, e.offsetX * dpr);
+			pointerY = Math.max(0, e.offsetY * dpr);
+			visualize();
 		}
 
 		canvas.addEventListener("pointermove", pointerMove);
@@ -164,13 +205,17 @@
 				type="number"
 				bind:value={radius}
 				on:input={main}
-				min={0}
+				min={1}
 				max={100}
 			/>
 		</div>
 		<div class="group">
-			<label for="radius">Corners</label>
-			<Checkbox id="radius" bind:checked={corners} onChange={main} />
+			<label for="corners">Corners</label>
+			<Checkbox
+				id="corners"
+				bind:checked={corners}
+				onChange={visualize}
+			/>
 		</div>
 	</fieldset>
 </div>
@@ -217,7 +262,7 @@
 		}
 
 		.group {
-			margin: 0 1rem 0 0;
+			margin: 0 1rem 1rem 0;
 		}
 	}
 </style>

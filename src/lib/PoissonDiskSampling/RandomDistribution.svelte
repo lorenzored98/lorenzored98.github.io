@@ -5,9 +5,12 @@
 	const aspect = 0.5;
 	let canvas;
 	let ctx;
+	let dpr = 1;
 	let w = 0;
 	let h = 0;
 	let nPoints = 200;
+
+	let pointR = 1;
 
 	function main() {
 		if (!ctx) return;
@@ -15,15 +18,13 @@
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
 
-		const r = Math.floor(Math.sqrt(w * h) / 120);
-
 		ctx.fillStyle = "black";
 		for (let i = 0; i < nPoints; i++) {
 			const x = randomIntInRange(0, w);
 			const y = randomIntInRange(0, h);
 
 			ctx.beginPath();
-			ctx.arc(x, y, r, 0, Math.PI * 2);
+			ctx.arc(x, y, pointR, 0, Math.PI * 2);
 			ctx.fill();
 		}
 	}
@@ -35,9 +36,16 @@
 			w = canvas.clientWidth;
 			h = Math.floor(w * aspect);
 
+			dpr = Math.min(window.devicePixelRatio, 2);
+
+			canvas.style.height = h + "px";
+
+			w *= dpr;
+			h *= dpr;
 			canvas.width = w;
 			canvas.height = h;
-			canvas.style.height = h + "px";
+
+			pointR = Math.floor(Math.sqrt(w * h) / 120);
 
 			main();
 		}
@@ -113,7 +121,7 @@
 		}
 
 		.group {
-			margin: 0 1rem 0 0;
+			margin: 0 1rem 1rem 0;
 		}
 	}
 </style>
