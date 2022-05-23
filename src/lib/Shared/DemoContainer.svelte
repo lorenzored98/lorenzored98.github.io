@@ -12,7 +12,6 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin: 1rem 0 0 0;
 	}
 
 	figcaption {

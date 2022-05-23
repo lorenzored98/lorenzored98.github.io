@@ -29,6 +29,10 @@
 		background-color: var(--bg-color);
 	}
 
+	li:focus-within {
+		outline: 1px solid black;
+	}
+
 	time,
 	h3 {
 		min-height: 3rem;
@@ -41,7 +45,6 @@
 	time {
 		flex-shrink: 0;
 		background-color: var(--bg-accent);
-		font-variant-numeric: tabular-nums;
 	}
 
 	h3 {

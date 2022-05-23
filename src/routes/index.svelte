@@ -17,11 +17,6 @@
 </footer>
 
 <style>
-	/* TODO: 
-		Eventually when I have enough links tab will be broken because it will be
-		partially hidden by my footer. Easiest fix is to use js to manage it
-		but try to find a way with css
-	*/
 	main {
 		margin-bottom: 6rem;
 	}

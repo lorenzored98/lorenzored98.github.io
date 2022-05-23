@@ -71,7 +71,7 @@
 	<canvas bind:this={canvas} />
 	<fieldset>
 		<div class="demo-input-group">
-			<label for="points">N Points </label>
+			<label for="points">Points </label>
 			<input
 				id="points"
 				type="number"

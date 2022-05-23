@@ -33,6 +33,5 @@
 
 	time {
 		align-self: flex-end;
-		font-size: 1.4rem;
 	}
 </style>
