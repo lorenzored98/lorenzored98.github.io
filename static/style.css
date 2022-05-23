@@ -18,7 +18,6 @@
 	box-sizing: border-box;
 	position: relative;
 	font: inherit;
-	font-size: 1.6rem;
 	color: var(--text-color);
 	border-radius: 0;
 }
@@ -43,7 +42,6 @@ html {
 	font-size: 62.5%;
 	--text-color-bold: rgb(33, 33, 39);
 	--text-color: black;
-	--text-color-light: rgb(78, 87, 92);
 	--bg-color: rgb(251, 250, 255);
 	--bg-accent: rgb(255, 231, 128);
 	--layout-max-width: 80rem;
@@ -110,6 +108,7 @@ p {
 
 fieldset {
 	border: none;
+	font-size: 1.6rem;
 }
 
 canvas {
@@ -118,14 +117,36 @@ canvas {
 
 /* BLOG */
 
-fieldset input {
-	border: 1px solid var(--text-color-light);
+.demo-container fieldset {
+	margin: 1rem 0 0 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+.demo-container canvas {
+	width: 100%;
+	border: 1px solid var(--text-color-bold);
+}
+
+.demo-input-group {
+	margin: 0 1rem 1rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.demo-input-group input {
+	border: 1px solid var(--text-color-bold);
 	padding: 0.4rem 1rem;
 }
 
-fieldset button {
+.demo-input-group button {
 	background-color: var(--bg-accent);
-	border: 1px solid var(--text-color-light);
+	border: 1px solid var(--text-color-bold);
 	padding: 0.4rem 1rem;
 }
 

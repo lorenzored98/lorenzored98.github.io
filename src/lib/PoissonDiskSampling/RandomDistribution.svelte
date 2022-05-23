@@ -86,8 +86,6 @@
 
 <style>
 	canvas {
-		width: 100%;
-		border: 1px solid var(--text-color-light);
 		pointer-events: none;
 	}
 </style>

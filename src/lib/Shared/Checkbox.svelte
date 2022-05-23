@@ -25,7 +25,7 @@
 	div {
 		width: 3rem;
 		height: 3rem;
-		border: 1px solid var(--text-color-light);
+		border: 1px solid var(--text-color-bold);
 	}
 
 	div:focus-within {
