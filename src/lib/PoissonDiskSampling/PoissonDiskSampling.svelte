@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { randomIntInRange } from "../../utils/math";
 	import Checkbox from "$lib/Shared/Checkbox.svelte";
+	import DemoContainer from "$lib/Shared/DemoContainer.svelte";
 
 	const aspect = 0.5;
 	let canvas;
@@ -190,6 +191,12 @@
 		ctx = canvas.getContext("2d");
 
 		function resize() {
+			dpr = Math.min(window.devicePixelRatio, 2);
+
+			if (canvas.clientWidth * dpr === w) {
+				return;
+			}
+
 			w = canvas.clientWidth;
 			h = Math.floor(w * aspect);
 
@@ -216,10 +223,10 @@
 	});
 </script>
 
-<div class="container">
+<DemoContainer caption="Poisson Disk Sampling">
 	<canvas bind:this={canvas} />
 	<fieldset>
-		<div class="group">
+		<div class="demo-input-group">
 			<label for="radius">Radius</label>
 			<input
 				id="radius"
@@ -230,7 +237,7 @@
 				max={100}
 			/>
 		</div>
-		<div class="group">
+		<div class="demo-input-group">
 			<label for="samples">Samples</label>
 			<input
 				id="samples"
@@ -242,12 +249,12 @@
 			/>
 		</div>
 
-		<div class="group">
+		<div class="demo-input-group">
 			<label for="corners">Corners</label>
 			<Checkbox id="corners" bind:checked={corners} onChange={main} />
 		</div>
 
-		<div class="group">
+		<div class="demo-input-group">
 			<label for="showgrid">Show Grid</label>
 			<Checkbox
 				id="showgrid"
@@ -256,7 +263,7 @@
 			/>
 		</div>
 
-		<div class="group">
+		<div class="demo-input-group">
 			<label for="showradius">Show Radius</label>
 			<Checkbox
 				id="showradius"
@@ -265,55 +272,16 @@
 			/>
 		</div>
 
-		<div class="group">
+		<div class="demo-input-group">
 			<button on:click={main}>Run</button>
 		</div>
 	</fieldset>
-</div>
+</DemoContainer>
 
 <style>
-	.container {
-		width: 100%;
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: 1fr 100px;
-	}
-
 	canvas {
 		width: 100%;
 		border: 1px solid var(--text-color-light);
-	}
-
-	fieldset {
-		flex-shrink: 0;
-		margin: 0 0 0 1rem;
-	}
-
-	.group {
-		margin: 0 0 1rem 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		fieldset {
-			margin: 1rem 0 0 0;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: flex-end;
-			flex-wrap: wrap;
-		}
-
-		.group {
-			margin: 0 1rem 1rem 0;
-		}
+		pointer-events: none;
 	}
 </style>
