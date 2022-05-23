@@ -2,7 +2,7 @@
 	"name": "blog",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev --host",
 		"build": "svelte-kit build && cd build && copy NUL .nojekyll",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
