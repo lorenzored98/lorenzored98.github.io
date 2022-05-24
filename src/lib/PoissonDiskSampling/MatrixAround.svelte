@@ -203,9 +203,9 @@
 	<canvas bind:this={canvas} />
 	<fieldset>
 		<div class="demo-input-group">
-			<label for="radius">Radius</label>
+			<label for="matrix-around-radius">Radius</label>
 			<input
-				id="radius"
+				id="matrix-around-radius"
 				type="number"
 				bind:value={_radius}
 				on:input={main}
@@ -214,9 +214,9 @@
 			/>
 		</div>
 		<div class="demo-input-group">
-			<label for="corners">Corners</label>
+			<label for="matrix-around-corners">Corners</label>
 			<Checkbox
-				id="corners"
+				id="matrix-around-corners"
 				bind:checked={corners}
 				onChange={visualize}
 			/>

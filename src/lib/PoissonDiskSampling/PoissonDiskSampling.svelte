@@ -18,10 +18,12 @@
 	let _samples = 30;
 	let showGrid = true;
 	let showRadius = true;
-	let pointR = 3;
+	let pointR = 1;
 	let corners = false;
 
 	let points;
+
+	let iterations = 0;
 
 	function poisson() {
 		const radius = Math.max(minRadius, Number(_radius));
@@ -43,6 +45,8 @@
 
 		points[pointIndex] = startPoint;
 		active.push(pointIndex);
+
+		iterations = 0;
 
 		while (active.length > 0) {
 			const activeIndex = randomIntInRange(0, active.length - 1);
@@ -83,6 +87,8 @@
 							continue;
 						}
 					}
+
+					iterations++;
 
 					const xDiff = Math.floor((i % 5) - 2);
 					const yDiff = Math.floor(i / 5 - 2);
@@ -229,9 +235,9 @@
 	<canvas bind:this={canvas} />
 	<fieldset>
 		<div class="demo-input-group">
-			<label for="radius">Radius</label>
+			<label for="poisson-radius">Radius</label>
 			<input
-				id="radius"
+				id="poisson-radius"
 				type="number"
 				bind:value={_radius}
 				on:input={main}
@@ -240,9 +246,9 @@
 			/>
 		</div>
 		<div class="demo-input-group">
-			<label for="samples">Samples</label>
+			<label for="poisson-samples">Samples</label>
 			<input
-				id="samples"
+				id="poisson-samples"
 				type="number"
 				bind:value={_samples}
 				on:input={main}
@@ -252,23 +258,27 @@
 		</div>
 
 		<div class="demo-input-group">
-			<label for="corners">Corners</label>
-			<Checkbox id="corners" bind:checked={corners} onChange={main} />
+			<label for="poisson-corners">Corners</label>
+			<Checkbox
+				id="poisson-corners"
+				bind:checked={corners}
+				onChange={main}
+			/>
 		</div>
 
 		<div class="demo-input-group">
-			<label for="showgrid">Show Grid</label>
+			<label for="poisson-showgrid">Show Grid</label>
 			<Checkbox
-				id="showgrid"
+				id="poisson-showgrid"
 				bind:checked={showGrid}
 				onChange={visualize}
 			/>
 		</div>
 
 		<div class="demo-input-group">
-			<label for="showradius">Show Radius</label>
+			<label for="poisson-showradius">Show Radius</label>
 			<Checkbox
-				id="showradius"
+				id="poisson-showradius"
 				bind:checked={showRadius}
 				onChange={visualize}
 			/>
@@ -276,6 +286,10 @@
 
 		<div class="demo-input-group">
 			<button on:click={main}>Run</button>
+		</div>
+
+		<div class="demo-input-group">
+			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
 </DemoContainer>
