@@ -12,7 +12,6 @@
 	let dpr = 1;
 
 	const nPoints = 25;
-	let pointR = 1;
 	let points = [];
 
 	const minRadius = 1;
@@ -29,7 +28,6 @@
 	function setup() {
 		points = [];
 
-		pointR = Math.floor(Math.sqrt(w * h) / 120);
 		for (let i = 0; i < nPoints; i++) {
 			const x = randomIntInRange(0, w);
 			const y = randomIntInRange(0, h);
@@ -42,6 +40,7 @@
 		if (!ctx) return;
 
 		const radius = Math.max(minRadius, Number(_radius));
+		const size = radius / Math.SQRT2;
 
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
@@ -49,14 +48,13 @@
 		ctx.fillStyle = "black";
 		for (let i = 0; i < points.length; i += 2) {
 			ctx.beginPath();
-			ctx.arc(points[i], points[i + 1], pointR, 0, Math.PI * 2);
+			ctx.arc(points[i], points[i + 1], size / 3, 0, Math.PI * 2);
 			ctx.fill();
 		}
 
-		const size = radius / Math.SQRT2;
-
 		ctx.strokeStyle = "black";
 		ctx.lineWidth = 1;
+
 		for (let x = 0; x < w; x += size) {
 			ctx.beginPath();
 			ctx.moveTo(x, 0);
@@ -114,7 +112,7 @@
 		ctx.arc(
 			xIndex * size + size / 2,
 			yIndex * size + size / 2,
-			pointR,
+			size / 3,
 			0,
 			Math.PI * 2
 		);

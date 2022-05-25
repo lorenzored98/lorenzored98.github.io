@@ -18,7 +18,6 @@
 	let _samples = 30;
 	let showGrid = true;
 	let showRadius = true;
-	let pointR = 1;
 	let corners = false;
 
 	let points;
@@ -30,18 +29,19 @@
 		const samples = Math.max(minSamples, Number(_samples));
 
 		const size = radius / Math.SQRT2;
-		const gridSize = Math.floor(w / size) + 1;
+		const gridW = Math.floor(w / size) + 1;
+		const gridH = Math.floor(h / size) + 1;
 
 		const rSquared = radius * radius;
 
-		const points = new Array(gridSize ** 2).fill(null);
+		const points = new Array(gridW * gridH).fill(null);
 
 		const active = [];
 
 		const startPoint = [randomIntInRange(0, w), randomIntInRange(0, h)];
 		const xIndex = Math.floor(startPoint[0] / size);
 		const yIndex = Math.floor(startPoint[1] / size);
-		const pointIndex = index2DTo1D(xIndex, yIndex, gridSize);
+		const pointIndex = index2DTo1D(xIndex, yIndex, gridW);
 
 		points[pointIndex] = startPoint;
 		active.push(pointIndex);
@@ -98,14 +98,14 @@
 
 					if (
 						newXIndex > -1 &&
-						newXIndex < gridSize &&
+						newXIndex < gridW &&
 						newYIndex > -1 &&
-						newYIndex < gridSize
+						newYIndex < gridH
 					) {
 						const newIndex = index2DTo1D(
 							newXIndex,
 							newYIndex,
-							gridSize
+							gridW
 						);
 
 						const p = points[newIndex];
@@ -132,7 +132,7 @@
 			if (validPoint) {
 				const xIndex = Math.floor(validPoint[0] / size);
 				const yIndex = Math.floor(validPoint[1] / size);
-				const index = index2DTo1D(xIndex, yIndex, gridSize);
+				const index = index2DTo1D(xIndex, yIndex, gridW);
 				points[index] = validPoint;
 
 				active.push(index);
@@ -174,7 +174,7 @@
 
 			ctx.fillStyle = "black";
 			ctx.beginPath();
-			ctx.arc(point[0], point[1], pointR, 0, Math.PI * 2);
+			ctx.arc(point[0], point[1], size / 3, 0, Math.PI * 2);
 			ctx.fill();
 
 			if (showRadius) {
@@ -191,8 +191,8 @@
 		visualize();
 	}
 
-	function index2DTo1D(x, y, arrSize) {
-		return Math.floor(y * arrSize + x);
+	function index2DTo1D(x, y, width) {
+		return Math.floor(y * width + x);
 	}
 
 	onMount(() => {
@@ -207,8 +207,6 @@
 
 			w = canvas.clientWidth;
 			h = Math.floor(w * aspect);
-
-			pointR = Math.floor(Math.sqrt(w * h) / 120);
 
 			canvas.style.height = h + "px";
 

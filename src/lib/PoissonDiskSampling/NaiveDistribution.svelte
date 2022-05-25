@@ -16,8 +16,6 @@
 	let _radius = 50;
 	let _samples = 30;
 
-	let pointR = 1;
-
 	let iterations = 0;
 
 	function main() {
@@ -68,7 +66,7 @@
 
 		for (let i = 0; i < points.length; i++) {
 			ctx.beginPath();
-			ctx.arc(points[i][0], points[i][1], pointR, 0, Math.PI * 2);
+			ctx.arc(points[i][0], points[i][1], size / 3, 0, Math.PI * 2);
 			ctx.fill();
 		}
 	}
@@ -92,8 +90,6 @@
 			h *= dpr;
 			canvas.width = w;
 			canvas.height = h;
-
-			pointR = Math.floor(Math.sqrt(w * h) / 120);
 
 			main();
 		}
