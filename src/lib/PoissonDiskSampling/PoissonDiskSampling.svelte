@@ -34,6 +34,8 @@
 
 		const rSquared = radius * radius;
 
+		const radius2 = radius * 2;
+
 		const points = new Array(gridW * gridH).fill(null);
 
 		const active = [];
@@ -56,12 +58,12 @@
 			let validPoint = null;
 
 			for (let k = 0; k < samples; k++) {
-				const distance = randomIntInRange(radius, radius * 2);
-				const angle = Math.random() * Math.PI * 2;
+				const r = radius2 * Math.sqrt(Math.random());
+				const theta = Math.random() * Math.PI * 2;
 
 				const newPoint = [
-					point[0] + Math.cos(angle) * distance,
-					point[1] + Math.sin(angle) * distance,
+					point[0] + r * Math.cos(theta),
+					point[1] + r * Math.sin(theta),
 				];
 
 				newPoint[0] = Math.max(newPoint[0], 0);
