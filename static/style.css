@@ -1,15 +1,22 @@
 @font-face {
-	src: url("/Merriweather-Bold.woff2") format("woff2");
+	src: url("/Merriweather-Bold-Latin.woff2") format("woff2");
 	font-family: "Merriweather";
 	font-weight: 700;
 	font-display: block;
 }
 
 @font-face {
-	src: url("/Sanchez-Regular.woff2") format("woff2");
-	font-family: "Sanchez";
+	src: url("/Rubik-Regular-Latin.woff2") format("woff2");
+	font-family: "Rubik";
 	font-weight: 400;
 	font-display: block;
+}
+
+@font-face {
+	src: url("/JetBrainsMono-Regular-Latin.woff2") format("woff2");
+	font-family: "JetBrainsMono";
+	font-weight: 400;
+	font-display: swap;
 }
 
 * {
@@ -52,7 +59,7 @@ body {
 	background-color: var(--bg-color);
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
-	font-family: "Sanchez";
+	font-family: "Rubik";
 	font-weight: 400;
 	color: var(--text-color);
 }
