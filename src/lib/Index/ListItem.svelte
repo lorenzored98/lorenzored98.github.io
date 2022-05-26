@@ -31,6 +31,11 @@
 
 	li:focus-within {
 		outline: 1px solid black;
+		background-color: var(--bg-accent);
+	}
+
+	li:hover {
+		background-color: var(--bg-accent);
 	}
 
 	time,
@@ -53,10 +58,5 @@
 
 	a {
 		outline: none;
-	}
-
-	a:hover,
-	a:focus {
-		background-color: var(--bg-accent);
 	}
 </style>

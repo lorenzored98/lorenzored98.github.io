@@ -22,7 +22,7 @@
 	}
 
 	h2 {
-		font-family: "Sanchez";
+		font-family: "Rubik";
 		margin-bottom: 2rem;
 	}
 
