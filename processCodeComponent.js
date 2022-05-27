@@ -22,6 +22,7 @@ function getAttributes(node) {
 	const attribs = {
 		lang: null,
 		code: null,
+		inline: false,
 	};
 	for (let i = 0; i < node.attributes.length; i++) {
 		const attr = node.attributes[i];
@@ -36,6 +37,10 @@ function getAttributes(node) {
 			value = value.replace(/\t/g, "    ");
 			value = value.trim();
 			attribs.code = value;
+		}
+
+		if (attr.name === "data-inline") {
+			attribs.inline = true;
 		}
 	}
 
@@ -56,16 +61,20 @@ async function processCodeBlocks(content) {
 		theme: "github-light",
 	});
 
-	const bg = highlighter.getBackgroundColor();
-
 	let offset = 0;
 	for (let i = 0; i < nodes.length; i++) {
 		const node = nodes[i];
-		const { lang, code } = getAttributes(node);
+		const { lang, code, inline } = getAttributes(node);
 
 		const tokens = highlighter.codeToThemedTokens(code, lang);
 
-		let highlightedCode = `<pre style="background-color: ${bg}"><code>`;
+		let highlightedCode = "";
+		if (inline) {
+			highlightedCode += `<code class="inline-code">`;
+		} else {
+			highlightedCode += "<pre><code>";
+		}
+
 		for (let i = 0; i < tokens.length; i++) {
 			const lines = tokens[i];
 
@@ -77,6 +86,8 @@ async function processCodeBlocks(content) {
 
 				text = text.replaceAll("{", "&#123;");
 				text = text.replaceAll("}", "&#125;");
+				text = text.replaceAll(">", "&gt;");
+				text = text.replaceAll("<", "&lt;");
 
 				if (text.trim()) {
 					line += `<span style="color: ${token.color}">${text}</span>`;
@@ -89,7 +100,10 @@ async function processCodeBlocks(content) {
 			highlightedCode += line;
 		}
 
-		highlightedCode += "</code></pre>";
+		highlightedCode += "</code>";
+		if (!inline) {
+			highlightedCode += "</pre>";
+		}
 
 		const startContent = content.slice(0, node.start + offset);
 		const endContent = content.slice(node.end + offset);
