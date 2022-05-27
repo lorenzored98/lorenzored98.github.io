@@ -24,7 +24,7 @@
 		display: flex;
 		align-self: center;
 		flex-direction: column;
-		margin-bottom: 5rem;
+		margin-bottom: 3rem;
 	}
 
 	h1 {
