@@ -3,9 +3,11 @@
 </script>
 
 <div class="container">
-	<BlankLink href="mailto:lorenzopepedev@gmail.com">
-		lorenzopepedev@gmail.com
-	</BlankLink>
+	<div>
+		<BlankLink href="mailto:lorenzopepedev@gmail.com">
+			lorenzopepedev@gmail.com
+		</BlankLink>
+	</div>
 	<div>
 		<BlankLink href="https://twitter.com/lorenzopepe98">Twitter</BlankLink>
 		<BlankLink href="https://github.com/lorenzored98">Github</BlankLink>
@@ -21,6 +23,10 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
-		padding: 2rem 0;
+		padding: 2rem 0 1rem 0;
+	}
+
+	.container > div {
+		margin-bottom: 1rem;
 	}
 </style>

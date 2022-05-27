@@ -54,6 +54,7 @@ html {
 	--layout-max-width: 80rem;
 	--outline: 1px solid var(--text-color);
 	--border: 1px solid #b5b7cb;
+	--code-bg: white;
 }
 
 body {
@@ -94,7 +95,7 @@ canvas {
 	display: flex;
 	align-items: flex-start;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 0 2rem;
 }
 
 h1 {
@@ -133,15 +134,25 @@ pre {
 	overflow-x: auto;
 	margin-bottom: 1rem;
 	border: var(--border);
+	background-color: var(--code-bg);
 }
 
-code {
+code,
+var {
 	font-family: "JetBrainsMono";
 	font-size: 1.4rem;
 }
 
 var {
-	font-family: "JetBrainsMono";
+	padding: 0 0.2rem;
+	border: var(--border);
+	background-color: var(--code-bg);
+}
+
+.inline-code {
+	padding: 0 0.2rem;
+	border: var(--border);
+	background-color: var(--code-bg);
 }
 
 .demo-container {
