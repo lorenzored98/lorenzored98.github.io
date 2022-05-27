@@ -34,8 +34,6 @@
 
 		const rSquared = radius * radius;
 
-		const radius2 = radius * 2;
-
 		const points = new Array(gridW * gridH).fill(null);
 
 		const active = [];
