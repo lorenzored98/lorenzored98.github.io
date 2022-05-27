@@ -58,7 +58,7 @@
 			let validPoint = null;
 
 			for (let k = 0; k < samples; k++) {
-				const r = radius2 * Math.sqrt(Math.random());
+				const r = radius + radius * Math.sqrt(Math.random());
 				const theta = Math.random() * Math.PI * 2;
 
 				const newPoint = [
