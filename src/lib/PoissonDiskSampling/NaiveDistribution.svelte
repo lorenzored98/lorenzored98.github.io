@@ -132,7 +132,7 @@
 		<div class="demo-input-group">
 			<button on:click={main}>Run</button>
 		</div>
-		<div class="demo-input-group">
+		<div class="demo-input-group align-end">
 			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
@@ -141,5 +141,9 @@
 <style>
 	canvas {
 		pointer-events: none;
+	}
+
+	.align-end {
+		margin-left: auto;
 	}
 </style>

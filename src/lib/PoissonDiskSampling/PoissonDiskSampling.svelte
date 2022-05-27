@@ -28,9 +28,9 @@
 		const radius = Math.max(minRadius, Number(_radius));
 		const samples = Math.max(minSamples, Number(_samples));
 
-		const size = radius / Math.SQRT2;
-		const gridW = Math.floor(w / size) + 1;
-		const gridH = Math.floor(h / size) + 1;
+		const side = radius / Math.SQRT2;
+		const gridW = Math.floor(w / side) + 1;
+		const gridH = Math.floor(h / side) + 1;
 
 		const rSquared = radius * radius;
 
@@ -39,8 +39,8 @@
 		const active = [];
 
 		const startPoint = [randomIntInRange(0, w), randomIntInRange(0, h)];
-		const xIndex = Math.floor(startPoint[0] / size);
-		const yIndex = Math.floor(startPoint[1] / size);
+		const xIndex = Math.floor(startPoint[0] / side);
+		const yIndex = Math.floor(startPoint[1] / side);
 		const pointIndex = index2DTo1D(xIndex, yIndex, gridW);
 
 		points[pointIndex] = startPoint;
@@ -70,8 +70,8 @@
 				newPoint[1] = Math.max(newPoint[1], 0);
 				newPoint[1] = Math.min(newPoint[1], h);
 
-				const xIndex = Math.floor(newPoint[0] / size);
-				const yIndex = Math.floor(newPoint[1] / size);
+				const xIndex = Math.floor(newPoint[0] / side);
+				const yIndex = Math.floor(newPoint[1] / side);
 
 				let collides = false;
 
@@ -130,8 +130,8 @@
 			}
 
 			if (validPoint) {
-				const xIndex = Math.floor(validPoint[0] / size);
-				const yIndex = Math.floor(validPoint[1] / size);
+				const xIndex = Math.floor(validPoint[0] / side);
+				const yIndex = Math.floor(validPoint[1] / side);
 				const index = index2DTo1D(xIndex, yIndex, gridW);
 				points[index] = validPoint;
 
@@ -151,17 +151,17 @@
 
 		const radius = Math.max(minRadius, Number(_radius));
 
-		const size = radius / Math.SQRT2;
+		const side = radius / Math.SQRT2;
 
 		if (showGrid) {
-			for (let x = 0; x < w; x += size) {
+			for (let x = 0; x < w; x += side) {
 				ctx.beginPath();
 				ctx.moveTo(x, 0);
 				ctx.lineTo(x, h);
 				ctx.stroke();
 			}
 
-			for (let y = 0; y < h; y += size) {
+			for (let y = 0; y < h; y += side) {
 				ctx.beginPath();
 				ctx.moveTo(0, y);
 				ctx.lineTo(w, y);
@@ -174,7 +174,7 @@
 
 			ctx.fillStyle = "black";
 			ctx.beginPath();
-			ctx.arc(point[0], point[1], size / 3, 0, Math.PI * 2);
+			ctx.arc(point[0], point[1], side / 3, 0, Math.PI * 2);
 			ctx.fill();
 
 			if (showRadius) {
@@ -286,7 +286,7 @@
 			<button on:click={main}>Run</button>
 		</div>
 
-		<div class="demo-input-group">
+		<div class="demo-input-group align-end">
 			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
@@ -295,5 +295,9 @@
 <style>
 	canvas {
 		pointer-events: none;
+	}
+
+	.align-end {
+		margin-left: auto;
 	}
 </style>
