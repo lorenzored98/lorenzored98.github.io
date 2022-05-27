@@ -144,6 +144,10 @@ var {
 	font-family: "JetBrainsMono";
 }
 
+.demo-container {
+	margin-bottom: 1rem;
+}
+
 /* BLOG DEMOS*/
 .demo-container fieldset {
 	display: flex;
@@ -151,7 +155,6 @@ var {
 	justify-content: flex-start;
 	align-items: flex-end;
 	flex-wrap: wrap;
-	margin-bottom: 1rem;
 }
 
 .demo-container canvas {
