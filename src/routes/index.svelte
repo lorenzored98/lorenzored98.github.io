@@ -1,6 +1,7 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
 	import Socials from "$lib/Socials.svelte";
+	import Footer from "$lib/Posts/Footer.svelte";
 </script>
 
 <main>
@@ -12,13 +13,14 @@
 	</ol>
 </main>
 
-<footer>
-	<div class="wrapper"><Socials /></div>
-</footer>
+<div class="fixed">
+	<div class="wrapper"><Footer /></div>
+</div>
 
 <style>
 	main {
 		margin-bottom: 6rem;
+		padding: 2rem;
 	}
 
 	h2 {
@@ -30,7 +32,7 @@
 		list-style-type: none;
 	}
 
-	footer {
+	.fixed {
 		position: fixed;
 		bottom: 0;
 		left: 0;
