@@ -14,7 +14,7 @@
 	const minRadius = 10;
 	const minSamples = 1;
 
-	let _radius = 20;
+	let _radius = 50;
 	let _samples = 30;
 	let showGrid = true;
 	let showRadius = true;

@@ -53,6 +53,7 @@ html {
 	--bg-accent: rgb(255, 231, 128);
 	--layout-max-width: 80rem;
 	--outline: 1px solid var(--text-color);
+	--border: 1px solid #b5b7cb;
 }
 
 body {
@@ -110,7 +111,7 @@ h3 {
 
 p {
 	font-size: 1.6rem;
-	margin-bottom: 0.8rem;
+	margin-bottom: 1rem;
 }
 
 time {
@@ -126,6 +127,23 @@ canvas {
 	touch-action: none;
 }
 
+pre {
+	width: 100%;
+	padding: 1rem;
+	overflow-x: auto;
+	margin-bottom: 1rem;
+	border: var(--border);
+}
+
+code {
+	font-family: "JetBrainsMono";
+	font-size: 1.4rem;
+}
+
+var {
+	font-family: "JetBrainsMono";
+}
+
 /* BLOG DEMOS*/
 .demo-container fieldset {
 	display: flex;
@@ -133,11 +151,12 @@ canvas {
 	justify-content: flex-start;
 	align-items: flex-end;
 	flex-wrap: wrap;
+	margin-bottom: 1rem;
 }
 
 .demo-container canvas {
 	width: 100%;
-	border: 1px solid var(--text-color-bold);
+	border: var(--border);
 }
 
 .demo-input-group {
@@ -149,13 +168,13 @@ canvas {
 }
 
 .demo-input-group input {
-	border: 1px solid var(--text-color-bold);
+	border: var(--border);
 	padding: 0.4rem 1rem;
 }
 
 .demo-input-group button {
 	background-color: var(--bg-accent);
-	border: 1px solid var(--text-color-bold);
+	border: var(--border);
 	padding: 0.4rem 1rem;
 }
 

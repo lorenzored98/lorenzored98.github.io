@@ -15,8 +15,8 @@
 </script>
 
 <li>
-	<time {datetime}>{date}</time>
-	<a {href}><h3><slot /></h3></a>
+	<time {datetime}><span>{date}</span></time>
+	<a {href}><h3><span><slot /></span></h3></a>
 </li>
 
 <style>
@@ -30,7 +30,7 @@
 	}
 
 	li:focus-within {
-		outline: 1px solid black;
+		outline: var(--outline);
 		background-color: var(--bg-accent);
 	}
 
@@ -41,10 +41,9 @@
 	time,
 	h3 {
 		min-height: 3rem;
-		vertical-align: middle;
-		line-height: 3rem;
-		vertical-align: middle;
-		padding: 0 0.2rem;
+		padding: 0 0.4rem;
+		display: flex;
+		align-items: center;
 	}
 
 	time {

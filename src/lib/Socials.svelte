@@ -15,7 +15,7 @@
 
 <style>
 	.container {
-		border-top: 1px solid #b5b7cb;
+		border-top: var(--border);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
