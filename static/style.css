@@ -2,14 +2,14 @@
 	src: url("/Merriweather-Bold-Latin.woff2") format("woff2");
 	font-family: "Merriweather";
 	font-weight: 700;
-	font-display: block;
+	font-display: swap;
 }
 
 @font-face {
 	src: url("/Rubik-Regular-Latin.woff2") format("woff2");
 	font-family: "Rubik";
 	font-weight: 400;
-	font-display: block;
+	font-display: swap;
 }
 
 @font-face {
