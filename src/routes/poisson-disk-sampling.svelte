@@ -8,7 +8,14 @@
 	import NaiveDistribution from "$lib/PoissonDiskSampling/NaiveDistribution.svelte";
 	import MatrixAround from "$lib/PoissonDiskSampling/MatrixAround.svelte";
 	import PoissonDiskSampling from "$lib/PoissonDiskSampling/PoissonDiskSampling.svelte";
+	import Seo from "$lib/Posts/Seo.svelte";
 </script>
+
+<Seo
+	title="Poisson Disk sampling"
+	description="Poisson Disk Sampling in javascript"
+	keywords="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random"
+/>
 
 <Main>
 	<Section>

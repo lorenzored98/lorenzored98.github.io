@@ -1,8 +1,14 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
-	import Socials from "$lib/Socials.svelte";
 	import Footer from "$lib/Posts/Footer.svelte";
+	import Seo from "$lib/Posts/Seo.svelte";
 </script>
+
+<Seo
+	title="Lorenzo Pepe's Blog"
+	description="Writing about javascript, creative coding, fun stuff"
+	keywords="LorenzoPepe, Javascript, Typescript, CreativeCoding, Generative, ProcGen, Procedural"
+/>
 
 <main>
 	<ol>
