@@ -11,8 +11,8 @@
 />
 
 <main>
+	<h2>2022</h2>
 	<ol>
-		<h2>2022</h2>
 		<IndexListItem href="/poisson-disk-sampling" timestamp={1652960520}>
 			Poisson Disk Sampling
 		</IndexListItem>
