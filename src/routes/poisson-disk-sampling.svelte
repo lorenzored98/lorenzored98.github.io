@@ -242,7 +242,7 @@ for (let i = 0; i < 25; i++) {
 		<p>
 			The full code for my implementation of Poisson Disk Sampling is
 			available <BlankLink
-				href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27"
+				href="https://github.com/lorenzored98/Test/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27"
 				>here</BlankLink
 			>.
 		</p>
