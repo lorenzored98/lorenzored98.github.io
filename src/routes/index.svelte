@@ -5,7 +5,7 @@
 </script>
 
 <Seo
-	title="Lorenzo Pepe's Blog"
+	title="Lorenzo Pepe"
 	description="Writing about javascript, creative coding, fun stuff"
 	keywords="LorenzoPepe, Javascript, Typescript, CreativeCoding, Generative, ProcGen, Procedural"
 />
