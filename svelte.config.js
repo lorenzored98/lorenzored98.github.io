@@ -16,6 +16,16 @@ const config = {
 			// This can be false if you're using a fallback (i.e. SPA mode)
 			default: true,
 		},
+
+		routes: (filepath) => {
+			return ![
+				// exclude drafts folder
+				/drafts/,
+
+				// original default config
+				/(?:(?:^_|\/_)|(?:^\.|\/\.)(?!well-known))/,
+			].some((regex) => regex.test(filepath));
+		},
 	},
 	preprocess: [process()],
 };
