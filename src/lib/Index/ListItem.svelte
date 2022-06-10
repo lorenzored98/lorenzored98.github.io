@@ -4,19 +4,36 @@
 
 	const d = new Date(timestamp * 1000);
 
-	const date = Intl.DateTimeFormat(undefined, {
-		month: "long",
-		day: "numeric",
-	}).format(d);
+	const date = Intl.DateTimeFormat("en-GB").format(d);
 
 	// YYYY-MM-DD https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
 	// Surprised to not see date.toDateString() as a valid option
 	const datetime = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+
+	const external = href[0] !== "/";
+	const target = external ? "_blank" : undefined;
+	const rel = external ? "noopener noreferral nofllow" : undefined;
 </script>
 
 <li>
 	<time {datetime}><span>{date}</span></time>
-	<a {href}><h3><span><slot /></span></h3></a>
+	<a {href} {target} {rel}>
+		<h3>
+			<span><slot /></span>
+
+			{#if external}
+				<svg viewBox="0 0 100 100">
+					<title>{href}</title>
+					<path
+						stroke-width={16}
+						d="M 50 0 L 0 0 L 0 100 L 100 100 L 100 50"
+					/>
+					<path stroke-width={16} d="M 65 0 L 100 0 L 100 35" />
+					<path stroke-width={10} d="M 50 50 L 100 0" />
+				</svg>
+			{/if}
+		</h3>
+	</a>
 </li>
 
 <style>
@@ -57,5 +74,18 @@
 
 	a {
 		outline: none;
+	}
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+		margin-left: 1rem;
+		flex-shrink: 0;
+	}
+
+	path {
+		fill: none;
+		stroke: var(--text-color);
+		stroke-linejoin: miter;
 	}
 </style>
