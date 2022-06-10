@@ -1,8 +1,9 @@
 <script>
 	export let href;
+	export let style = undefined;
 </script>
 
-<a {href} rel="noopener noreferral nofollow" target="_blank">
+<a {style} {href} rel="noopener noreferral nofollow" target="_blank">
 	<slot />
 </a>
 
