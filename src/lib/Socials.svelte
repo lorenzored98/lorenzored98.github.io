@@ -4,14 +4,23 @@
 
 <div class="container">
 	<div>
-		<BlankLink href="mailto:lorenzopepedev@gmail.com">
+		<BlankLink
+			style="margin-right: 1rem;"
+			href="mailto:lorenzopepedev@gmail.com"
+		>
 			lorenzopepedev@gmail.com
 		</BlankLink>
 	</div>
 	<div>
 		<BlankLink href="https://twitter.com/lorenzopepe98">Twitter</BlankLink>
-		<BlankLink href="https://github.com/lorenzored98">Github</BlankLink>
-		<BlankLink href="https://codesandbox.io/u/lorenzored98">Code</BlankLink>
+		<BlankLink
+			style="margin-left: 1rem;"
+			href="https://github.com/lorenzored98">Github</BlankLink
+		>
+		<BlankLink
+			style="margin-left: 1rem;"
+			href="https://codesandbox.io/u/lorenzored98">Code</BlankLink
+		>
 	</div>
 </div>
 
