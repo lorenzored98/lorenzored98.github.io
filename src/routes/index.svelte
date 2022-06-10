@@ -11,10 +11,50 @@
 />
 
 <main>
-	<h2>2022</h2>
 	<ol>
+		<IndexListItem
+			href="https://codesandbox.io/s/bilinear-image-resize-5fqdw4"
+			timestamp={1654056000}
+		>
+			Bilinear Image Resize
+		</IndexListItem>
+
 		<IndexListItem href="/poisson-disk-sampling" timestamp={1653748371}>
 			Poisson Disk Sampling
+		</IndexListItem>
+
+		<IndexListItem
+			href="https://codesandbox.io/s/diamond-square-izt6t9"
+			timestamp={1652500800}
+		>
+			Diamond Square
+		</IndexListItem>
+
+		<IndexListItem
+			href="https://codesandbox.io/s/2d-midpoint-displacement-oeeg7x"
+			timestamp={1652500800}
+		>
+			2D Midpoint Displacement
+		</IndexListItem>
+
+		<IndexListItem
+			href="https://codesandbox.io/s/octree-color-quantization-oxbgf3"
+			timestamp={1652328000}
+		>
+			Octree Color Quantization
+		</IndexListItem>
+		<IndexListItem
+			href="https://codesandbox.io/s/quadtree-image-compression-d769ee"
+			timestamp={1652155200}
+		>
+			Quadtree Image Compression
+		</IndexListItem>
+
+		<IndexListItem
+			href="https://codesandbox.io/s/kgolid-pixel-color-sorting-o5nroi"
+			timestamp={1651809600}
+		>
+			Pixel Sorting
 		</IndexListItem>
 	</ol>
 </main>
@@ -27,11 +67,6 @@
 	main {
 		margin-bottom: 6rem;
 		padding: 2rem;
-	}
-
-	h2 {
-		font-family: "Rubik";
-		margin-bottom: 2rem;
 	}
 
 	ol {
