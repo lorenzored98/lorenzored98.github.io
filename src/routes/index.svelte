@@ -16,7 +16,7 @@
 			href="https://github.com/lorenzored98/CHIP8"
 			timestamp={1655577363}
 		>
-			CHIP8 Interpreter
+			CHIP-8 Interpreter
 		</IndexListItem>
 
 		<IndexListItem
