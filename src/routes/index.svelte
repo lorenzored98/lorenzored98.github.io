@@ -13,6 +13,13 @@
 <main>
 	<ol>
 		<IndexListItem
+			href="https://github.com/lorenzored98/CHIP8"
+			timestamp={1655577363}
+		>
+			CHIP8 Interpreter
+		</IndexListItem>
+
+		<IndexListItem
 			href="https://codesandbox.io/s/bilinear-image-resize-5fqdw4"
 			timestamp={1654056000}
 		>
