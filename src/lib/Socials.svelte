@@ -37,5 +37,6 @@
 
 	.container > div {
 		margin-bottom: 1rem;
+		font-size: 1.6rem;
 	}
 </style>
