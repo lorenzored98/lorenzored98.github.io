@@ -41,7 +41,7 @@
 			href="https://codesandbox.io/s/2d-midpoint-displacement-oeeg7x"
 			timestamp={1652500800}
 		>
-			2D Midpoint Displacement
+			Midpoint Displacement
 		</IndexListItem>
 
 		<IndexListItem
@@ -78,6 +78,9 @@
 
 	ol {
 		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.fixed {
