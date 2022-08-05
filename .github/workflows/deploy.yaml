@@ -5,12 +5,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: /home/runner/work
         steps:
             - name: Build site
-              run: ls -l
+              run: ls -l -a
 
     deploy:
         if: github.ref == 'refs/heads/main'
