@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Directory
-              run: cd..
+              run: cd ..
             - name: Build site
               run: npm run build
 
