@@ -10,9 +10,7 @@ jobs:
                 working-directory: /home/runner/work
         steps:
 						- ok:
-							run: ls -l
-            - name: Build site
-              run: npm run build
+              run: ls -l
 
     deploy:
         if: github.ref == 'refs/heads/main'
