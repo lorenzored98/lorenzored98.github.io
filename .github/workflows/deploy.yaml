@@ -3,11 +3,11 @@ on:
     push:
         branches: [main]
 jobs:
-    defaults:
-        run:
-            working-directory: /home/runner/work/lorenzored98.github.io
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: /home/runner/work/lorenzored98.github.io
         steps:
             - name: Build site
               run: npm run build
