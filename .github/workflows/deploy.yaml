@@ -7,8 +7,10 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-                working-directory: /home/runner/work/lorenzored98.github.io
+                working-directory: /home/runner/work
         steps:
+						- ok:
+							run: ls
             - name: Build site
               run: npm run build
 
