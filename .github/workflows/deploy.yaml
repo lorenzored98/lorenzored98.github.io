@@ -12,13 +12,8 @@ jobs:
                   node-version: 16
             - run: npm install
             - run: npm run build
-            - run: ls -l
-            - uses: actions/download-artifact@v3
-              with:
-                  name: build
-                  path: build
             - uses: peaceiris/actions-gh-pages@v3
+              if: ${{ github.ref == 'refs/heads/main' }}
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_branch: gh-pages
                   publish_dir: ./build
