@@ -9,8 +9,9 @@ jobs:
             run:
                 working-directory: /home/runner/work
         steps:
-						- name: OK 
+						- name: please work
               run: ls -l
+              
             - name: Build site
               run: npm run build
 
