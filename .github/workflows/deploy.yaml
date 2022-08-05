@@ -5,6 +5,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./lorenzored98.github.io
         steps:
             - name: Build site
               run: npm run build
