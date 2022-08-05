@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Build site
-              run: ls -l -a
+              run: pnpm run build
 
     deploy:
         if: github.ref == 'refs/heads/main'
