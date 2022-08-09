@@ -18,4 +18,10 @@
 	a:focus {
 		box-shadow: inset 0 -2.2rem 0 var(--bg-accent);
 	}
+
+	@media (prefers-reduced-motion) {
+		a {
+			transition: none;
+		}
+	}
 </style>
