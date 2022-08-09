@@ -6,13 +6,13 @@
 		<link rel="stylesheet" href="style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Poisson Disk sampling</title><meta name="description" content="Poisson Disk Sampling in javascript" data-svelte="svelte-69xwgb"><meta name="keywords" content="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random" data-svelte="svelte-69xwgb"><meta name="author" content="Pepe Lorenzo" data-svelte="svelte-69xwgb">
-	<link rel="stylesheet" href="/_app/immutable/assets/poisson-disk-sampling-14e9dcf6.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/Seo-4999d9fa.css">
-	<link rel="modulepreload" href="/_app/immutable/start-75643cfa.js">
+	<link href="/_app/immutable/assets/poisson-disk-sampling-14e9dcf6.css" rel="stylesheet">
+	<link href="/_app/immutable/assets/Seo-9f66cb1c.css" rel="stylesheet">
+	<link rel="modulepreload" href="/_app/immutable/start-9d1f5514.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-8f3330b7.js">
 	<link rel="modulepreload" href="/_app/immutable/layout.svelte-9785df09.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/poisson-disk-sampling.svelte-bb957eec.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/Seo-211d3ed5.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/poisson-disk-sampling.svelte-d234d8b0.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Seo-51d287b2.js">
 	</head>
 	<body>
 		<div id="app">
@@ -100,13 +100,13 @@
 </h2>
 		<p>There are many different ways to implement Poisson Disk Sampling.
 			I&#39;ve decided to implement the one described by Robert Bridson in his
-			<a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">Fast Poisson Disk Sampling in Arbitrary Dimensions
+			<a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">Fast Poisson Disk Sampling in Arbitrary Dimensions
 			
 </a> paper, which, as far as I know, is also the most popular
 			one.
 		</p>
 
-		<p>The algorithm is composed by three steps.</p>
+		<p>The algorithm is composed of three steps.</p>
 
 		<p>The first step is dividing the space into a grid. The paper uses
 			this grid to create an n-dimensional array to contain the points.
@@ -128,14 +128,14 @@
 <span><span style="color: #24292F">points[index] </span><span style="color: #CF222E">=</span><span style="color: #24292F"> point;</span></span>
 </code></pre>
 
-		<p>The second step is choosing a random point inside the space and
-			inserting it into our points array and into another array which the
+		<p>The second step is generating a random point inside the space and
+			inserting it into the points array and into another array which the
 			paper calls the &quot;active list&quot;.
 		</p>
 
 		<p>The &quot;active list&quot; is an array that will help us keep track of which
 			point we are using to generate other random points in its proximity.
-			It works similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">queue
+			It works similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">queue
 			
 </a>, meaning the first point that goes in is also the first
 			point processed.
@@ -244,32 +244,32 @@
 </figure>
 
 		<p>The full code for my implementation of Poisson Disk Sampling is
-			available <a href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">here
+			available <a href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">here
 </a>.
 		</p>
 </section>
 </main>
 
-<footer class="svelte-sb2gzd"><div class="container svelte-eb7b7m"><div class="svelte-eb7b7m"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">lorenzopepedev@gmail.com
+<footer class="svelte-sb2gzd"><div class="container svelte-eb7b7m"><div class="svelte-eb7b7m"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">lorenzopepedev@gmail.com
 		
 </a></div>
-	<div class="svelte-eb7b7m"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">Twitter
+	<div class="svelte-eb7b7m"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">Twitter
 </a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">Github
+		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">Github
 </a>
-		<a style="margin-left: 1rem;" href="https://codesandbox.io/u/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-i1cm">Code
+		<a style="margin-left: 1rem;" href="https://codesandbox.io/u/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-apxwym">Code
 </a></div>
 </div>
 </footer>
 
 
-		<script type="module" data-sveltekit-hydrate="yjfcv9">
-		import { set_public_env, start } from "/_app/immutable/start-75643cfa.js";
+		<script type="module" data-sveltekit-hydrate="1asm30">
+		import { set_public_env, start } from "/_app/immutable/start-9d1f5514.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="yjfcv9"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1asm30"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
