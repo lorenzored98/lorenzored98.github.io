@@ -50,7 +50,7 @@ html {
 	font-size: 62.5%;
 	--text-color-bold: rgb(33, 33, 39);
 	--text-color: black;
-	--bg-color: rgb(251, 250, 255);
+	--bg-color: rgb(252, 251, 250);
 	--bg-accent: rgb(255, 231, 128);
 	--layout-max-width: 80rem;
 	--outline: 1px solid var(--text-color);

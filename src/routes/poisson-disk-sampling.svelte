@@ -97,7 +97,7 @@
 			one.
 		</p>
 
-		<p>The algorithm is composed by three steps.</p>
+		<p>The algorithm is composed of three steps.</p>
 
 		<p>
 			The first step is dividing the space into a grid. The paper uses
@@ -125,8 +125,8 @@ points[index] = point;
 		/>
 
 		<p>
-			The second step is choosing a random point inside the space and
-			inserting it into our points array and into another array which the
+			The second step is generating a random point inside the space and
+			inserting it into the points array and into another array which the
 			paper calls the "active list".
 		</p>
 

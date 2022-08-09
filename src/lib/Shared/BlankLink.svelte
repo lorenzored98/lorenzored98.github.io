@@ -11,6 +11,7 @@
 	a {
 		box-shadow: inset 0 -0.8rem 0 var(--bg-accent);
 		transition: box-shadow 0.2s cubic-bezier(0.33, 0.66, 0.66, 1);
+		display: inline;
 	}
 
 	a:hover,
