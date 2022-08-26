@@ -1,6 +1,6 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
-	import Footer from "$lib/Posts/Footer.svelte";
+	import Socials from "$lib/Socials.svelte";
 	import Seo from "$lib/Posts/Seo.svelte";
 </script>
 
@@ -10,8 +10,14 @@
 	keywords="LorenzoPepe, Javascript, Typescript, CreativeCoding, Generative, ProcGen, Procedural"
 />
 
+<header>
+	<Socials />
+</header>
 <main>
 	<ol>
+		<IndexListItem href="/github-pages-action" timestamp={1661509919}>
+			Github Pages Action
+		</IndexListItem>
 		<IndexListItem
 			href="https://github.com/lorenzored98/CHIP8"
 			timestamp={1655577363}
@@ -66,14 +72,14 @@
 	</ol>
 </main>
 
-<div class="fixed">
-	<div class="wrapper"><Footer /></div>
-</div>
-
 <style>
+	header {
+		width: 100%;
+		border-bottom: var(--border);
+		margin-bottom: 2rem;
+	}
 	main {
-		margin-bottom: 6rem;
-		padding: 2rem;
+		padding: 2rem 0 2rem 0;
 	}
 
 	ol {
@@ -81,21 +87,5 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-	}
-
-	.fixed {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: var(--bg-color);
-	}
-
-	.wrapper {
-		width: var(--layout-max-width);
-		padding: 0 2rem;
 	}
 </style>
