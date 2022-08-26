@@ -19,8 +19,6 @@
 	<time {datetime}><span>{date}</span></time>
 	<a {href} {target} {rel}>
 		<h3>
-			<span><slot /></span>
-
 			{#if external}
 				<svg viewBox="0 0 100 100">
 					<title>{href}</title>
@@ -32,6 +30,7 @@
 					<path stroke-width={10} d="M 50 50 L 100 0" />
 				</svg>
 			{/if}
+			<span><slot /></span>
 		</h3>
 	</a>
 </li>
@@ -79,7 +78,7 @@
 	svg {
 		width: 2rem;
 		height: 2rem;
-		margin-left: 1rem;
+		margin-right: 1rem;
 		flex-shrink: 0;
 	}
 
