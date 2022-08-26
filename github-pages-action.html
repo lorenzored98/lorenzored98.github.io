@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Github Pages Action</title><meta name="description" content="Automatically deploy github pages static website with github actions" data-svelte="svelte-69xwgb"><meta name="keywords" content="Github Pages, Github Actions, Github, Static Website, Deploy" data-svelte="svelte-69xwgb"><meta name="author" content="Pepe Lorenzo" data-svelte="svelte-69xwgb">
+	<link href="./_app/immutable/assets/Seo-bca2d51b.css" rel="stylesheet">
+	<link href="./_app/immutable/assets/Subtitle-7215ce66.css" rel="stylesheet">
+	<link rel="modulepreload" href="./_app/immutable/start-d2f4fbb7.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/index-76713c38.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/singletons-c5451959.js">
+	<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-835e78d8.js">
+	<link rel="modulepreload" href="./_app/immutable/components/pages/github-pages-action/_page.svelte-1c3ad12b.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/Seo-3db11607.js">
+	<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-8b880126.js">
+	</head>
+	<body>
+		<div id="app">
+
+
+
+
+<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1yu9zvc"><h1 class="svelte-1yu9zvc">Github Pages Action</h1>
+	<time datetime="2022-8-26" class="svelte-1yu9zvc">August 26, 2022</time>
+</div>
+		<p>A simple and minimal file for building your static Github pages
+			website via Github actions.
+		</p>
+</section>
+
+	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#naive-approach" id="naive-approach">The YAML File</a>
+</h2>
+
+		<p>This file is intented to work with a node/npm based build step.</p>
+
+		<pre><code><span><span style="color: #116329">name</span><span style="color: #24292F">: </span><span style="color: #0A3069">Build And Deploy</span></span>
+<span><span style="color: #0550AE">on</span><span style="color: #24292F">:</span></span>
+<span><span>    </span><span style="color: #116329">push</span><span style="color: #24292F">:</span></span>
+<span><span>        </span><span style="color: #116329">branches</span><span style="color: #24292F">: [</span><span style="color: #0A3069">main</span><span style="color: #24292F">]</span></span>
+<span><span style="color: #116329">jobs</span><span style="color: #24292F">:</span></span>
+<span><span>    </span><span style="color: #116329">bd</span><span style="color: #24292F">:</span></span>
+<span><span>        </span><span style="color: #116329">runs-on</span><span style="color: #24292F">: </span><span style="color: #0A3069">ubuntu-latest</span></span>
+<span><span>        </span><span style="color: #116329">steps</span><span style="color: #24292F">:</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">actions/checkout@v3</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">actions/setup-node@v3</span></span>
+<span><span>              </span><span style="color: #116329">with</span><span style="color: #24292F">:</span></span>
+<span><span>                  </span><span style="color: #116329">node-version</span><span style="color: #24292F">: </span><span style="color: #0550AE">16</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">run</span><span style="color: #24292F">: </span><span style="color: #0A3069">npm install</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">run</span><span style="color: #24292F">: </span><span style="color: #0A3069">npm run build</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">peaceiris/actions-gh-pages@v3</span></span>
+<span><span>              </span><span style="color: #116329">if</span><span style="color: #24292F">: </span><span style="color: #0A3069">${{ github.ref == &#39;refs/heads/main&#39; }}</span></span>
+<span><span>              </span><span style="color: #116329">with</span><span style="color: #24292F">:</span></span>
+<span><span>                  </span><span style="color: #116329">github_token</span><span style="color: #24292F">: </span><span style="color: #0A3069">${{ secrets.GITHUB_TOKEN }}</span></span>
+<span><span>                  </span><span style="color: #116329">publish_dir</span><span style="color: #24292F">: </span><span style="color: #0A3069">./build</span></span>
+</code></pre>
+
+		<p>If you can understand everything that&#39;s going on here is no need to
+			keep reading, otherwise here&#39;s a short summary of what this file
+			does:
+		</p>
+
+		<ul><li><var>bd</var> : Job name I chose, you can choose whatever you want.
+			</li>
+			<li><var>actions/checkout@v3</var> : This is an official Github
+				action. It will checkout our repository so that it can be used
+				by the other steps. Here&#39;s the <a href="https://github.com/actions/checkout" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">repo
+</a>.
+			</li>
+			<li><var>peaceiris/actions-gh-pages@v3</var> : This is an unofficial
+				action that will allow us to deploy static files to the gh-pages
+				branch. Here&#39;s the <a href="https://github.com/peaceiris/actions-gh-pages" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">repo
+</a>.
+			</li>
+			<li><var>if</var> : Checking that we are on main branch in this case.
+				If you are on another branch, you can modify refs/heads/main or just
+				remove the if condition.
+			</li>
+			<li><var>github_token</var> : This is a token that created by the action
+				to authenticate in the workflow.
+			</li>
+			<li><var>publish_dir</var> : The directory that contains the static files
+				after the build step. It takes a relative path from where your package.json
+				is located.
+			</li></ul>
+
+		<p>Most of the other syntax is self-explanatory and the
+			<a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">workflow syntax doc
+</a> does a much better job of explaining it.
+		</p>
+
+		<p>Create a <var>.github/workflows/[whatever].yaml</var>
+			inside your repository, copy the content of this file with changes to
+			fit your workflow, and on the next push command it will generate your
+			website and publish it.
+		</p>
+</section>
+</main>
+
+<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">lorenzopepedev@gmail.com
+		
+</a></div>
+	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Twitter
+</a>
+		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Github
+</a>
+		<a style="margin-left: 1rem;" href="https://codesandbox.io/u/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Code
+</a></div>
+</div>
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="11yzx3t">
+		import { set_public_env, start } from "./_app/immutable/start-d2f4fbb7.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="11yzx3t"]').parentNode,
+			paths: {"base":"","assets":""},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				node_ids: [0, 3],
+				params: {},
+				routeId: "github-pages-action"
+			}
+		});
+	</script>
+	</div>
+	</body>
+</html>
