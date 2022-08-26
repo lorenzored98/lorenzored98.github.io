@@ -3,7 +3,7 @@
 
 	const d = new Date(timestamp * 1000);
 
-	const date = Intl.DateTimeFormat(undefined, {
+	const date = Intl.DateTimeFormat("en-US", {
 		month: "long",
 		day: "numeric",
 		year: "numeric",
