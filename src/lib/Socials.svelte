@@ -26,7 +26,6 @@
 
 <style>
 	.container {
-		border-top: var(--border);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
