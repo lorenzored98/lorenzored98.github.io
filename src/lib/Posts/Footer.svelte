@@ -8,6 +8,7 @@
 
 <style>
 	footer {
+		border-top: var(--border);
 		width: 100%;
 	}
 </style>
