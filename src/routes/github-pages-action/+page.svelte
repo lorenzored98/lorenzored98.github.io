@@ -105,9 +105,9 @@ jobs:
 
 		<p>
 			Create a <var>.github/workflows/[whatever].yaml</var>
-			inside your repository, copy the content of this file with changes to
-			fit your workflow, and on the next push command it will generate your
-			website and publish it.
+			inside your repository, copy the content of this file,make the appropriate
+			changes if your build step differs, and on the next push command your
+			website will be automatically built and deployed.
 		</p>
 	</Section>
 </Main>
