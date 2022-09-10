@@ -1,14 +1,14 @@
 <script>
-	import BlankLink from "$lib/Shared/BlankLink.svelte";
-	import Title from "$lib/Posts/Title.svelte";
-	import Section from "$lib/Posts/Section.svelte";
-	import Main from "$lib/Posts/Main.svelte";
-	import Footer from "$lib/Posts/Footer.svelte";
-	import Subtitle from "$lib/Posts/Subtitle.svelte";
-	import NaiveDistribution from "$lib/PoissonDiskSampling/NaiveDistribution.svelte";
-	import MatrixAround from "$lib/PoissonDiskSampling/MatrixAround.svelte";
-	import PoissonDiskSampling from "$lib/PoissonDiskSampling/PoissonDiskSampling.svelte";
-	import Seo from "$lib/Posts/Seo.svelte";
+	import BlankLink from "$lib/BlankLink.svelte";
+	import Title from "$lib/Title.svelte";
+	import Section from "$lib/Section.svelte";
+	import Main from "$lib/Main.svelte";
+	import Footer from "$lib/Footer.svelte";
+	import Subtitle from "$lib/Subtitle.svelte";
+	import Seo from "$lib/Seo.svelte";
+	import NaiveDistribution from ".//NaiveDistribution.svelte";
+	import MatrixAround from ".//MatrixAround.svelte";
+	import PoissonDiskSampling from ".//PoissonDiskSampling.svelte";
 </script>
 
 <Seo

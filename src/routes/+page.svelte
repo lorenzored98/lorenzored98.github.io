@@ -1,7 +1,7 @@
 <script>
 	import IndexListItem from "$lib/Index/ListItem.svelte";
 	import Socials from "$lib/Socials.svelte";
-	import Seo from "$lib/Posts/Seo.svelte";
+	import Seo from "$lib/Seo.svelte";
 </script>
 
 <Seo

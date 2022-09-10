@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from "svelte";
 	import { randomIntInRange } from "../../utils/math";
-	import Checkbox from "$lib/Shared/Checkbox.svelte";
-	import DemoContainer from "$lib/Shared/DemoContainer.svelte";
+	import Checkbox from "$lib/Checkbox.svelte";
+	import DemoContainer from "$lib/DemoContainer.svelte";
 
 	const aspect = 0.5;
 	let canvas;

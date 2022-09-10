@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	import { randomIntInRange } from "../../utils/math";
-	import DemoContainer from "$lib/Shared/DemoContainer.svelte";
+	import DemoContainer from "$lib/DemoContainer.svelte";
 
 	const aspect = 0.5;
 	let canvas;

@@ -1,11 +1,11 @@
 <script>
-	import BlankLink from "$lib/Shared/BlankLink.svelte";
-	import Title from "$lib/Posts/Title.svelte";
-	import Section from "$lib/Posts/Section.svelte";
-	import Main from "$lib/Posts/Main.svelte";
-	import Footer from "$lib/Posts/Footer.svelte";
-	import Subtitle from "$lib/Posts/Subtitle.svelte";
-	import Seo from "$lib/Posts/Seo.svelte";
+	import BlankLink from "$lib/BlankLink.svelte";
+	import Title from "$lib/Title.svelte";
+	import Section from "$lib/Section.svelte";
+	import Main from "$lib/Main.svelte";
+	import Footer from "$lib/Footer.svelte";
+	import Subtitle from "$lib/Subtitle.svelte";
+	import Seo from "$lib/Seo.svelte";
 </script>
 
 <Seo

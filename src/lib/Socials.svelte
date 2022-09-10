@@ -1,5 +1,5 @@
 <script>
-	import BlankLink from "$lib/Shared/BlankLink.svelte";
+	import BlankLink from "$lib/BlankLink.svelte";
 </script>
 
 <div class="container">
