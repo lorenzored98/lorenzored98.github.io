@@ -136,9 +136,9 @@ points[index] = point;
 			It works similarly to a <BlankLink
 				href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)"
 			>
-				queue
-			</BlankLink>, meaning the first point that goes in is also the first
-			point processed.
+				queue</BlankLink
+			>, meaning the first point that goes in is also the first point
+			processed.
 		</p>
 
 		<p>The last step is the actual algorithm.</p>
