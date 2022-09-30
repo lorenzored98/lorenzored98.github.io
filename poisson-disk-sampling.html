@@ -9,6 +9,15 @@
 		<link href="./_app/immutable/assets/_page-d1a92ec9.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Seo-bca2d51b.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Subtitle-7215ce66.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-65d874e4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a627a0fb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d49fcea3.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-696da040.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-542205c4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-60ced57c.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-e4a1063e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-de8aa6df.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-02f0b180.js">
 	</head>
 	<body>
 		<div id="app">
@@ -257,6 +266,26 @@
 </div>
 </footer>
 
-</div>
+
+		<script type="module" data-sveltekit-hydrate="nwnppl">
+			import { start } from "./_app/immutable/start-65d874e4.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 4],
+					params: {},
+					routeId: "poisson-disk-sampling",
+					data: (function(a){return [a,a]}(null)),
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="nwnppl"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
 	</body>
 </html>
