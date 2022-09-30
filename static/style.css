@@ -53,8 +53,8 @@ html {
 	--bg-color: rgb(252, 251, 250);
 	--bg-accent: rgb(255, 231, 128);
 	--layout-max-width: 80rem;
-	--outline: 1px solid var(--text-color);
-	--border: 1px solid #b5b7cb;
+	--outline: 1px solid rgb(121, 79, 45);
+	--border: 1px solid rgb(202, 182, 158);
 	--code-bg: white;
 }
 
