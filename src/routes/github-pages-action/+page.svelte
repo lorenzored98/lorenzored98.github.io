@@ -24,7 +24,7 @@
 	</Section>
 
 	<Section>
-		<Subtitle id="naive-approach">The YAML File</Subtitle>
+		<Subtitle id="yaml-file">The YAML File</Subtitle>
 
 		<p>This file is intented to work with a node/npm based build step.</p>
 
