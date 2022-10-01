@@ -8,7 +8,7 @@ const config = {
 			// default options are shown
 			pages: "build",
 			assets: "build",
-			fallback: true,
+			fallback: "404.html",
 			precompress: false,
 		}),
 	},
