@@ -154,14 +154,14 @@
 		const side = radius / Math.SQRT2;
 
 		if (showGrid) {
-			for (let x = 0; x < w; x += side) {
+			for (let x = side; x < w; x += side) {
 				ctx.beginPath();
 				ctx.moveTo(x, 0);
 				ctx.lineTo(x, h);
 				ctx.stroke();
 			}
 
-			for (let y = 0; y < h; y += side) {
+			for (let y = side; y < h; y += side) {
 				ctx.beginPath();
 				ctx.moveTo(0, y);
 				ctx.lineTo(w, y);

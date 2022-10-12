@@ -45,6 +45,23 @@
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, w, h);
 
+		ctx.strokeStyle = "black";
+		ctx.lineWidth = 1;
+
+		for (let x = size; x < w; x += size) {
+			ctx.beginPath();
+			ctx.moveTo(x, 0);
+			ctx.lineTo(x, h);
+			ctx.stroke();
+		}
+
+		for (let y = size; y < h; y += size) {
+			ctx.beginPath();
+			ctx.moveTo(0, y);
+			ctx.lineTo(w, y);
+			ctx.stroke();
+		}
+
 		ctx.fillStyle = "black";
 		for (let i = 0; i < points.length; i += 2) {
 			ctx.beginPath();
@@ -52,27 +69,10 @@
 			ctx.fill();
 		}
 
-		ctx.strokeStyle = "black";
-		ctx.lineWidth = 1;
-
-		for (let x = 0; x < w; x += size) {
-			ctx.beginPath();
-			ctx.moveTo(x, 0);
-			ctx.lineTo(x, h);
-			ctx.stroke();
-		}
-
-		for (let y = 0; y < h; y += size) {
-			ctx.beginPath();
-			ctx.moveTo(0, y);
-			ctx.lineTo(w, y);
-			ctx.stroke();
-		}
-
 		const xIndex = Math.floor(pointerX / size);
 		const yIndex = Math.floor(pointerY / size);
 
-		ctx.fillStyle = "rgba(255, 200, 25, 0.5)";
+		ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
 
 		ctx.fillRect(xIndex * size, yIndex * size, size, size);
 		ctx.fillRect(xIndex * size, (yIndex + 1) * size, size, size);

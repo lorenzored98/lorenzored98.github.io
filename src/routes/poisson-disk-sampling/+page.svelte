@@ -125,7 +125,7 @@ points[index] = point;
 		/>
 
 		<p>
-			The second step is generating a random point inside the space and
+			The second step is generating a random point inside the space,
 			inserting it into the points array and into another array which the
 			paper calls the "active list".
 		</p>
