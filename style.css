@@ -48,13 +48,13 @@ input[type="checkbox"] {
 
 html {
 	font-size: 62.5%;
-	--text-color-bold: rgb(33, 33, 39);
+	--text-color-bold: rgb(16 16, 16);
 	--text-color: black;
 	--bg-color: rgb(252, 251, 250);
-	--bg-accent: rgb(255, 231, 128);
+	--bg-accent: rgb(250, 186, 126);
 	--layout-max-width: 80rem;
-	--outline: 1px solid rgb(121, 79, 45);
-	--border: 1px solid rgb(202, 182, 158);
+	--outline: 1px solid #37212b;
+	--border: 1px solid #37212b;
 	--code-bg: white;
 }
 
@@ -65,6 +65,7 @@ body {
 	font-family: "Inter";
 	font-weight: 400;
 	color: var(--text-color);
+	outline: none;
 }
 
 h1,
