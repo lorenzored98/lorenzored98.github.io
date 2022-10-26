@@ -22,9 +22,10 @@
 <style>
 	div {
 		display: flex;
-		align-self: center;
 		flex-direction: column;
+		align-items: center;
 		margin-bottom: 3rem;
+		width: 100%;
 	}
 
 	h1 {
