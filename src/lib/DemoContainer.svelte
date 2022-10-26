@@ -2,16 +2,19 @@
 	export let caption;
 </script>
 
-<figure class="demo-container">
-	<figcaption>{caption}</figcaption>
-	<slot />
-</figure>
+<div class="demo-container">
+	<figure>
+		{#if caption}
+			<figcaption>{caption}</figcaption>
+		{/if}
+		<slot name="canvas" />
+	</figure>
+	<slot name="controls" />
+</div>
 
 <style>
-	figure {
+	div {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
 		font-family: "JetBrainsMono";
 	}
 
