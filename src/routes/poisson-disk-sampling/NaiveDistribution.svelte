@@ -104,8 +104,8 @@
 </script>
 
 <DemoContainer caption="Naive Distribution">
-	<canvas bind:this={canvas} />
-	<fieldset>
+	<canvas bind:this={canvas} slot="canvas" />
+	<fieldset slot="controls">
 		<div class="demo-input-group">
 			<label for="naive-radius">Radius</label>
 			<input
@@ -129,10 +129,8 @@
 			/>
 		</div>
 
-		<div class="demo-input-group">
-			<button on:click={main}>Run</button>
-		</div>
-		<div class="demo-input-group align-end">
+		<div class="demo-input-group run">
+			<button on:click={main} style="margin-right: 1rem">Run</button>
 			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
@@ -143,7 +141,7 @@
 		pointer-events: none;
 	}
 
-	.align-end {
-		margin-left: auto;
+	.demo-input-group.run button {
+		margin-right: 1rem;
 	}
 </style>

@@ -3,6 +3,7 @@
 	import { randomIntInRange } from "../../utils/math";
 	import Checkbox from "$lib/Checkbox.svelte";
 	import DemoContainer from "$lib/DemoContainer.svelte";
+	import NumberRange from "../../lib/NumberRange.svelte";
 
 	const aspect = 0.5;
 	let canvas;
@@ -14,7 +15,8 @@
 	const nPoints = 25;
 	let points = [];
 
-	const minRadius = 1;
+	const minRadius = 30;
+	const maxRadius = 100;
 	let _radius = 50;
 	let corners = false;
 
@@ -198,17 +200,16 @@
 </script>
 
 <DemoContainer caption="Sample Matrix">
-	<canvas bind:this={canvas} />
-	<fieldset>
+	<canvas bind:this={canvas} slot="canvas" />
+	<fieldset slot="controls">
 		<div class="demo-input-group">
-			<label for="matrix-around-radius">Radius</label>
-			<input
+			<label for="matrix-around-radius">Radius: ({_radius})</label>
+			<NumberRange
 				id="matrix-around-radius"
-				type="number"
 				bind:value={_radius}
-				on:input={main}
-				min={minRadius}
-				max={100}
+				onChange={main}
+				min={30}
+				max={maxRadius}
 			/>
 		</div>
 		<div class="demo-input-group">

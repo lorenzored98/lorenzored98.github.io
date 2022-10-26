@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { randomIntInRange } from "../../utils/math";
 	import Checkbox from "$lib/Checkbox.svelte";
+	import NumberRange from "$lib/NumberRange.svelte";
 	import DemoContainer from "$lib/DemoContainer.svelte";
 
 	const aspect = 0.5;
@@ -230,63 +231,60 @@
 </script>
 
 <DemoContainer caption="Poisson Disk Sampling">
-	<canvas bind:this={canvas} />
-	<fieldset>
+	<canvas bind:this={canvas} slot="canvas" />
+	<fieldset slot="controls">
 		<div class="demo-input-group">
-			<label for="poisson-radius">Radius</label>
-			<input
+			<label for="poisson-radius">Radius: ({_radius})</label>
+			<NumberRange
 				id="poisson-radius"
-				type="number"
 				bind:value={_radius}
-				on:input={main}
+				onChange={main}
 				min={minRadius}
 				max={100}
 			/>
 		</div>
 		<div class="demo-input-group">
-			<label for="poisson-samples">Samples</label>
-			<input
+			<label for="poisson-samples">Samples: ({_samples})</label>
+			<NumberRange
 				id="poisson-samples"
-				type="number"
 				bind:value={_samples}
-				on:input={main}
+				onChange={main}
 				min={minSamples}
 				max={50}
 			/>
 		</div>
 
-		<div class="demo-input-group">
-			<label for="poisson-corners">Corners</label>
-			<Checkbox
-				id="poisson-corners"
-				bind:checked={corners}
-				onChange={main}
-			/>
+		<div class="demo-multi-input-group">
+			<div class="demo-input-group">
+				<label for="poisson-corners">Corners</label>
+				<Checkbox
+					id="poisson-corners"
+					bind:checked={corners}
+					onChange={main}
+				/>
+			</div>
+
+			<div class="demo-input-group">
+				<label for="poisson-showgrid">Show Grid</label>
+				<Checkbox
+					id="poisson-showgrid"
+					bind:checked={showGrid}
+					onChange={visualize}
+				/>
+			</div>
+
+			<div class="demo-input-group">
+				<label for="poisson-showradius">Show Radius</label>
+				<Checkbox
+					id="poisson-showradius"
+					bind:checked={showRadius}
+					onChange={visualize}
+				/>
+			</div>
 		</div>
 
-		<div class="demo-input-group">
-			<label for="poisson-showgrid">Show Grid</label>
-			<Checkbox
-				id="poisson-showgrid"
-				bind:checked={showGrid}
-				onChange={visualize}
-			/>
-		</div>
-
-		<div class="demo-input-group">
-			<label for="poisson-showradius">Show Radius</label>
-			<Checkbox
-				id="poisson-showradius"
-				bind:checked={showRadius}
-				onChange={visualize}
-			/>
-		</div>
-
-		<div class="demo-input-group">
-			<button on:click={main}>Run</button>
-		</div>
-
-		<div class="demo-input-group align-end">
+		<div class="demo-input-group run">
+			<button on:click={main} style="margin-right: 1rem">Run</button>
 			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
@@ -295,9 +293,5 @@
 <style>
 	canvas {
 		pointer-events: none;
-	}
-
-	.align-end {
-		margin-left: auto;
 	}
 </style>
