@@ -53,9 +53,11 @@ html {
 	--bg-color: rgb(252, 251, 250);
 	--bg-accent: rgb(250, 186, 126);
 	--layout-max-width: 80rem;
-	--outline: 1px solid #37212b;
-	--border: 1px solid #37212b;
+	--border-accent: #37212b;
+	--outline: 1px solid var(--border-accent);
+	--border: 1px solid var(--border-accent);
 	--code-bg: white;
+	--disabled-bg: rgb(226, 220, 210);
 }
 
 body {
@@ -172,7 +174,7 @@ var {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: flex-end;
+	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
@@ -181,12 +183,24 @@ var {
 	border: var(--border);
 }
 
+.demo-input button,
+input {
+	height: 3rem;
+}
+
+.demo-multi-input-group {
+	display: flex;
+	flex-direction: row;
+}
+
 .demo-input-group {
 	margin: 1rem 1rem 0 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	padding: 0.4rem;
+	flex-shrink: 0;
 }
 
 .demo-input-group input {
@@ -198,6 +212,19 @@ var {
 	background-color: var(--bg-accent);
 	border: var(--border);
 	padding: 0.4rem 1rem;
+}
+
+.demo-input-group.run {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.demo-input-group button:disabled {
+	cursor: default;
+	background-color: var(--disabled-bg);
+	border: var(--border);
 }
 
 @media screen and (max-width: 760px) and (orientation: landscape) {
