@@ -38,6 +38,7 @@ a {
 	color: inherit;
 	display: inline-block;
 	font-size: inherit;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a,
@@ -184,7 +185,8 @@ var {
 }
 
 .demo-input button,
-input {
+input,
+select {
 	height: 3rem;
 }
 
