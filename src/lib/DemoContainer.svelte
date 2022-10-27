@@ -1,8 +1,9 @@
 <script>
 	export let caption;
+	export let id = undefined;
 </script>
 
-<div class="demo-container">
+<div class="demo-container" {id}>
 	<figure>
 		{#if caption}
 			<figcaption>{caption}</figcaption>
