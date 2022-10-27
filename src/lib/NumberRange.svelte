@@ -6,7 +6,7 @@
 	export let value = 0;
 	export let step = 1;
 	export let id;
-	export let onChange;
+	export let onChange = undefined;
 
 	let style;
 
