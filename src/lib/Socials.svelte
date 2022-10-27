@@ -17,10 +17,6 @@
 			style="margin-left: 1rem;"
 			href="https://github.com/lorenzored98">Github</BlankLink
 		>
-		<BlankLink
-			style="margin-left: 1rem;"
-			href="https://codesandbox.io/u/lorenzored98">Code</BlankLink
-		>
 	</div>
 </div>
 
