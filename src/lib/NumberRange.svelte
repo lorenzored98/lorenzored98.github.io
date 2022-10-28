@@ -12,7 +12,7 @@
 
 	// TODO: Lots of hardcoded values
 	$: style = `transform: translate(-50%, -50%) scale(${
-		lerp(200 - 18.5, 0, mapRange(min, max, 0, max, value) / max) / 200
+		lerp(200 - 17, 0, mapRange(min, max, 0, max, value) / max) / 200
 	}, 1.01)`;
 </script>
 
@@ -46,7 +46,7 @@
 	}
 
 	.gray-bg {
-		background-color: var(--disabled-bg);
+		background-color: var(--border-color);
 		height: 1rem;
 		width: calc(200px - 0.4rem);
 		position: absolute;
@@ -93,6 +93,7 @@
 		border-radius: 0;
 		background: white;
 		transform: translate(0, -4px);
+		border-radius: 4px;
 	}
 
 	input[type="range"]::-moz-range-thumb {
@@ -101,5 +102,6 @@
 		border: var(--border);
 		border-radius: 0;
 		background: white;
+		border-radius: 4px;
 	}
 </style>

@@ -43,12 +43,10 @@
 	}
 
 	.fill {
-		background-color: var(--bg-accent);
-		stroke: var(--text-color);
+		stroke: var(--text);
 	}
 
 	.nofill {
-		background-color: var(--bg-color);
 		stroke: var(--bg-color);
 	}
 

@@ -1,90 +1,67 @@
 <script>
+	import { timestampToDate } from "../../utils/date";
 	export let href;
 	export let timestamp;
+	export let type;
 
-	const d = new Date(timestamp * 1000);
-
-	const date = Intl.DateTimeFormat("en-GB").format(d);
-
-	// YYYY-MM-DD https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
-	// Surprised to not see date.toDateString() as a valid option
-	const datetime = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
-
-	const external = href[0] !== "/";
-	const target = external ? "_blank" : undefined;
-	const rel = external ? "noopener noreferral nofllow" : undefined;
+	const { date, datetime } = timestampToDate(timestamp);
 </script>
 
 <li>
-	<time {datetime}><span>{date}</span></time>
-	<a {href} {target} {rel}>
+	<a {href}>
 		<h3>
-			{#if external}
-				<svg viewBox="0 0 100 100">
-					<title>{href}</title>
-					<path
-						stroke-width={16}
-						d="M 50 0 L 0 0 L 0 100 L 100 100 L 100 50"
-					/>
-					<path stroke-width={16} d="M 65 0 L 100 0 L 100 35" />
-					<path stroke-width={10} d="M 50 50 L 100 0" />
-				</svg>
-			{/if}
-			<span><slot /></span>
+			<slot />
 		</h3>
 	</a>
+	<div>
+		<time {datetime}><span>{date}</span></time><span class="dot">•</span
+		><span class="type">{type}</span>
+	</div>
 </li>
 
 <style>
 	li {
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
+		flex-direction: column;
 		align-items: flex-start;
-		background-color: var(--bg-color);
+		gap: 0.6rem;
+		border-radius: 4px;
+		padding: 0.2rem 0.4rem;
 	}
 
 	li:focus-within {
 		outline: var(--outline);
-		background-color: var(--bg-accent);
 	}
 
-	li:hover {
-		background-color: var(--bg-accent);
+	li:focus-within a {
+		color: black;
 	}
 
-	time,
-	h3 {
-		min-height: 3rem;
-		padding: 0 0.4rem;
-		display: flex;
-		align-items: center;
-	}
-
-	time {
-		flex-shrink: 0;
-		background-color: var(--bg-accent);
-	}
-
-	h3 {
-		margin-left: 2rem;
+	li:focus-within .dot {
+		color: black;
 	}
 
 	a {
 		outline: none;
+		text-decoration: underline;
 	}
 
-	svg {
-		width: 2rem;
-		height: 2rem;
-		margin-right: 1rem;
-		flex-shrink: 0;
+	a:hover {
+		color: black;
 	}
 
-	path {
-		fill: none;
-		stroke: var(--text-color);
-		stroke-linejoin: miter;
+	h3 {
+		color: inherit;
+	}
+
+	.dot {
+		color: var(--text-bold);
+		margin: 0 0.4rem;
+	}
+
+	.type {
+		font-size: 1.4rem;
+		font-weight: 500;
 	}
 </style>
