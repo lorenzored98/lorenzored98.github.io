@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { randomIntInRange } from "../../utils/math";
 	import DemoContainer from "$lib/DemoContainer.svelte";
+	import NumberRange from "../../lib/NumberRange.svelte";
 
 	const aspect = 0.5;
 	let canvas;
@@ -108,9 +109,8 @@
 	<fieldset slot="controls">
 		<div class="demo-input-group">
 			<label for="naive-radius">Radius</label>
-			<input
+			<NumberRange
 				id="naive-radius"
-				type="number"
 				bind:value={_radius}
 				on:input={main}
 				min={minRadius}
@@ -119,9 +119,8 @@
 		</div>
 		<div class="demo-input-group">
 			<label for="naive-samples">Samples</label>
-			<input
+			<NumberRange
 				id="naive-samples"
-				type="number"
 				bind:value={_samples}
 				on:input={main}
 				min={minSamples}
@@ -141,7 +140,7 @@
 		pointer-events: none;
 	}
 
-	.demo-input-group.run button {
-		margin-right: 1rem;
+	.run {
+		align-self: center;
 	}
 </style>
