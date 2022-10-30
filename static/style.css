@@ -36,7 +36,7 @@ a {
 
 a,
 button,
-input[type="checkbox"],
+input,
 select {
 	cursor: pointer;
 	border-radius: 4px;
