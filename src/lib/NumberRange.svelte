@@ -6,7 +6,7 @@
 	export let value = 0;
 	export let step = 1;
 	export let id;
-	export let onChange = undefined;
+	export let onChange;
 
 	let style;
 
@@ -20,8 +20,8 @@
 	<div class="input-wrapper">
 		<input
 			type="range"
-			on:input={onChange}
 			bind:value
+			on:input={onChange}
 			{id}
 			{min}
 			{max}
