@@ -44,14 +44,13 @@ select {
 
 html {
 	font-size: 62.5%;
+	--layout-max-width: 80rem;
 	--text: rgb(21, 22, 24);
 	--text-bold: rgb(36, 40, 46);
 	--text-small: rgb(97, 102, 121);
 	--link: rgb(52, 52, 255);
 	--link-highlight: rgb(0, 0, 255);
 	--bg-color: rgb(255, 255, 255);
-	--bg-accent: rgb(173, 181, 255);
-	--layout-max-width: 80rem;
 	--border-color: #d9e8e0;
 	--border-color-accent: rgb(84, 84, 88);
 	--border: 1px solid var(--border-color);
@@ -204,17 +203,16 @@ select {
 }
 
 .demo-input-group input,
-button {
+button,
+select {
 	border: var(--border);
-	padding: 0.4rem 1rem;
+
 	background-color: transparent;
 }
 
-.demo-input-group.run {
-	align-self: flex-end;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+.demo-input-group input,
+button {
+	padding: 0.4rem 1rem;
 }
 
 .demo-input-group button:disabled {
