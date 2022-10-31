@@ -75,12 +75,12 @@
 	}
 
 	input[type="range"]::-webkit-slider-runnable-track {
-		background: var(--bg-accent);
+		background: var(--link);
 		height: 1rem;
 	}
 
 	input[type="range"]::-moz-range-track {
-		background: var(--bg-accent);
+		background: var(--link);
 		height: 1rem;
 	}
 
