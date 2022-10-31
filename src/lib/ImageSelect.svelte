@@ -11,12 +11,3 @@
 	<option value={"/images/akira.webp"}>Akira</option>
 	<option value={"/images/dragonquest.webp"}>Dragon Quest</option>
 </select>
-
-<style>
-	select {
-		background-color: transparent;
-		border: var(--border);
-		cursor: pointer;
-		line-height: inherit;
-	}
-</style>
