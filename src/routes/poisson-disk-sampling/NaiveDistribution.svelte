@@ -129,7 +129,7 @@
 		</div>
 
 		<div class="demo-input-group run">
-			<button on:click={main} style="margin-right: 1rem">Run</button>
+			<button on:click={main}>Run</button>
 			<span>Iterations: {iterations}</span>
 		</div>
 	</fieldset>
@@ -141,6 +141,13 @@
 	}
 
 	.run {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		align-self: center;
+	}
+
+	.run button {
+		margin-right: 1rem;
 	}
 </style>
