@@ -82,6 +82,10 @@
 		img.src = _src;
 
 		window.addEventListener("resize", resize, { passive: true });
+
+		return () => {
+			window.removeEventListener("resize", resize);
+		};
 	});
 
 	function setup() {
@@ -349,6 +353,7 @@
 				bind:value={_samples}
 				min={minSamples}
 				max={maxSamples}
+				onChange={null}
 			/>
 		</div>
 
