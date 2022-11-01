@@ -39,7 +39,7 @@ button,
 input,
 select {
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 }
 
 html {
@@ -55,6 +55,7 @@ html {
 	--border-color-accent: rgb(84, 84, 88);
 	--border: 1px solid var(--border-color);
 	--outline: 1px solid #9c99b3;
+	--border-radius: 4px;
 }
 
 body {
@@ -155,7 +156,7 @@ var {
 var {
 	padding: 0 0.2rem;
 	border: var(--border);
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 }
 
 .inline-code {
@@ -206,11 +207,10 @@ select {
 button,
 select {
 	border: var(--border);
-
 	background-color: transparent;
 }
 
-.demo-input-group input,
+.demo-input-group input:not([type="range"]),
 button {
 	padding: 0.4rem 1rem;
 }
