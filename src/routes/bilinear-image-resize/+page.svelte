@@ -18,7 +18,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1654056000}>Bilinear Image Resize</Title>
-		<p>123</p>
 	</Section>
 
 	<Section>
