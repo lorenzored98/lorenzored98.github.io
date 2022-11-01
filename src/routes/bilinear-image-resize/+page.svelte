@@ -30,17 +30,18 @@
 			>
 		</p>
 		<p>
-			I'm not sure if this is by default what happens when using <var
+			I'm not sure if this is what happens by default when using <var
 				>ctx.drawImage()</var
-			> and source and target sizes differs. The result looks similar though.
+			> and source and target sizes differ. The result looks similar though.
 		</p>
 		<p>
 			There are jagged edges when resizing because there is no
 			antialiasing function applied.
 		</p>
 		<p>
-			The same code can also upscale an image, but for the sake of the
-			demo I capped the value to a sensible max.
+			This demo could also upscale the image. Due to the layout of this
+			page, I decided to cap it to a maximum value which is always smaller
+			or equal to the original image.
 		</p>
 	</Section>
 
