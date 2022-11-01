@@ -1,5 +1,4 @@
 <script>
-	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
 	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
