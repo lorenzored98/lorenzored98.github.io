@@ -26,10 +26,15 @@
 		width: 3rem;
 		height: 3rem;
 		border: var(--border);
+		border-radius: var(--border-radius);
 	}
 
 	div:focus-within {
 		outline: var(--outline);
+	}
+
+	div:hover {
+		border-color: var(--border-accent);
 	}
 
 	svg {

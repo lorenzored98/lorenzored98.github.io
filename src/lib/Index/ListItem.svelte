@@ -26,7 +26,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 0.6rem;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		padding: 0.2rem 0.4rem;
 	}
 
