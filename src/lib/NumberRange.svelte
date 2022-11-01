@@ -1,6 +1,4 @@
 <script>
-	import { lerp, mapRange } from "../utils/math";
-
 	export let min = 0;
 	export let max = 0;
 	export let value = 0;
@@ -8,12 +6,13 @@
 	export let id;
 	export let onChange;
 
-	let style;
-
-	// TODO: Lots of hardcoded values
-	$: style = `transform: translate(-50%, -50%) scale(${
-		lerp(200 - 17, 0, mapRange(min, max, 0, max, value) / max) / 200
-	}, 1.01)`;
+	$: gradientValue = ((value - min) / (max - min)) * 100;
+	$: style =
+		"background: linear-gradient(to right, var(--link) 0%, var(--link) " +
+		gradientValue +
+		"%, var(--border-color) " +
+		gradientValue +
+		"%, var(--border-color) 100%)";
 </script>
 
 <div class="wrapper">
@@ -26,8 +25,8 @@
 			{min}
 			{max}
 			{step}
+			{style}
 		/>
-		<div class="gray-bg" {style} />
 	</div>
 	<div class="ranges">
 		<span>{min}</span>
@@ -41,27 +40,23 @@
 		flex-direction: column;
 	}
 
-	.input-wrapper {
-		display: flex;
-	}
-
-	.gray-bg {
-		background-color: var(--border-color);
-		height: 1rem;
-		width: calc(200px - 0.4rem);
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform-origin: right center;
-		pointer-events: none;
-	}
-
 	.ranges {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 0.2rem;
+	}
+
+	.input-wrapper {
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		border-radius: var(--border-radius);
+	}
+
+	.input-wrapper:focus-within {
+		outline: var(--outline);
 	}
 
 	input[type="range"] {
@@ -71,37 +66,38 @@
 		cursor: pointer;
 		width: 200px;
 		border: none;
-		padding: 0 0.2rem;
+		height: 1rem;
+		outline: none;
 	}
 
-	input[type="range"]::-webkit-slider-runnable-track {
-		background: var(--link);
+	input::-webkit-slider-runnable-track {
 		height: 1rem;
 	}
 
-	input[type="range"]::-moz-range-track {
-		background: var(--link);
+	input::-moz-range-track {
 		height: 1rem;
 	}
 
-	input[type="range"]::-webkit-slider-thumb {
+	input::-webkit-slider-thumb:hover,
+	input::-moz-range-thumb:hover {
+		border-color: var(--border-accent);
+	}
+
+	input::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		appearance: none;
+		transform: translate(0, -4px);
 		height: 1.8rem;
 		width: 1.8rem;
 		border: var(--border);
-		border-radius: 0;
-		background: white;
-		transform: translate(0, -4px);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
+		background-color: white;
 	}
 
-	input[type="range"]::-moz-range-thumb {
+	input::-moz-range-thumb {
 		height: 1.6rem;
 		width: 1.6rem;
 		border: var(--border);
-		border-radius: 0;
-		background: white;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
+		background-color: white;
 	}
 </style>
