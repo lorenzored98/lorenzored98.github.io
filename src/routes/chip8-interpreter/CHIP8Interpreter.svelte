@@ -622,7 +622,7 @@
 
 	let chip8;
 	let renderer;
-	const delay = 1000 / 700;
+	const delay = 1000 / 60;
 	let t = 0;
 
 	let _src = "/chip8/ibm_logo.ch8";
@@ -664,9 +664,9 @@
 	function main(n = 0) {
 		const dt = n - t;
 		if (dt > delay) {
-			t = n;
 			chip8.cycle();
 			renderer.draw(chip8.display);
+			t = n;
 		}
 		window.requestAnimationFrame(main);
 	}
