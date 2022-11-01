@@ -98,6 +98,9 @@
 		ebo = gl.createBuffer();
 	}
 
+	// I converted this from a canvas2D demo to WebGL for this blog.
+	// It would also make sense to just have randoms and variation going from 0 1 or -1 1
+	// But I'm lazy
 	function midpointDisplacement2D() {
 		const heightMap = [];
 		let size = 2 ** _depth;
