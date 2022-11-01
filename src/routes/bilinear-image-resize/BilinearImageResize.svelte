@@ -18,10 +18,10 @@
 	let rgba;
 	let _src = "/images/starrynight.webp";
 	let aspect = 0;
-	const minWidth = 0;
+	const minWidth = 1;
 	let _width = 0;
 	let maxWidth = 0;
-	const minHeight = 0;
+	const minHeight = 1;
 	let _height = 0;
 	let maxHeight = 0;
 	let _lockAspect = true;
@@ -174,8 +174,10 @@
 		if (_lockAspect) {
 			if (t) {
 				_height = Math.floor(_width / aspect);
+				if (_height < minHeight) _height = minHeight;
 			} else {
 				_width = Math.floor(_height * aspect);
+				if (_width < minWidth) _width = minWidth;
 			}
 		}
 
