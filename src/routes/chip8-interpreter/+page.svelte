@@ -28,7 +28,7 @@
 			their hands at something more complex like a NES or a GBA maybe.
 		</p>
 		<p>Didn't implement audio.</p>
-		<p>Use <var>q</var> and <var>e</var> to move in the breakout demo.</p>
+		<p>Breakout demo: use <var>q</var> and <var>e</var> to move.</p>
 	</Section>
 
 	<CHIP8Interpreter />
