@@ -164,10 +164,6 @@ var {
 	border: var(--border);
 }
 
-.demo-container {
-	margin: 2rem 0 3rem 0;
-}
-
 /* BLOG DEMOS*/
 .demo-container fieldset {
 	display: flex;
