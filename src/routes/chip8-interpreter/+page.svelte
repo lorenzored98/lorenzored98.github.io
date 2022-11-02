@@ -21,7 +21,7 @@
 	</Section>
 
 	<Section>
-		<Subtitle id="details">Details</Subtitle>
+		<Subtitle id="demo">Demo</Subtitle>
 		<p>
 			It's my first time coding an emulator/interpreter. I've heard that
 			this is a very common starter project for people who want to try

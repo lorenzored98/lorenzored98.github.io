@@ -21,7 +21,7 @@
 	</Section>
 
 	<Section>
-		<Subtitle id="details">Details</Subtitle>
+		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			Mostly followed a <BlankLink

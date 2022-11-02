@@ -18,11 +18,11 @@
 <Main>
 	<Section>
 		<Title timestamp={1652500800}>Diamond Square</Title>
-		<p>Exploring terrain generation algorithms</p>
+		<p>Exploring terrain generation algorithms.</p>
 	</Section>
 
 	<Section>
-		<Subtitle id="details">Details</Subtitle>
+		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			From <BlankLink
