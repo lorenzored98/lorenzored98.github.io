@@ -17,7 +17,7 @@
 <Main>
 	<Section>
 		<Title timestamp={1652500800}>2D Midpoint Displacement</Title>
-		<p>Rudimental noise ?</p>
+		<p>Exploring terrain generation algorithms</p>
 	</Section>
 
 	<Section>
