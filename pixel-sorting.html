@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_page-3fc388c2.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-04dc0004.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-73a5d68e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a4a97fa6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ff670264.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-309e56f2.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/pixel-sorting/_page.svelte-eebde5a5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-3e94c9ab.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-cc357b56.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/math-fcbdfd63.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-abd5cee0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-8f4747ca.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-6b6f6191.js"><title>Pixel Sorting</title><!-- HEAD_svelte-69xwgb_START --><meta name="description" content="Sort image colors by similarity"><meta name="keywords" content="Pixel Sorting, Color Sorting, Javascript"><meta name="author" content="Pepe Lorenzo"><!-- HEAD_svelte-69xwgb_END -->
+	</head>
+	<body>
+		<div id="app">
+
+
+
+
+<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Pixel Sorting</h1>
+	<time datetime="2022-5-6">06/05/2022</time>
+</div>
+		<p>Implementing <a href="https://twitter.com/kGolid" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Kjetil Golid
+</a> pixel/color sorting.
+		</p>
+</section>
+
+	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
+</h2>
+
+		<p>For every pixel in the image, compute the average color of the
+			current pixel&#39;s surrounding pixels. Within a maximum number of
+			tries, find a different non-processed pixel with the most similar
+			color to the computed average and swap them.
+		</p>
+
+		<p>sRGB is not the best color space for a color difference function. In
+			this demo, I converted the colors to <a href="https://bottosson.github.io/posts/oklab/" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Oklab
+</a> which is much better suited.
+		</p>
+
+		<p>The orientation and result of this effect is a combination of:</p>
+		<ul><li>The algorithm processes pixels from top to bottom. This is not a
+				requirement. I&#39;ve seen vastly cooler versions, such as a radial
+				one and a seemingly noise-based one.
+			</li>
+			<li>Which and how many of the 8 surrounding pixels are being used to
+				compute the color difference. In this demo, I&#39;m using the
+				top-left, top, and left pixels.
+			</li></ul>
+		<div class="demo-container svelte-hhfl1j" id="pixel-sorting-demo"><figure><figcaption class="svelte-hhfl1j">Pixel Sorting</figcaption>
+		<canvas slot="canvas" class="svelte-1wvpccn"></canvas></figure>
+	<fieldset slot="controls"><div class="demo-input-group"><label for="pixel-sorting-samples">Samples: (50)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="pixel-sorting-samples" min="1" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 49.494949494949495%, var(--border-color) 49.494949494949495%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
+	<div class="ranges svelte-7715t9"><span>1</span>
+		<span>100</span></div>
+</div></div>
+
+		<div class="demo-input-group"><label for="pixel-sorting-images">Source</label>
+<select id="pixel-sorting-images"><option default value="/images/starrynight.webp">Starry Night</option><option value="/images/greatwave.webp">Great Wave</option><option value="/images/akira.webp">Akira</option><option value="/images/dragonquest.webp">Dragon Quest</option></select></div>
+
+		<div class="demo-multi-input-group svelte-1wvpccn"><div class="demo-input-group"><button >Start</button></div>
+			<div class="demo-input-group"><button disabled>Pause</button></div>
+			<div class="demo-input-group"><button>Reset</button></div></div></fieldset>
+</div>
+</section>
+</main>
+
+<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
+		
+</a></div>
+	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
+</a>
+		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
+</a></div>
+</div>
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1etztpa">
+			import { start } from "./_app/immutable/start-73a5d68e.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 10],
+					params: {},
+					routeId: "/pixel-sorting",
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1etztpa"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+	</body>
+</html>

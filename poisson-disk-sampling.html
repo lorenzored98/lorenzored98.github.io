@@ -2,22 +2,29 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png?v=2" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-d1a92ec9.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-bca2d51b.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Subtitle-7215ce66.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-876a2798.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-e9d960f3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-26455eca.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-6e9f3ce4.js">
+		<link href="./_app/immutable/assets/_page-0c7d8862.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-04dc0004.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Checkbox-cb995005.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-73a5d68e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a4a97fa6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ff670264.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-309e56f2.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-95021f7c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-1704e081.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-e2e5f627.js"><title>Poisson Disk sampling</title><!-- HEAD_svelte-69xwgb_START --><meta name="description" content="Poisson Disk Sampling in javascript"><meta name="keywords" content="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random"><meta name="author" content="Pepe Lorenzo"><!-- HEAD_svelte-69xwgb_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-0fd2f13e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-3e94c9ab.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-cc357b56.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/math-fcbdfd63.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-abd5cee0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-8f4747ca.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Checkbox-09103b41.js"><title>Poisson Disk sampling</title><!-- HEAD_svelte-69xwgb_START --><meta name="description" content="Poisson Disk Sampling in javascript"><meta name="keywords" content="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random"><meta name="author" content="Pepe Lorenzo"><!-- HEAD_svelte-69xwgb_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -25,8 +32,8 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1yu9zvc"><h1 class="svelte-1yu9zvc">Poisson Disk Sampling</h1>
-	<time datetime="2022-5-28" class="svelte-1yu9zvc">May 28, 2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Poisson Disk Sampling</h1>
+	<time datetime="2022-5-28">28/05/2022</time>
 </div>
 		<p>Poisson Disk Sampling is an algorithm that guarantees that, for
 			every point in an n-dimensional space, the distance between a point
@@ -56,16 +63,22 @@
 			it is to reach millions of iterations.
 		</p>
 
-		<figure class="demo-container svelte-120dcnx"><figcaption class="svelte-120dcnx">Naive Distribution</figcaption>
-	<canvas class="svelte-1vnfqr0"></canvas>
-	<fieldset><div class="demo-input-group"><label for="naive-radius">Radius</label>
-			<input id="naive-radius" type="number" min="20" max="100" value="50"></div>
+		<div class="demo-container svelte-hhfl1j"><figure><figcaption class="svelte-hhfl1j">Naive Distribution</figcaption>
+		<canvas slot="canvas" class="svelte-1625q6c"></canvas></figure>
+	<fieldset slot="controls"><div class="demo-input-group"><label for="naive-radius">Radius</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="naive-radius" min="20" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 37.5%, var(--border-color) 37.5%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
+	<div class="ranges svelte-7715t9"><span>20</span>
+		<span>100</span></div>
+</div></div>
 		<div class="demo-input-group"><label for="naive-samples">Samples</label>
-			<input id="naive-samples" type="number" min="1" max="30" value="30"></div>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="naive-samples" min="1" max="30" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 100%, var(--border-color) 100%, var(--border-color) 100%)" class="svelte-7715t9" value="30"></div>
+	<div class="ranges svelte-7715t9"><span>1</span>
+		<span>30</span></div>
+</div></div>
 
-		<div class="demo-input-group"><button>Run</button></div>
-		<div class="demo-input-group align-end svelte-1vnfqr0"><span>Iterations: 0</span></div></fieldset>
-</figure>
+		<div class="demo-input-group run svelte-1625q6c"><button class="svelte-1625q6c">Run</button>
+			<span>Iterations: 0</span></div></fieldset>
+</div>
 </section>
 
 	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#space-subdivision" id="space-subdivision">Space Subdivision</a>
@@ -90,22 +103,25 @@
 			by the square root of 2.
 		</p>
 
-		<figure class="demo-container svelte-120dcnx"><figcaption class="svelte-120dcnx">Sample Matrix</figcaption>
-	<canvas></canvas>
-	<fieldset><div class="demo-input-group"><label for="matrix-around-radius">Radius</label>
-			<input id="matrix-around-radius" type="number" min="1" max="100" value="50"></div>
+		<div class="demo-container svelte-hhfl1j"><figure><figcaption class="svelte-hhfl1j">Sample Matrix</figcaption>
+		<canvas slot="canvas"></canvas></figure>
+	<fieldset slot="controls"><div class="demo-input-group"><label for="matrix-around-radius">Radius: (50)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="matrix-around-radius" min="30" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 28.57142857142857%, var(--border-color) 28.57142857142857%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
+	<div class="ranges svelte-7715t9"><span>30</span>
+		<span>100</span></div>
+</div></div>
 		<div class="demo-input-group"><label for="matrix-around-corners">Corners</label>
-			<div class="nofill svelte-iu4gfm"><input id="matrix-around-corners" type="checkbox" class="svelte-iu4gfm">
-	<svg xmlns="http://www.w3.org/2000/svg" class="nofill svelte-iu4gfm" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
+			<div class="nofill svelte-goj249"><input id="matrix-around-corners" type="checkbox" class="svelte-goj249">
+	<svg xmlns="http://www.w3.org/2000/svg" class="nofill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div></fieldset>
-</figure>
+</div>
 </section>
 
 	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#algorithm" id="algorithm">The Algorithm</a>
 </h2>
 		<p>There are many different ways to implement Poisson Disk Sampling.
 			I&#39;ve decided to implement the one described by Robert Bridson in his
-			<a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Fast Poisson Disk Sampling in Arbitrary Dimensions
+			<a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Fast Poisson Disk Sampling in Arbitrary Dimensions
 			
 </a> paper, which, as far as I know, is also the most popular
 			one.
@@ -119,18 +135,18 @@
 			and y coordinates to find their index.
 		</p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">side</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">/</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">SQRT2</span><span style="color: #24292F">;</span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">gridW</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(width </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side) </span><span style="color: #CF222E">+</span><span> </span><span style="color: #0550AE">1</span><span style="color: #24292F">;</span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">gridH</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(height </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side) </span><span style="color: #CF222E">+</span><span> </span><span style="color: #0550AE">1</span><span style="color: #24292F">;</span></span>
+		<pre><code><span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">side</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> radius </span><span style="color: #D32F2F">/</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #24292EFF">.</span><span style="color: #1976D2">SQRT2</span><span style="color: #24292EFF">;</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">gridW</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(width </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side) </span><span style="color: #D32F2F">+</span><span> </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">;</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">gridH</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(height </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side) </span><span style="color: #D32F2F">+</span><span> </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">;</span></span>
 <span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">points</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #CF222E">new</span><span> </span><span style="color: #0550AE">Array</span><span style="color: #24292F">(gridW </span><span style="color: #CF222E">*</span><span style="color: #24292F"> gridH).</span><span style="color: #8250DF">fill</span><span style="color: #24292F">(</span><span style="color: #0550AE">null</span><span style="color: #24292F">);</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">points</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #D32F2F">new</span><span> </span><span style="color: #1976D2">Array</span><span style="color: #24292EFF">(gridW </span><span style="color: #D32F2F">*</span><span style="color: #24292EFF"> gridH)</span><span style="color: #6F42C1">.fill</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">null</span><span style="color: #24292EFF">);</span></span>
 <span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">xIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(point[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">yIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(point[</span><span style="color: #0550AE">1</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">xIndex</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(point[</span><span style="color: #1976D2">0</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side);</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">yIndex</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(point[</span><span style="color: #1976D2">1</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side);</span></span>
 <span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">index</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(yIndex </span><span style="color: #CF222E">*</span><span style="color: #24292F"> gridW </span><span style="color: #CF222E">+</span><span style="color: #24292F"> xIndex);</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">index</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(yIndex </span><span style="color: #D32F2F">*</span><span style="color: #24292EFF"> gridW </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> xIndex);</span></span>
 <span></span>
-<span><span style="color: #24292F">points[index] </span><span style="color: #CF222E">=</span><span style="color: #24292F"> point;</span></span>
+<span><span style="color: #24292EFF">points[index] </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> point;</span></span>
 </code></pre>
 
 		<p>The second step is generating a random point inside the space,
@@ -140,7 +156,7 @@
 
 		<p>The &quot;active list&quot; is an array that will help us keep track of which
 			point we are using to generate other random points in its proximity.
-			It works similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">queue
+			It works similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">queue
 </a>, meaning the first point that goes in is also the first point
 			processed.
 		</p>
@@ -149,18 +165,18 @@
 
 		<p>For each point inside the &quot;active list,&quot; we are going to try
 			n-times, where n is our sample variable, to create a random point
-			that has a distance between <code class="inline-code"><span><span style="color: #24292F">r</span></span></code>
-			and <code class="inline-code"><span><span style="color: #24292F">r</span><span style="color: #CF222E">*</span><span style="color: #0550AE">2</span></span></code> from
+			that has a distance between <code class="inline-code"><span><span style="color: #24292EFF">r</span></span></code>
+			and <code class="inline-code"><span><span style="color: #24292EFF">r</span><span style="color: #D32F2F">*</span><span style="color: #1976D2">2</span></span></code> from
 			our &quot;active point&quot;.
 		</p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">r</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">+</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">sqrt</span><span style="color: #24292F">(</span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">random</span><span style="color: #24292F">());</span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">theta</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">random</span><span style="color: #24292F">() </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">PI</span><span> </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">2</span><span style="color: #24292F">;</span></span>
+		<pre><code><span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">r</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> radius </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> radius </span><span style="color: #D32F2F">*</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.sqrt</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.random</span><span style="color: #24292EFF">());</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">theta</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.random</span><span style="color: #24292EFF">() </span><span style="color: #D32F2F">*</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #24292EFF">.</span><span style="color: #1976D2">PI</span><span> </span><span style="color: #D32F2F">*</span><span> </span><span style="color: #1976D2">2</span><span style="color: #24292EFF">;</span></span>
 <span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">newPoint</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> [</span></span>
-<span><span style="color: #24292F">    point[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">+</span><span style="color: #24292F"> r </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">cos</span><span style="color: #24292F">(theta),</span></span>
-<span><span style="color: #24292F">    point[</span><span style="color: #0550AE">1</span><span style="color: #24292F">] </span><span style="color: #CF222E">+</span><span style="color: #24292F"> r </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">sin</span><span style="color: #24292F">(theta),</span></span>
-<span><span style="color: #24292F">];</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">newPoint</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> [</span></span>
+<span><span style="color: #24292EFF">    point[</span><span style="color: #1976D2">0</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> r </span><span style="color: #D32F2F">*</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.cos</span><span style="color: #24292EFF">(theta)</span><span style="color: #212121">,</span></span>
+<span><span style="color: #24292EFF">    point[</span><span style="color: #1976D2">1</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> r </span><span style="color: #D32F2F">*</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.sin</span><span style="color: #24292EFF">(theta)</span><span style="color: #212121">,</span></span>
+<span><span style="color: #24292EFF">];</span></span>
 </code></pre>
 
 		<p>To check if the new point collides, we need to find its cell index.
@@ -172,42 +188,42 @@
 			expensive function, we find if the points collide.
 		</p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">xIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(newPoint[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
-<span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">yIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(newPoint[</span><span style="color: #0550AE">1</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
+		<pre><code><span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">xIndex</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(newPoint[</span><span style="color: #1976D2">0</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side);</span></span>
+<span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">yIndex</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(newPoint[</span><span style="color: #1976D2">1</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">/</span><span style="color: #24292EFF"> side);</span></span>
 <span></span>
-<span><span style="color: #6E7781">/**</span></span>
-<span><span style="color: #6E7781"> * I read that no matter where to point is we just need to look</span></span>
-<span><span style="color: #6E7781"> * at the 5x5 grid around our cell.</span></span>
-<span><span style="color: #6E7781"> * From my understanding it&#39;s not really a 5x5 as I can avoid checking</span></span>
-<span><span style="color: #6E7781"> * the 4 corners</span></span>
-<span><span style="color: #6E7781">*/</span></span>
-<span><span style="color: #CF222E">for</span><span style="color: #24292F"> (</span><span style="color: #CF222E">let</span><span style="color: #24292F"> i </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">0</span><span style="color: #24292F">; i </span><span style="color: #CF222E">&lt;</span><span> </span><span style="color: #0550AE">25</span><span style="color: #24292F">; i</span><span style="color: #CF222E">++</span><span style="color: #24292F">) {</span></span>
-<span><span>    </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">0</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">4</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">20</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">24</span><span style="color: #24292F">) {</span></span>
-<span><span>        </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (</span><span style="color: #CF222E">!</span><span style="color: #24292F">corners) {</span></span>
-<span><span>            </span><span style="color: #CF222E">continue</span><span style="color: #24292F">;</span></span>
-<span><span style="color: #24292F">        }</span></span>
-<span><span style="color: #24292F">    }</span></span>
+<span><span style="color: #C2C3C5">/**</span></span>
+<span><span style="color: #C2C3C5"> * I read that no matter where to point is we just need to look</span></span>
+<span><span style="color: #C2C3C5"> * at the 5x5 grid around our cell.</span></span>
+<span><span style="color: #C2C3C5"> * From my understanding it&#39;s not really a 5x5 as I can avoid checking</span></span>
+<span><span style="color: #C2C3C5"> * the 4 corners</span></span>
+<span><span style="color: #C2C3C5">*/</span></span>
+<span><span style="color: #D32F2F">for</span><span style="color: #24292EFF"> (</span><span style="color: #D32F2F">let</span><span style="color: #24292EFF"> i </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">0</span><span style="color: #24292EFF">; i </span><span style="color: #D32F2F">&lt;</span><span> </span><span style="color: #1976D2">25</span><span style="color: #24292EFF">; i</span><span style="color: #D32F2F">++</span><span style="color: #24292EFF">) {</span></span>
+<span><span>    </span><span style="color: #D32F2F">if</span><span style="color: #24292EFF"> (i </span><span style="color: #D32F2F">===</span><span> </span><span style="color: #1976D2">0</span><span> </span><span style="color: #D32F2F">||</span><span style="color: #24292EFF"> i </span><span style="color: #D32F2F">===</span><span> </span><span style="color: #1976D2">4</span><span> </span><span style="color: #D32F2F">||</span><span style="color: #24292EFF"> i </span><span style="color: #D32F2F">===</span><span> </span><span style="color: #1976D2">20</span><span> </span><span style="color: #D32F2F">||</span><span style="color: #24292EFF"> i </span><span style="color: #D32F2F">===</span><span> </span><span style="color: #1976D2">24</span><span style="color: #24292EFF">) {</span></span>
+<span><span>        </span><span style="color: #D32F2F">if</span><span style="color: #24292EFF"> (</span><span style="color: #D32F2F">!</span><span style="color: #24292EFF">corners) {</span></span>
+<span><span>            </span><span style="color: #D32F2F">continue</span><span style="color: #24292EFF">;</span></span>
+<span><span style="color: #24292EFF">        }</span></span>
+<span><span style="color: #24292EFF">    }</span></span>
 <span></span>
-<span><span>    </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">xDiff</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">((i </span><span style="color: #CF222E">%</span><span> </span><span style="color: #0550AE">5</span><span style="color: #24292F">) </span><span style="color: #CF222E">-</span><span> </span><span style="color: #0550AE">2</span><span style="color: #24292F">);</span></span>
-<span><span>    </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">yDiff</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(i </span><span style="color: #CF222E">/</span><span> </span><span style="color: #0550AE">5</span><span> </span><span style="color: #CF222E">-</span><span> </span><span style="color: #0550AE">2</span><span style="color: #24292F">);</span></span>
+<span><span>    </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">xDiff</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">((i </span><span style="color: #D32F2F">%</span><span> </span><span style="color: #1976D2">5</span><span style="color: #24292EFF">) </span><span style="color: #D32F2F">-</span><span> </span><span style="color: #1976D2">2</span><span style="color: #24292EFF">);</span></span>
+<span><span>    </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">yDiff</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">Math</span><span style="color: #6F42C1">.floor</span><span style="color: #24292EFF">(i </span><span style="color: #D32F2F">/</span><span> </span><span style="color: #1976D2">5</span><span> </span><span style="color: #D32F2F">-</span><span> </span><span style="color: #1976D2">2</span><span style="color: #24292EFF">);</span></span>
 <span></span>
-<span><span>    </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">newIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #8250DF">index2DTo1D</span><span style="color: #24292F">(</span></span>
-<span><span style="color: #24292F">        xIndex </span><span style="color: #CF222E">+</span><span style="color: #24292F"> xDiff,</span></span>
-<span><span style="color: #24292F">        yIndex </span><span style="color: #CF222E">+</span><span style="color: #24292F"> yDiff,</span></span>
-<span><span style="color: #24292F">        gridW</span></span>
-<span><span style="color: #24292F">    );</span></span>
-<span><span>    </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">pointToCheck</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> points[newIndex];</span></span>
+<span><span>    </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">newIndex</span><span> </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #6F42C1">index2DTo1D</span><span style="color: #24292EFF">(</span></span>
+<span><span style="color: #24292EFF">        xIndex </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> xDiff</span><span style="color: #212121">,</span></span>
+<span><span style="color: #24292EFF">        yIndex </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> yDiff</span><span style="color: #212121">,</span></span>
+<span><span style="color: #24292EFF">        gridW</span></span>
+<span><span style="color: #24292EFF">    );</span></span>
+<span><span>    </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">pointToCheck</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> points[newIndex];</span></span>
 <span></span>
-<span><span>    </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (pointToCheck </span><span style="color: #CF222E">!==</span><span> </span><span style="color: #0550AE">null</span><span style="color: #24292F">) {</span></span>
-<span><span>        </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">a</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> pointToCheck[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">-</span><span style="color: #24292F"> newPoint[</span><span style="color: #0550AE">0</span><span style="color: #24292F">];</span></span>
-<span><span>        </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">b</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> pointToCheck[</span><span style="color: #0550AE">1</span><span style="color: #24292F">] </span><span style="color: #CF222E">-</span><span style="color: #24292F"> newPoint[</span><span style="color: #0550AE">1</span><span style="color: #24292F">];</span></span>
-<span><span>        </span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">dSquared</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> a </span><span style="color: #CF222E">*</span><span style="color: #24292F"> a </span><span style="color: #CF222E">+</span><span style="color: #24292F"> b </span><span style="color: #CF222E">*</span><span style="color: #24292F"> b;</span></span>
-<span><span>        </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (dSquared </span><span style="color: #CF222E">&lt;</span><span style="color: #24292F"> rSquared) {</span></span>
-<span><span style="color: #24292F">            collides </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">true</span><span style="color: #24292F">;</span></span>
-<span><span>            </span><span style="color: #CF222E">break</span><span style="color: #24292F">;</span></span>
-<span><span style="color: #24292F">        }</span></span>
-<span><span style="color: #24292F">    }</span></span>
-<span><span style="color: #24292F">}</span></span>
+<span><span>    </span><span style="color: #D32F2F">if</span><span style="color: #24292EFF"> (pointToCheck </span><span style="color: #D32F2F">!==</span><span> </span><span style="color: #1976D2">null</span><span style="color: #24292EFF">) {</span></span>
+<span><span>        </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">a</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> pointToCheck[</span><span style="color: #1976D2">0</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">-</span><span style="color: #24292EFF"> newPoint[</span><span style="color: #1976D2">0</span><span style="color: #24292EFF">];</span></span>
+<span><span>        </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">b</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> pointToCheck[</span><span style="color: #1976D2">1</span><span style="color: #24292EFF">] </span><span style="color: #D32F2F">-</span><span style="color: #24292EFF"> newPoint[</span><span style="color: #1976D2">1</span><span style="color: #24292EFF">];</span></span>
+<span><span>        </span><span style="color: #D32F2F">const</span><span> </span><span style="color: #1976D2">dSquared</span><span> </span><span style="color: #D32F2F">=</span><span style="color: #24292EFF"> a </span><span style="color: #D32F2F">*</span><span style="color: #24292EFF"> a </span><span style="color: #D32F2F">+</span><span style="color: #24292EFF"> b </span><span style="color: #D32F2F">*</span><span style="color: #24292EFF"> b;</span></span>
+<span><span>        </span><span style="color: #D32F2F">if</span><span style="color: #24292EFF"> (dSquared </span><span style="color: #D32F2F">&lt;</span><span style="color: #24292EFF"> rSquared) {</span></span>
+<span><span style="color: #24292EFF">            collides </span><span style="color: #D32F2F">=</span><span> </span><span style="color: #1976D2">true</span><span style="color: #24292EFF">;</span></span>
+<span><span>            </span><span style="color: #D32F2F">break</span><span style="color: #24292EFF">;</span></span>
+<span><span style="color: #24292EFF">        }</span></span>
+<span><span style="color: #24292EFF">    }</span></span>
+<span><span style="color: #24292EFF">}</span></span>
 </code></pre>
 
 		<p>If there is a valid new point, we add it to both the points array
@@ -216,73 +232,76 @@
 		</p>
 
 		<p>Once the queue is empty the algorithm is finished. All that&#39;s left
-			to do is looping through the points array and removing <code class="inline-code"><span><span style="color: #0550AE">null</span></span></code> values since the algorithm does not guarantee that every cell has
+			to do is looping through the points array and removing <code class="inline-code"><span><span style="color: #1976D2">null</span></span></code> values since the algorithm does not guarantee that every cell has
 			a point.
 		</p>
 
-		<figure class="demo-container svelte-120dcnx"><figcaption class="svelte-120dcnx">Poisson Disk Sampling</figcaption>
-	<canvas class="svelte-1vnfqr0"></canvas>
-	<fieldset><div class="demo-input-group"><label for="poisson-radius">Radius</label>
-			<input id="poisson-radius" type="number" min="10" max="100" value="50"></div>
-		<div class="demo-input-group"><label for="poisson-samples">Samples</label>
-			<input id="poisson-samples" type="number" min="1" max="50" value="30"></div>
-
-		<div class="demo-input-group"><label for="poisson-corners">Corners</label>
-			<div class="nofill svelte-iu4gfm"><input id="poisson-corners" type="checkbox" class="svelte-iu4gfm">
-	<svg xmlns="http://www.w3.org/2000/svg" class="nofill svelte-iu4gfm" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
+		<div class="demo-container svelte-hhfl1j"><figure><figcaption class="svelte-hhfl1j">Poisson Disk Sampling</figcaption>
+		<canvas slot="canvas" class="svelte-1625q6c"></canvas></figure>
+	<fieldset slot="controls"><div class="demo-input-group"><label for="poisson-radius">Radius: (50)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-radius" min="10" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 44.44444444444444%, var(--border-color) 44.44444444444444%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
+	<div class="ranges svelte-7715t9"><span>10</span>
+		<span>100</span></div>
+</div></div>
+		<div class="demo-input-group"><label for="poisson-samples">Samples: (30)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-samples" min="1" max="50" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 59.183673469387756%, var(--border-color) 59.183673469387756%, var(--border-color) 100%)" class="svelte-7715t9" value="30"></div>
+	<div class="ranges svelte-7715t9"><span>1</span>
+		<span>50</span></div>
 </div></div>
 
-		<div class="demo-input-group"><label for="poisson-showgrid">Show Grid</label>
-			<div class="fill svelte-iu4gfm"><input id="poisson-showgrid" type="checkbox" class="svelte-iu4gfm" checked>
-	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-iu4gfm" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
+		<div class="demo-multi-input-group"><div class="demo-input-group"><label for="poisson-corners">Corners</label>
+				<div class="nofill svelte-goj249"><input id="poisson-corners" type="checkbox" class="svelte-goj249">
+	<svg xmlns="http://www.w3.org/2000/svg" class="nofill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div>
 
-		<div class="demo-input-group"><label for="poisson-showradius">Show Radius</label>
-			<div class="fill svelte-iu4gfm"><input id="poisson-showradius" type="checkbox" class="svelte-iu4gfm" checked>
-	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-iu4gfm" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
+			<div class="demo-input-group"><label for="poisson-showgrid">Show Grid</label>
+				<div class="fill svelte-goj249"><input id="poisson-showgrid" type="checkbox" class="svelte-goj249" checked>
+	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div>
 
-		<div class="demo-input-group"><button>Run</button></div>
+			<div class="demo-input-group"><label for="poisson-showradius">Show Radius</label>
+				<div class="fill svelte-goj249"><input id="poisson-showradius" type="checkbox" class="svelte-goj249" checked>
+	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
+</div></div></div>
 
-		<div class="demo-input-group align-end svelte-1vnfqr0"><span>Iterations: 0</span></div></fieldset>
-</figure>
+		<div class="demo-input-group run svelte-1625q6c"><button class="svelte-1625q6c">Run</button>
+			<span>Iterations: 0</span></div></fieldset>
+</div>
 
 		<p>The full code for my implementation of Poisson Disk Sampling is
-			available <a href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">here
+			available <a href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">here
 </a>.
 		</p>
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">lorenzopepedev@gmail.com
+<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
 		
 </a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Twitter
+	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
 </a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Github
-</a>
-		<a style="margin-left: 1rem;" href="https://codesandbox.io/u/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-rs4az6">Code
+		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
 </a></div>
 </div>
 </footer>
 
 
-		<script type="module" data-sveltekit-hydrate="ujvz8u">
-			import { start } from "./_app/immutable/start-876a2798.js";
+		<script type="module" data-sveltekit-hydrate="oslpzo">
+			import { start } from "./_app/immutable/start-73a5d68e.js";
 
 			start({
 				env: {},
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 4],
+					node_ids: [0, 11],
 					params: {},
-					routeId: "poisson-disk-sampling",
-					data: (function(a){return [a,a]}(null)),
+					routeId: "/poisson-disk-sampling",
+					data: [null,null],
 					form: null
 				},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="ujvz8u"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="oslpzo"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>

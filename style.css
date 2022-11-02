@@ -1,14 +1,7 @@
 @font-face {
-	src: url("/Merriweather-Bold-Latin.woff2") format("woff2");
-	font-family: "Merriweather";
-	font-weight: 700;
-	font-display: swap;
-}
-
-@font-face {
-	src: url("/Inter-Regular-Latin.woff2") format("woff2");
+	src: url("/Inter-Latin.var.woff2") format("woff2");
 	font-family: "Inter";
-	font-weight: 400;
+	font-weight: 100 900;
 	font-display: swap;
 }
 
@@ -25,7 +18,7 @@
 	box-sizing: border-box;
 	position: relative;
 	font: inherit;
-	color: var(--text-color);
+	color: inherit;
 	border-radius: 0;
 }
 
@@ -38,24 +31,31 @@ a {
 	color: inherit;
 	display: inline-block;
 	font-size: inherit;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a,
 button,
-input[type="checkbox"] {
+input,
+select {
 	cursor: pointer;
+	border-radius: var(--border-radius);
 }
 
 html {
 	font-size: 62.5%;
-	--text-color-bold: rgb(16 16, 16);
-	--text-color: black;
-	--bg-color: rgb(252, 251, 250);
-	--bg-accent: rgb(250, 186, 126);
 	--layout-max-width: 80rem;
-	--outline: 1px solid #37212b;
-	--border: 1px solid #37212b;
-	--code-bg: white;
+	--text: rgb(21, 22, 24);
+	--text-bold: rgb(36, 40, 46);
+	--text-small: rgb(97, 102, 121);
+	--link: rgb(52, 52, 255);
+	--link-highlight: rgb(0, 0, 255);
+	--bg-color: rgb(255, 255, 255);
+	--border-color: #d9e8e0;
+	--border-color-accent: rgb(84, 84, 88);
+	--border: 1px solid var(--border-color);
+	--outline: 1px solid #9c99b3;
+	--border-radius: 4px;
 }
 
 body {
@@ -64,16 +64,16 @@ body {
 	min-height: -webkit-fill-available;
 	font-family: "Inter";
 	font-weight: 400;
-	color: var(--text-color);
+	color: var(--text);
 	outline: none;
 }
 
 h1,
 h2,
 h3 {
-	font-family: "Merriweather";
+	font-family: "Inter";
 	font-weight: 700;
-	color: var(--text-color-bold);
+	color: var(--text-bold);
 }
 
 p,
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2.4rem;
+	font-size: 3rem;
 }
 
 h3 {
@@ -119,12 +119,14 @@ li {
 }
 
 li::marker {
-	color: var(--text-color-bold);
+	color: var(--text-bold);
 }
 
 time {
 	font-size: 1.4rem;
 	font-family: "JetBrainsMono";
+	color: var(--text-small);
+	font-weight: 500;
 }
 
 fieldset {
@@ -142,29 +144,35 @@ pre {
 	overflow-x: auto;
 	margin: 2rem 0 3rem 0;
 	border: var(--border);
-	background-color: var(--code-bg);
 }
 
 code,
 var {
 	font-family: "JetBrainsMono";
 	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 var {
 	padding: 0 0.2rem;
 	border: var(--border);
-	background-color: var(--code-bg);
+	border-radius: var(--border-radius);
+}
+
+blockquote {
+	padding: 1rem 2rem 0 2rem;
+	border: var(--border);
+	border-radius: var(--border-radius);
+	margin-bottom: 1rem;
+}
+
+strong {
+	font-weight: 500;
 }
 
 .inline-code {
 	padding: 0 0.2rem;
 	border: var(--border);
-	background-color: var(--code-bg);
-}
-
-.demo-container {
-	margin: 2rem 0 3rem 0;
 }
 
 /* BLOG DEMOS*/
@@ -172,7 +180,7 @@ var {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: flex-end;
+	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
@@ -181,23 +189,59 @@ var {
 	border: var(--border);
 }
 
+.demo-input-group button,
+input,
+select {
+	height: 3rem;
+}
+
+.demo-multi-input-group {
+	display: flex;
+	flex-direction: row;
+}
+
 .demo-input-group {
 	margin: 1rem 1rem 0 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	padding: 0.4rem;
+	flex-shrink: 0;
 }
 
-.demo-input-group input {
+.demo-input-group input,
+button,
+select {
 	border: var(--border);
+	background-color: transparent;
+}
+
+.demo-input-group input:not([type="range"]),
+button {
 	padding: 0.4rem 1rem;
 }
 
-.demo-input-group button {
-	background-color: var(--bg-accent);
-	border: var(--border);
-	padding: 0.4rem 1rem;
+.demo-input-group button:disabled {
+	cursor: default;
+	background-color: var(--border-color);
+	outline: none;
+}
+
+.demo-input-group button:not(:disabled):hover {
+	border-color: var(--border-color-accent);
+}
+
+.demo-input-group input:hover {
+	border-color: var(--border-color-accent);
+}
+
+.demo-input-group select:hover {
+	border-color: var(--border-color-accent);
+}
+
+.demo-input-group option {
+	background-color: white;
 }
 
 @media screen and (max-width: 760px) and (orientation: landscape) {

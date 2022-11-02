@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_page-7c76b289.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-04dc0004.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-73a5d68e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a4a97fa6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ff670264.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-309e56f2.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/diamond-square/_page.svelte-51d432b6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-3e94c9ab.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-cc357b56.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-abd5cee0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-8f4747ca.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/math-fcbdfd63.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/gl-b37e48a8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/core-2382e8f7.js"><title>Diamond Square</title><!-- HEAD_svelte-69xwgb_START --><meta name="description" content="Generate noise-like patterns using diamond square algorithm"><meta name="keywords" content="Noise, Javascript, Creative Coding, Algorithm, Diamond Square"><meta name="author" content="Pepe Lorenzo"><!-- HEAD_svelte-69xwgb_END -->
+	</head>
+	<body>
+		<div id="app">
+
+
+
+
+<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Diamond Square</h1>
+	<time datetime="2022-5-14">14/05/2022</time>
+</div>
+		<p>Exploring terrain generation algorithms.</p>
+</section>
+
+	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
+</h2>
+
+		<p>From <a href="https://en.wikipedia.org/wiki/Diamond-square_algorithm" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Wikipedia
+</a>:
+		</p>
+
+		<blockquote cite="https://en.wikipedia.org/wiki/Diamond-square_algorithm"><p><strong>The diamond step</strong>: For each square in the array,
+				set the midpoint of that square to be the average of the four
+				corner points plus a random value.
+			</p>
+			<p><strong>The square step</strong>: For each diamond in the array,
+				set the midpoint of that diamond to be the average of the four
+				corner points plus a random value.
+			</p></blockquote>
+
+		<p>Depth is how many times the space is subdivided and variation
+			controls how much a random value can fluctuate.
+		</p>
+		<div class="demo-container svelte-hhfl1j"><figure><figcaption class="svelte-hhfl1j">Diamond Square</figcaption>
+		<canvas slot="canvas" class="svelte-1sfotsa"></canvas></figure>
+	<fieldset slot="controls"><div class="demo-input-group"><label for="depth">Depth: (8)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="depth" min="1" max="10" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 77.77777777777779%, var(--border-color) 77.77777777777779%, var(--border-color) 100%)" class="svelte-7715t9" value="8"></div>
+	<div class="ranges svelte-7715t9"><span>1</span>
+		<span>10</span></div>
+</div></div>
+
+		<div class="demo-input-group"><label for="variation">Variation: (128)</label>
+			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="variation" min="1" max="256" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 49.80392156862745%, var(--border-color) 49.80392156862745%, var(--border-color) 100%)" class="svelte-7715t9" value="128"></div>
+	<div class="ranges svelte-7715t9"><span>1</span>
+		<span>256</span></div>
+</div></div>
+
+		<div class="demo-input-group run svelte-1sfotsa"><button>Run</button></div></fieldset>
+</div>
+</section>
+</main>
+
+<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
+		
+</a></div>
+	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
+</a>
+		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
+</a></div>
+</div>
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="cmy6ki">
+			import { start } from "./_app/immutable/start-73a5d68e.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 6],
+					params: {},
+					routeId: "/diamond-square",
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="cmy6ki"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+	</body>
+</html>

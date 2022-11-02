@@ -1,0 +1,1 @@
+function a(r,n){return r=Math.ceil(r),n=Math.floor(n),Math.floor(Math.random()*(n-r+1)+r)}function o(r,n,t){return r*(1-t)+n*t}function e(r){return r>=.04045?Math.pow((r+.055)/(1+.055),2.4):r/12.92}export{e as g,o as l,a as r};
