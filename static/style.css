@@ -159,6 +159,17 @@ var {
 	border-radius: var(--border-radius);
 }
 
+blockquote {
+	padding: 1rem 2rem 0 2rem;
+	border: var(--border);
+	border-radius: var(--border-radius);
+	margin-bottom: 1rem;
+}
+
+strong {
+	font-weight: 500;
+}
+
 .inline-code {
 	padding: 0 0.2rem;
 	border: var(--border);
