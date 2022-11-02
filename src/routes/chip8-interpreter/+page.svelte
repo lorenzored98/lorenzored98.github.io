@@ -16,7 +16,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1652500800}>CHIP-8 Interpreter</Title>
+		<Title timestamp={1655577363}>CHIP-8 Interpreter</Title>
 		<p>I wanted to code a NES emulator but here we are.</p>
 	</Section>
 
