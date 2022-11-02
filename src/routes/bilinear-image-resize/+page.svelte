@@ -32,7 +32,7 @@
 		<p>
 			I'm not sure if this is what happens by default when using <var
 				>ctx.drawImage()</var
-			> and source and target sizes differ. The result looks similar though.
+			> and source and target sizes differ. The result looks similar.
 		</p>
 		<p>
 			There are jagged edges when resizing because there is no
