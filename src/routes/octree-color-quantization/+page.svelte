@@ -1,0 +1,38 @@
+<script>
+	import Title from "$lib/Title.svelte";
+	import Subtitle from "$lib/Subtitle.svelte";
+	import Section from "$lib/Section.svelte";
+	import Main from "$lib/Main.svelte";
+	import Footer from "$lib/Footer.svelte";
+	import Seo from "$lib/Seo.svelte";
+	import OctreeColorQuantization from "./OctreeColorQuantization.svelte";
+</script>
+
+<Seo
+	title="Octree Color Quantization"
+	description="Using an octree to color quantize an image"
+	keywords="Octree, Javascript, Image Processing, Quantization, Canvas2D"
+/>
+
+<Main>
+	<Section>
+		<Title timestamp={1652328000}>Octree Color Quantization</Title>
+		<p>A color matrioska.</p>
+	</Section>
+
+	<Section>
+		<Subtitle id="demo">Demo</Subtitle>
+		<p>
+			To get an idea on how this work. Imagine an Octree as a cube. We can
+			insert a rgb color by using each individual channel as a position.
+			The r channel is the x coordiante, g is y and b is z.
+		</p>
+		<p>
+			Then you have to pick the smallest possible sub cube that contains
+			the amount of colors specified in the <var>quantization</var> function.
+		</p>
+		<OctreeColorQuantization />
+	</Section>
+</Main>
+
+<Footer />
