@@ -26,7 +26,7 @@
 	</Section>
 
 	<Section>
-		<Subtitle id="details">Details</Subtitle>
+		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			For every pixel in the image, compute the average color of the
