@@ -112,7 +112,7 @@
 			<NumberRange
 				id="naive-radius"
 				bind:value={_radius}
-				on:input={main}
+				onChange={main}
 				min={minRadius}
 				max={100}
 			/>
@@ -122,7 +122,7 @@
 			<NumberRange
 				id="naive-samples"
 				bind:value={_samples}
-				on:input={main}
+				onChange={main}
 				min={minSamples}
 				max={30}
 			/>
