@@ -43,9 +43,8 @@
 			page, I decided to cap it to a maximum value which is always smaller
 			or equal to the original image.
 		</p>
+		<BilinearImageResize />
 	</Section>
-
-	<BilinearImageResize />
 </Main>
 
 <Footer />

@@ -50,9 +50,8 @@
 			Depth is how many times the space is subdivided and variation
 			controls how much a random value can fluctuate.
 		</p>
+		<DiamondSquare />
 	</Section>
-
-	<DiamondSquare />
 </Main>
 
 <Footer />

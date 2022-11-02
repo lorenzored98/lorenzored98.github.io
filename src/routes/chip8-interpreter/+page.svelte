@@ -29,9 +29,8 @@
 		</p>
 		<p>Didn't implement audio.</p>
 		<p>Breakout demo: use <var>q</var> and <var>e</var> to move.</p>
+		<CHIP8Interpreter />
 	</Section>
-
-	<CHIP8Interpreter />
 </Main>
 
 <Footer />

@@ -38,9 +38,8 @@
 			originally did this using Canvas2D so it retained some of the
 			quirks.
 		</p>
+		<MidpointDisplacement />
 	</Section>
-
-	<MidpointDisplacement />
 </Main>
 
 <Footer />

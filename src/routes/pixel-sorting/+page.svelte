@@ -55,9 +55,8 @@
 				top-left, top, and left pixels.
 			</li>
 		</ul>
+		<PixelSorting />
 	</Section>
-
-	<PixelSorting />
 </Main>
 
 <Footer />
