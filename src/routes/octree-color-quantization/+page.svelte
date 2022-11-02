@@ -23,9 +23,9 @@
 	<Section>
 		<Subtitle id="demo">Demo</Subtitle>
 		<p>
-			To get an idea on how this work. Imagine an Octree as a cube. We can
-			insert a rgb color by using each individual channel as a position.
-			The r channel is the x coordiante, g is y and b is z.
+			To get an idea on how this work. Imagine an Octree as an xyz axes
+			plot. We can insert a rgb color by using each individual channel as
+			a position. The r channel is the x coordiante, g is y and b is z.
 		</p>
 		<p>
 			Then you have to pick the smallest possible sub cube that contains
