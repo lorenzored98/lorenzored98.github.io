@@ -22,7 +22,7 @@
 	border-radius: 0;
 }
 
-*:focus {
+*:focus-visible {
 	outline: var(--outline);
 }
 
