@@ -76,38 +76,83 @@ export function createTexture(
 		_minFilter = gl[mipmaps];
 	}
 
-	const image = new Image();
-	image.crossOrigin = "anonymous";
-	image.src = src;
-
-	image.onload = () => {
-		useTexture(gl, texture, id);
-
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, _wrapS);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, _wrapT);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, _minFilter);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, _magFilter);
-
-		gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, flipY);
-
-		gl.texImage2D(
-			gl.TEXTURE_2D,
-			0,
-			_internalFormat,
-			image.width,
-			image.height,
-			0,
+	if (typeof src === "string") {
+		const image = new Image();
+		image.crossOrigin = "anonymous";
+		image.src = src;
+		image.onload = () =>
+			genImage(
+				gl,
+				texture,
+				id,
+				image,
+				_target,
+				_internalFormat,
+				_wrapS,
+				_wrapT,
+				_minFilter,
+				_magFilter,
+				mipmaps,
+				flipY
+			);
+	} else if (src instanceof Image) {
+		genImage(
+			gl,
+			texture,
+			id,
+			src,
 			_target,
-			gl.UNSIGNED_BYTE,
-			image
+			_internalFormat,
+			_wrapS,
+			_wrapT,
+			_minFilter,
+			_magFilter,
+			mipmaps,
+			flipY
 		);
-
-		if (mipmaps) {
-			gl.generateMipmap(gl.TEXTURE_2D);
-		}
-	};
+	}
 
 	return { id, value: texture };
+}
+
+function genImage(
+	gl,
+	texture,
+	id,
+	image,
+	target,
+	internalFormat,
+	wrapS,
+	wrapT,
+	minFilter,
+	magFilter,
+	mipmaps,
+	flipY
+) {
+	useTexture(gl, texture, id);
+
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, wrapS);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrapT);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, minFilter);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, magFilter);
+
+	gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, flipY);
+
+	gl.texImage2D(
+		gl.TEXTURE_2D,
+		0,
+		internalFormat,
+		image.width,
+		image.height,
+		0,
+		target,
+		gl.UNSIGNED_BYTE,
+		image
+	);
+
+	if (mipmaps) {
+		gl.generateMipmap(gl.TEXTURE_2D);
+	}
 }
 
 export function useTexture(gl, texture, id) {
