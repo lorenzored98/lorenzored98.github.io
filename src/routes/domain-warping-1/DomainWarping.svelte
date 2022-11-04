@@ -102,7 +102,7 @@
 		ebo = gl.createBuffer();
 
 		grad = createTexture(gl, {
-			src: "/images/domain-warping1/grad.png",
+			src: "/domain-warping1/grad.png",
 			internalFormat: "rgb",
 			target: "rgb",
 		});
