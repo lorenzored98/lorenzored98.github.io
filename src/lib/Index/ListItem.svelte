@@ -32,23 +32,16 @@
 
 	li:focus-within {
 		outline: var(--outline);
-	}
-
-	li:focus-within a {
 		color: black;
 	}
 
-	li:focus-within .dot {
+	li:hover {
 		color: black;
 	}
 
 	a {
 		outline: none;
 		text-decoration: underline;
-	}
-
-	a:hover {
-		color: black;
 	}
 
 	h3 {
