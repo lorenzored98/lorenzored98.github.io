@@ -67,6 +67,7 @@
 			w = canvas.clientWidth;
 			h = Math.floor(w * aspect);
 
+			canvas.style.width = w + "px";
 			canvas.style.height = h + "px";
 
 			w *= dpr;
