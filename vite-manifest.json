@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-f639755a.js",
+    "file": "_app/immutable/start-f1d9b1bc.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_singletons-8fba3503.js"
+      "_index-eac81cc4.js",
+      "_singletons-41402495.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -20,50 +20,51 @@
       ".svelte-kit/generated/nodes/9.js",
       ".svelte-kit/generated/nodes/10.js",
       ".svelte-kit/generated/nodes/11.js",
-      ".svelte-kit/generated/nodes/12.js"
+      ".svelte-kit/generated/nodes/12.js",
+      ".svelte-kit/generated/nodes/13.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-309e56f2.js",
+    "file": "_app/immutable/components/layout.svelte-b2be64a9.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-1349f636.js",
+    "file": "_app/immutable/components/error.svelte-89763e1d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_singletons-8fba3503.js"
+      "_index-eac81cc4.js",
+      "_singletons-41402495.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-6c5845fe.js",
+    "file": "_app/immutable/components/pages/_page.svelte-e2f7d6ad.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js"
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js"
     ],
     "css": [
       "_app/immutable/assets/_page-22f2be2e.css"
     ]
   },
   "src/routes/2d-midpoint-displacement/+page.svelte": {
-    "file": "_app/immutable/components/pages/2d-midpoint-displacement/_page.svelte-b45768e1.js",
+    "file": "_app/immutable/components/pages/2d-midpoint-displacement/_page.svelte-671d3ab8.js",
     "src": "src/routes/2d-midpoint-displacement/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Footer-cc357b56.js",
-      "_Seo-3e94c9ab.js",
-      "_DemoContainer-abd5cee0.js",
-      "_NumberRange-8f4747ca.js",
+      "_index-eac81cc4.js",
+      "_Footer-e049357b.js",
+      "_Seo-593c0eb7.js",
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
       "_math-fcbdfd63.js",
-      "_gl-b37e48a8.js",
+      "_gl-055e8196.js",
       "_core-2382e8f7.js"
     ],
     "css": [
@@ -71,17 +72,17 @@
     ]
   },
   "src/routes/bilinear-image-resize/+page.svelte": {
-    "file": "_app/immutable/components/pages/bilinear-image-resize/_page.svelte-5db171f4.js",
+    "file": "_app/immutable/components/pages/bilinear-image-resize/_page.svelte-00a3a1cb.js",
     "src": "src/routes/bilinear-image-resize/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
-      "_DemoContainer-abd5cee0.js",
-      "_ImageSelect-6b6f6191.js",
-      "_NumberRange-8f4747ca.js",
-      "_Checkbox-09103b41.js",
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
+      "_DemoContainer-367e056c.js",
+      "_ImageSelect-28d0b1be.js",
+      "_NumberRange-2f6f0500.js",
+      "_Checkbox-2f8ff9e2.js",
       "_math-fcbdfd63.js"
     ],
     "css": [
@@ -89,31 +90,31 @@
     ]
   },
   "src/routes/chip8-interpreter/+page.svelte": {
-    "file": "_app/immutable/components/pages/chip8-interpreter/_page.svelte-a6ce59f6.js",
+    "file": "_app/immutable/components/pages/chip8-interpreter/_page.svelte-ebdad710.js",
     "src": "src/routes/chip8-interpreter/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Footer-cc357b56.js",
-      "_Seo-3e94c9ab.js",
-      "_DemoContainer-abd5cee0.js"
+      "_index-eac81cc4.js",
+      "_Footer-e049357b.js",
+      "_Seo-593c0eb7.js",
+      "_DemoContainer-367e056c.js"
     ],
     "css": [
       "_app/immutable/assets/_page-9f1a508a.css"
     ]
   },
   "src/routes/diamond-square/+page.svelte": {
-    "file": "_app/immutable/components/pages/diamond-square/_page.svelte-51d432b6.js",
+    "file": "_app/immutable/components/pages/diamond-square/_page.svelte-27c04265.js",
     "src": "src/routes/diamond-square/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
-      "_DemoContainer-abd5cee0.js",
-      "_NumberRange-8f4747ca.js",
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
       "_math-fcbdfd63.js",
-      "_gl-b37e48a8.js",
+      "_gl-055e8196.js",
       "_core-2382e8f7.js"
     ],
     "css": [
@@ -121,42 +122,58 @@
     ]
   },
   "src/routes/domain-warping-1/+page.svelte": {
-    "file": "_app/immutable/components/pages/domain-warping-1/_page.svelte-ce2361a5.js",
+    "file": "_app/immutable/components/pages/domain-warping-1/_page.svelte-3a059d20.js",
     "src": "src/routes/domain-warping-1/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
-      "_DemoContainer-abd5cee0.js",
-      "_NumberRange-8f4747ca.js",
-      "_gl-b37e48a8.js"
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
+      "_gl-055e8196.js"
     ],
     "css": [
       "_app/immutable/assets/_page-53fdd47f.css"
     ]
   },
   "src/routes/github-pages-action/+page.svelte": {
-    "file": "_app/immutable/components/pages/github-pages-action/_page.svelte-207f398c.js",
+    "file": "_app/immutable/components/pages/github-pages-action/_page.svelte-05d8b301.js",
     "src": "src/routes/github-pages-action/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js"
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js"
+    ]
+  },
+  "src/routes/lut/+page.svelte": {
+    "file": "_app/immutable/components/pages/lut/_page.svelte-95eafa22.js",
+    "src": "src/routes/lut/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
+      "_gl-055e8196.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-2b137509.css"
     ]
   },
   "src/routes/octree-color-quantization/+page.svelte": {
-    "file": "_app/immutable/components/pages/octree-color-quantization/_page.svelte-dad2b651.js",
+    "file": "_app/immutable/components/pages/octree-color-quantization/_page.svelte-fb91d9e8.js",
     "src": "src/routes/octree-color-quantization/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Footer-cc357b56.js",
-      "_Seo-3e94c9ab.js",
-      "_DemoContainer-abd5cee0.js",
-      "_ImageSelect-6b6f6191.js",
-      "_NumberRange-8f4747ca.js",
+      "_index-eac81cc4.js",
+      "_Footer-e049357b.js",
+      "_Seo-593c0eb7.js",
+      "_DemoContainer-367e056c.js",
+      "_ImageSelect-28d0b1be.js",
+      "_NumberRange-2f6f0500.js",
       "_core-2382e8f7.js"
     ],
     "css": [
@@ -164,51 +181,51 @@
     ]
   },
   "src/routes/pixel-sorting/+page.svelte": {
-    "file": "_app/immutable/components/pages/pixel-sorting/_page.svelte-eebde5a5.js",
+    "file": "_app/immutable/components/pages/pixel-sorting/_page.svelte-5b992593.js",
     "src": "src/routes/pixel-sorting/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
       "_math-fcbdfd63.js",
-      "_DemoContainer-abd5cee0.js",
-      "_NumberRange-8f4747ca.js",
-      "_ImageSelect-6b6f6191.js"
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
+      "_ImageSelect-28d0b1be.js"
     ],
     "css": [
       "_app/immutable/assets/_page-3fc388c2.css"
     ]
   },
   "src/routes/poisson-disk-sampling/+page.svelte": {
-    "file": "_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-0fd2f13e.js",
+    "file": "_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-60957c63.js",
     "src": "src/routes/poisson-disk-sampling/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
       "_math-fcbdfd63.js",
-      "_DemoContainer-abd5cee0.js",
-      "_NumberRange-8f4747ca.js",
-      "_Checkbox-09103b41.js"
+      "_DemoContainer-367e056c.js",
+      "_NumberRange-2f6f0500.js",
+      "_Checkbox-2f8ff9e2.js"
     ],
     "css": [
       "_app/immutable/assets/_page-0c7d8862.css"
     ]
   },
   "src/routes/quadtree-image-compression/+page.svelte": {
-    "file": "_app/immutable/components/pages/quadtree-image-compression/_page.svelte-0a7db219.js",
+    "file": "_app/immutable/components/pages/quadtree-image-compression/_page.svelte-2d115da0.js",
     "src": "src/routes/quadtree-image-compression/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js",
-      "_Footer-cc357b56.js",
-      "_DemoContainer-abd5cee0.js",
-      "_ImageSelect-6b6f6191.js",
-      "_NumberRange-8f4747ca.js",
-      "_Checkbox-09103b41.js",
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js",
+      "_Footer-e049357b.js",
+      "_DemoContainer-367e056c.js",
+      "_ImageSelect-28d0b1be.js",
+      "_NumberRange-2f6f0500.js",
+      "_Checkbox-2f8ff9e2.js",
       "_core-2382e8f7.js"
     ],
     "css": [
@@ -223,50 +240,50 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-8fba3503.js": {
-    "file": "_app/immutable/chunks/singletons-8fba3503.js",
+  "_singletons-41402495.js": {
+    "file": "_app/immutable/chunks/singletons-41402495.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ]
   },
-  "_index-a4a97fa6.js": {
-    "file": "_app/immutable/chunks/index-a4a97fa6.js"
+  "_index-eac81cc4.js": {
+    "file": "_app/immutable/chunks/index-eac81cc4.js"
   },
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
-  "_Seo-3e94c9ab.js": {
-    "file": "_app/immutable/chunks/Seo-3e94c9ab.js",
+  "_Seo-593c0eb7.js": {
+    "file": "_app/immutable/chunks/Seo-593c0eb7.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ],
     "css": [
       "_app/immutable/assets/Seo-e99f0078.css"
     ]
   },
-  "_Footer-cc357b56.js": {
-    "file": "_app/immutable/chunks/Footer-cc357b56.js",
+  "_Footer-e049357b.js": {
+    "file": "_app/immutable/chunks/Footer-e049357b.js",
     "imports": [
-      "_index-a4a97fa6.js",
-      "_Seo-3e94c9ab.js"
+      "_index-eac81cc4.js",
+      "_Seo-593c0eb7.js"
     ],
     "css": [
       "_app/immutable/assets/Footer-4e080589.css"
     ]
   },
-  "_DemoContainer-abd5cee0.js": {
-    "file": "_app/immutable/chunks/DemoContainer-abd5cee0.js",
+  "_DemoContainer-367e056c.js": {
+    "file": "_app/immutable/chunks/DemoContainer-367e056c.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ],
     "css": [
-      "_app/immutable/assets/DemoContainer-04dc0004.css"
+      "_app/immutable/assets/DemoContainer-ec9d78b9.css"
     ]
   },
-  "_NumberRange-8f4747ca.js": {
-    "file": "_app/immutable/chunks/NumberRange-8f4747ca.js",
+  "_NumberRange-2f6f0500.js": {
+    "file": "_app/immutable/chunks/NumberRange-2f6f0500.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ],
     "css": [
       "_app/immutable/assets/NumberRange-c777d2cc.css"
@@ -275,29 +292,29 @@
   "_math-fcbdfd63.js": {
     "file": "_app/immutable/chunks/math-fcbdfd63.js"
   },
-  "_gl-b37e48a8.js": {
-    "file": "_app/immutable/chunks/gl-b37e48a8.js"
+  "_gl-055e8196.js": {
+    "file": "_app/immutable/chunks/gl-055e8196.js"
   },
   "_core-2382e8f7.js": {
     "file": "_app/immutable/chunks/core-2382e8f7.js"
   },
-  "_ImageSelect-6b6f6191.js": {
-    "file": "_app/immutable/chunks/ImageSelect-6b6f6191.js",
+  "_ImageSelect-28d0b1be.js": {
+    "file": "_app/immutable/chunks/ImageSelect-28d0b1be.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ]
   },
-  "_Checkbox-09103b41.js": {
-    "file": "_app/immutable/chunks/Checkbox-09103b41.js",
+  "_Checkbox-2f8ff9e2.js": {
+    "file": "_app/immutable/chunks/Checkbox-2f8ff9e2.js",
     "imports": [
-      "_index-a4a97fa6.js"
+      "_index-eac81cc4.js"
     ],
     "css": [
       "_app/immutable/assets/Checkbox-cb995005.css"
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-62e61df2.js",
+    "file": "_app/immutable/chunks/0-dc12cb32.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -306,7 +323,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-cafa3cd0.js",
+    "file": "_app/immutable/chunks/1-15a14d35.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -314,7 +331,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-f555e109.js",
+    "file": "_app/immutable/chunks/2-36c94857.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -322,7 +339,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-a21ff691.js",
+    "file": "_app/immutable/chunks/3-f34f5b8e.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -330,7 +347,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-1e35cc7f.js",
+    "file": "_app/immutable/chunks/4-81f5ad89.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -338,7 +355,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-784a842f.js",
+    "file": "_app/immutable/chunks/5-aa3d19d2.js",
     "src": ".svelte-kit/generated/nodes/5.js",
     "isDynamicEntry": true,
     "imports": [
@@ -346,7 +363,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-d710733a.js",
+    "file": "_app/immutable/chunks/6-e9fd45f5.js",
     "src": ".svelte-kit/generated/nodes/6.js",
     "isDynamicEntry": true,
     "imports": [
@@ -354,7 +371,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-c806f4c3.js",
+    "file": "_app/immutable/chunks/7-139f53d5.js",
     "src": ".svelte-kit/generated/nodes/7.js",
     "isDynamicEntry": true,
     "imports": [
@@ -362,7 +379,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/8.js": {
-    "file": "_app/immutable/chunks/8-0cba23a4.js",
+    "file": "_app/immutable/chunks/8-248769e5.js",
     "src": ".svelte-kit/generated/nodes/8.js",
     "isDynamicEntry": true,
     "imports": [
@@ -370,32 +387,40 @@
     ]
   },
   ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-e55d1752.js",
+    "file": "_app/immutable/chunks/9-7ea4f23e.js",
     "src": ".svelte-kit/generated/nodes/9.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/lut/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/10.js": {
+    "file": "_app/immutable/chunks/10-d77f6c13.js",
+    "src": ".svelte-kit/generated/nodes/10.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/octree-color-quantization/+page.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/10.js": {
-    "file": "_app/immutable/chunks/10-d1f03b71.js",
-    "src": ".svelte-kit/generated/nodes/10.js",
+  ".svelte-kit/generated/nodes/11.js": {
+    "file": "_app/immutable/chunks/11-d5a1eb88.js",
+    "src": ".svelte-kit/generated/nodes/11.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/pixel-sorting/+page.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/11.js": {
-    "file": "_app/immutable/chunks/11-b5d355f8.js",
-    "src": ".svelte-kit/generated/nodes/11.js",
+  ".svelte-kit/generated/nodes/12.js": {
+    "file": "_app/immutable/chunks/12-4f767594.js",
+    "src": ".svelte-kit/generated/nodes/12.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/poisson-disk-sampling/+page.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/12.js": {
-    "file": "_app/immutable/chunks/12-77895007.js",
-    "src": ".svelte-kit/generated/nodes/12.js",
+  ".svelte-kit/generated/nodes/13.js": {
+    "file": "_app/immutable/chunks/13-935fbb29.js",
+    "src": ".svelte-kit/generated/nodes/13.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/quadtree-image-compression/+page.svelte"
@@ -405,33 +430,17 @@
     "file": "_app/immutable/assets/_page-22f2be2e.css",
     "src": "src/routes/+page.css"
   },
-  "DemoContainer.css": {
-    "file": "_app/immutable/assets/DemoContainer-04dc0004.css",
-    "src": "DemoContainer.css"
-  },
-  "Seo.css": {
-    "file": "_app/immutable/assets/Seo-e99f0078.css",
-    "src": "Seo.css"
-  },
-  "src/routes/diamond-square/+page.css": {
+  "src/routes/2d-midpoint-displacement/+page.css": {
     "file": "_app/immutable/assets/_page-7c76b289.css",
-    "src": "src/routes/diamond-square/+page.css"
+    "src": "src/routes/2d-midpoint-displacement/+page.css"
   },
-  "Footer.css": {
-    "file": "_app/immutable/assets/Footer-4e080589.css",
-    "src": "Footer.css"
+  "NumberRange.css": {
+    "file": "_app/immutable/assets/NumberRange-c777d2cc.css",
+    "src": "NumberRange.css"
   },
-  "src/routes/bilinear-image-resize/+page.css": {
+  "src/routes/quadtree-image-compression/+page.css": {
     "file": "_app/immutable/assets/_page-53fdd47f.css",
-    "src": "src/routes/bilinear-image-resize/+page.css"
-  },
-  "src/routes/pixel-sorting/+page.css": {
-    "file": "_app/immutable/assets/_page-3fc388c2.css",
-    "src": "src/routes/pixel-sorting/+page.css"
-  },
-  "src/routes/poisson-disk-sampling/+page.css": {
-    "file": "_app/immutable/assets/_page-0c7d8862.css",
-    "src": "src/routes/poisson-disk-sampling/+page.css"
+    "src": "src/routes/quadtree-image-compression/+page.css"
   },
   "Checkbox.css": {
     "file": "_app/immutable/assets/Checkbox-cb995005.css",
@@ -441,8 +450,28 @@
     "file": "_app/immutable/assets/_page-9f1a508a.css",
     "src": "src/routes/chip8-interpreter/+page.css"
   },
-  "NumberRange.css": {
-    "file": "_app/immutable/assets/NumberRange-c777d2cc.css",
-    "src": "NumberRange.css"
+  "src/routes/pixel-sorting/+page.css": {
+    "file": "_app/immutable/assets/_page-3fc388c2.css",
+    "src": "src/routes/pixel-sorting/+page.css"
+  },
+  "Seo.css": {
+    "file": "_app/immutable/assets/Seo-e99f0078.css",
+    "src": "Seo.css"
+  },
+  "Footer.css": {
+    "file": "_app/immutable/assets/Footer-4e080589.css",
+    "src": "Footer.css"
+  },
+  "src/routes/poisson-disk-sampling/+page.css": {
+    "file": "_app/immutable/assets/_page-0c7d8862.css",
+    "src": "src/routes/poisson-disk-sampling/+page.css"
+  },
+  "DemoContainer.css": {
+    "file": "_app/immutable/assets/DemoContainer-ec9d78b9.css",
+    "src": "DemoContainer.css"
+  },
+  "src/routes/lut/+page.css": {
+    "file": "_app/immutable/assets/_page-2b137509.css",
+    "src": "src/routes/lut/+page.css"
   }
 }
