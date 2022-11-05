@@ -112,7 +112,7 @@
 		<Subtitle id="shader-lookup">Shader Lookup</Subtitle>
 		<p>
 			For those who have to support WebGL1, or for whatever reason don't
-			want to use a 3D texture there is a way of doing it inside a
+			want to use a 3D texture, there is a way of doing it inside a
 			fragment shader.
 		</p>
 
