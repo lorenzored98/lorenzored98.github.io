@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-f1d9b1bc.js",
+    "file": "_app/immutable/start-a77c68aa.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-eac81cc4.js",
-      "_singletons-41402495.js"
+      "_singletons-9ccb4c26.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -33,12 +33,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-89763e1d.js",
+    "file": "_app/immutable/components/error.svelte-6bfc6c36.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-eac81cc4.js",
-      "_singletons-41402495.js"
+      "_singletons-9ccb4c26.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -148,7 +148,7 @@
     ]
   },
   "src/routes/lut/+page.svelte": {
-    "file": "_app/immutable/components/pages/lut/_page.svelte-95eafa22.js",
+    "file": "_app/immutable/components/pages/lut/_page.svelte-e2035621.js",
     "src": "src/routes/lut/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -240,8 +240,8 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-41402495.js": {
-    "file": "_app/immutable/chunks/singletons-41402495.js",
+  "_singletons-9ccb4c26.js": {
+    "file": "_app/immutable/chunks/singletons-9ccb4c26.js",
     "imports": [
       "_index-eac81cc4.js"
     ]
@@ -323,7 +323,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-15a14d35.js",
+    "file": "_app/immutable/chunks/1-cc659bb5.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -387,7 +387,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-7ea4f23e.js",
+    "file": "_app/immutable/chunks/9-631fe9c5.js",
     "src": ".svelte-kit/generated/nodes/9.js",
     "isDynamicEntry": true,
     "imports": [
@@ -430,48 +430,48 @@
     "file": "_app/immutable/assets/_page-22f2be2e.css",
     "src": "src/routes/+page.css"
   },
-  "src/routes/2d-midpoint-displacement/+page.css": {
-    "file": "_app/immutable/assets/_page-7c76b289.css",
-    "src": "src/routes/2d-midpoint-displacement/+page.css"
-  },
-  "NumberRange.css": {
-    "file": "_app/immutable/assets/NumberRange-c777d2cc.css",
-    "src": "NumberRange.css"
-  },
-  "src/routes/quadtree-image-compression/+page.css": {
+  "src/routes/bilinear-image-resize/+page.css": {
     "file": "_app/immutable/assets/_page-53fdd47f.css",
-    "src": "src/routes/quadtree-image-compression/+page.css"
-  },
-  "Checkbox.css": {
-    "file": "_app/immutable/assets/Checkbox-cb995005.css",
-    "src": "Checkbox.css"
+    "src": "src/routes/bilinear-image-resize/+page.css"
   },
   "src/routes/chip8-interpreter/+page.css": {
     "file": "_app/immutable/assets/_page-9f1a508a.css",
     "src": "src/routes/chip8-interpreter/+page.css"
   },
+  "src/routes/2d-midpoint-displacement/+page.css": {
+    "file": "_app/immutable/assets/_page-7c76b289.css",
+    "src": "src/routes/2d-midpoint-displacement/+page.css"
+  },
+  "src/routes/lut/+page.css": {
+    "file": "_app/immutable/assets/_page-2b137509.css",
+    "src": "src/routes/lut/+page.css"
+  },
   "src/routes/pixel-sorting/+page.css": {
     "file": "_app/immutable/assets/_page-3fc388c2.css",
     "src": "src/routes/pixel-sorting/+page.css"
-  },
-  "Seo.css": {
-    "file": "_app/immutable/assets/Seo-e99f0078.css",
-    "src": "Seo.css"
-  },
-  "Footer.css": {
-    "file": "_app/immutable/assets/Footer-4e080589.css",
-    "src": "Footer.css"
   },
   "src/routes/poisson-disk-sampling/+page.css": {
     "file": "_app/immutable/assets/_page-0c7d8862.css",
     "src": "src/routes/poisson-disk-sampling/+page.css"
   },
+  "Footer.css": {
+    "file": "_app/immutable/assets/Footer-4e080589.css",
+    "src": "Footer.css"
+  },
+  "NumberRange.css": {
+    "file": "_app/immutable/assets/NumberRange-c777d2cc.css",
+    "src": "NumberRange.css"
+  },
+  "Seo.css": {
+    "file": "_app/immutable/assets/Seo-e99f0078.css",
+    "src": "Seo.css"
+  },
+  "Checkbox.css": {
+    "file": "_app/immutable/assets/Checkbox-cb995005.css",
+    "src": "Checkbox.css"
+  },
   "DemoContainer.css": {
     "file": "_app/immutable/assets/DemoContainer-ec9d78b9.css",
     "src": "DemoContainer.css"
-  },
-  "src/routes/lut/+page.css": {
-    "file": "_app/immutable/assets/_page-2b137509.css",
-    "src": "src/routes/lut/+page.css"
   }
 }
