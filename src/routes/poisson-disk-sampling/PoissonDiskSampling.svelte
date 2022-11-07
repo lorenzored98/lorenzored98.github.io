@@ -222,7 +222,6 @@
 		window.addEventListener("resize", resize, { passive: true });
 
 		resize();
-		main();
 
 		return () => {
 			window.removeEventListener("resize", resize);

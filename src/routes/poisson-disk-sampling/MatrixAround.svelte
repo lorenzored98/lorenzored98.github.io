@@ -39,8 +39,6 @@
 	}
 
 	function visualize() {
-		if (!ctx) return;
-
 		const radius = Math.max(minRadius, Number(_radius));
 		const size = radius / Math.SQRT2;
 
@@ -182,7 +180,6 @@
 		window.addEventListener("resize", resize, { passive: true });
 
 		resize();
-		main();
 
 		function pointerMove(e) {
 			pointerX = Math.max(0, e.offsetX * dpr);

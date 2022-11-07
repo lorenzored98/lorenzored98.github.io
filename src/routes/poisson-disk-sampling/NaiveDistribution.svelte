@@ -20,8 +20,6 @@
 	let iterations = 0;
 
 	function main() {
-		if (!ctx) return;
-
 		const radius = Math.max(minRadius, Number(_radius));
 		const samples = Math.max(minSamples, Number(_samples));
 		const size = radius / Math.SQRT2;
@@ -98,7 +96,6 @@
 		window.addEventListener("resize", resize, { passive: true });
 
 		resize();
-		main();
 
 		return () => window.removeEventListener("resize", resize);
 	});
