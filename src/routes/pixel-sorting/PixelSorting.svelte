@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from "svelte";
-	import { randomIntInRange, gammaInv } from "../../utils/math";
+	import { randomIntInRange, gammaInv } from "$utils/math";
 	import DemoContainer from "$lib/DemoContainer.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
 	import ImageSelect from "$lib/ImageSelect.svelte";

@@ -1,6 +1,6 @@
 <script>
 	export let timestamp;
-	import { timestampToDate } from "../utils/date";
+	import { timestampToDate } from "$utils/date";
 
 	const { date, datetime } = timestampToDate(timestamp);
 </script>

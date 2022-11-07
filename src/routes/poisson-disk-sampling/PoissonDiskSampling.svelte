@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from "svelte";
-	import { randomIntInRange } from "../../utils/math";
+	import { randomIntInRange } from "$utils/math";
 	import Checkbox from "$lib/Checkbox.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
 	import DemoContainer from "$lib/DemoContainer.svelte";

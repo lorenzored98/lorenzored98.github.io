@@ -4,7 +4,7 @@
 	import ImageSelect from "$lib/ImageSelect.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
 	import Checkbox from "$lib/Checkbox.svelte";
-	import { debounce } from "../../utils/core";
+	import { debounce } from "$utils/core";
 
 	let innerWidth = 0;
 	let container;

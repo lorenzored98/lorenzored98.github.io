@@ -4,7 +4,7 @@
 	import ImageSelect from "$lib/ImageSelect.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
 	import Checkbox from "$lib/Checkbox.svelte";
-	import { lerp } from "../../utils/math";
+	import { lerp } from "$utils/math";
 
 	let innerWidth = 0;
 	let container;

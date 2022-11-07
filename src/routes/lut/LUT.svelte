@@ -7,7 +7,7 @@
 		createProgram,
 		createTexture,
 		useTexture,
-	} from "../../utils/gl";
+	} from "$utils/gl";
 	import vs from "./shader.vert?raw";
 	import fs from "./shader.frag?raw";
 

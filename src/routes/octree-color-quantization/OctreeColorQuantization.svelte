@@ -3,7 +3,7 @@
 	import DemoContainer from "$lib/DemoContainer.svelte";
 	import ImageSelect from "$lib/ImageSelect.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
-	import { debounce } from "../../utils/core";
+	import { debounce } from "$utils/core";
 
 	class Octree {
 		constructor(center, size, depth = Number.POSITIVE_INFINITY) {

@@ -1,5 +1,5 @@
 <script>
-	import { timestampToDate } from "../../utils/date";
+	import { timestampToDate } from "$utils/date";
 	export let href;
 	export let timestamp;
 	export let type;

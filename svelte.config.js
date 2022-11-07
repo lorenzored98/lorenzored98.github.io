@@ -11,6 +11,9 @@ const config = {
 			fallback: "404.html",
 			precompress: false,
 		}),
+		alias: {
+			"$utils/*": "./src/utils/*",
+		},
 	},
 	preprocess: [process()],
 };
