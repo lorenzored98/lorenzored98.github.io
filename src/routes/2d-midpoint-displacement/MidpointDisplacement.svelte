@@ -3,8 +3,8 @@
 	import DemoContainer from "$lib/DemoContainer.svelte";
 	import NumberRange from "$lib/NumberRange.svelte";
 	import { randomIntInRange } from "$utils/math";
-	import { createShader, createProgram } from "$ut$utils
-	import { debounce } from "$ut$utils";
+	import { createShader, createProgram } from "$utils/gl";
+	import { debounce } from "$utils/core";
 
 	const aspect = 0.5;
 	let canvas;

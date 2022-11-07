@@ -6,8 +6,8 @@
 	import Main from "$lib/Main.svelte";
 	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
+	import PostImage from "$lib/PostImage.svelte";
 	import LUT from "./LUT.svelte";
-	import PostImage from "../../lib/PostImage.svelte";
 </script>
 
 <Seo

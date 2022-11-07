@@ -3,7 +3,7 @@
 	import { randomIntInRange } from "$utils/math";
 	import Checkbox from "$lib/Checkbox.svelte";
 	import DemoContainer from "$lib/DemoContainer.svelte";
-	import NumberRange from "../../lib/NumberRange.svelte";
+	import NumberRange from "$lib/NumberRange.svelte";
 
 	const aspect = 0.5;
 	let canvas;
