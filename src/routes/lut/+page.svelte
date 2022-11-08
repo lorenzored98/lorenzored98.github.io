@@ -18,11 +18,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1667670429}>LUT Shader</Title>
-		<p>
-			It's easier to find .env secrets on Github than 5 LUT textures to
-			use for this blog post...
-		</p>
+		<Title timestamp={1667670429}>LUT</Title>
 	</Section>
 
 	<Section>
