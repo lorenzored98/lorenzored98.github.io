@@ -26,7 +26,7 @@
 	let program;
 	const F = Float32Array.BYTES_PER_ELEMENT;
 
-	let grad = { value: null, id: -1 };
+	let grad = { value: null, id: 0 };
 	let uTime;
 	let uGrad;
 	let uPattern;

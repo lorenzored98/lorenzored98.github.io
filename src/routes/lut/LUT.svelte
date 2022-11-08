@@ -30,31 +30,31 @@
 	const LUTs = [
 		{
 			image: null,
-			texture: { value: null, id: -1 },
+			texture: { value: null, id: 0 },
 			name: "Neutral",
 			src: "/lut/neutral.webp",
 		},
 		{
 			image: null,
-			texture: { value: null, id: -1 },
+			texture: { value: null, id: 0 },
 			name: "Darken",
 			src: "/lut/darken.webp",
 		},
 		{
 			image: null,
-			texture: { value: null, id: -1 },
+			texture: { value: null, id: 0 },
 			name: "Grayscale",
 			src: "/lut/grayscale.webp",
 		},
 		{
 			image: null,
-			texture: { value: null, id: -1 },
+			texture: { value: null, id: 0 },
 			name: "Sepia",
 			src: "/lut/sepia.webp",
 		},
 	];
 
-	let tex = { value: null, id: -1 };
+	let tex = { value: null, id: 0 };
 
 	let uRes;
 	let uTex;
