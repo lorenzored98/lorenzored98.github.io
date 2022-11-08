@@ -11,7 +11,7 @@
 </script>
 
 <Seo
-	title="LUT Shader"
+	title="LUT"
 	description="Color lookup table WebGL2"
 	keywords="Javascript, WebGL, LUT, Filters, PostProcessing, Creative, Shaders"
 />
