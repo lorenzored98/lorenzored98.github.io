@@ -25,7 +25,7 @@
 
 		<p>
 			I discovered this algorithm while researching procedural terrain
-			generation . I'm assuming it's an outdated way of doing that, but,
+			generation. I'm assuming it's an outdated way of doing that, but,
 			contrary to stacking gradient noises on top of each other, I
 			actually understand what this does!
 		</p>
