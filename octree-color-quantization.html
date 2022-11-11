@@ -11,19 +11,19 @@
 		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-a77c68aa.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-eac81cc4.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-9ccb4c26.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-b2be64a9.js">
+		<link rel="modulepreload" href="./_app/immutable/start-3d1aec96.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-c0d4dd5d.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/octree-color-quantization/_page.svelte-fb91d9e8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-e049357b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-593c0eb7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-367e056c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-28d0b1be.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-2f6f0500.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/core-2382e8f7.js"><title>Octree Color Quantization</title><!-- HEAD_svelte-69xwgb_START --><meta name="description" content="Using an octree to color quantize an image"><meta name="keywords" content="Octree, Javascript, Image Processing, Quantization, Canvas2D"><meta name="author" content="Pepe Lorenzo"><!-- HEAD_svelte-69xwgb_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/octree-color-quantization/_page.svelte-66b4cbf9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-d00fa4b4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-fce9b211.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/core-2382e8f7.js"><title>Octree Color Quantization</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Using an octree to color quantize an image"><meta name="keywords" content="Octree, Javascript, Image Processing, Quantization, Canvas2D"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Octree Color Quantization"><meta property="og:description" content="Using an octree to color quantize an image"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -39,12 +39,12 @@
 
 	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
 </h2>
-		<p>To get an idea on how this work. Imagine an Octree as an xyz axes
-			plot. We can insert a rgb color by using each individual channel as
-			a position. The r channel is the x coordiante, g is y and b is z.
+		<p>To get an idea of how this work. Imagine an Octree as an XYZ axes
+			plot. We can insert an RGB color by using each channel as a
+			position. The r channel is the x coordinate, g is y and b is z.
 		</p>
-		<p>Then you have to pick the smallest possible sub cube that contains
-			the amount of colors specified in the <var>quantization</var> function.
+		<p>Then you have to pick the smallest possible sub-cube that contains
+			the number of colors specified in the <var>quantization</var> function.
 		</p>
 		<div class="demo-container svelte-14j5zis" id="octree-color-quantization-demo"><figure><figcaption class="svelte-14j5zis">Octree Color Quantization</figcaption>
 		<canvas slot="canvas" class="svelte-10p45u9"></canvas></figure>
@@ -71,8 +71,8 @@
 </footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1uqqz6h">
-			import { start } from "./_app/immutable/start-a77c68aa.js";
+		<script type="module" data-sveltekit-hydrate="1lbjkyc">
+			import { start } from "./_app/immutable/start-3d1aec96.js";
 
 			start({
 				env: {},
@@ -86,7 +86,7 @@
 					form: null
 				},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1uqqz6h"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1lbjkyc"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
