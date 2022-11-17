@@ -15,6 +15,14 @@
 </header>
 <main>
 	<ol>
+		<IndexListItem
+			href="/quad-without-vertices"
+			timestamp={1668709650}
+			type="POST"
+		>
+			Quad Without Vertices
+		</IndexListItem>
+
 		<IndexListItem href="/lut" timestamp={1667670429} type="POST">
 			LUT
 		</IndexListItem>
