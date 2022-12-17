@@ -3,7 +3,7 @@
 	export let style = undefined;
 </script>
 
-<a {style} {href} rel="noopener noreferral nofollow" target="_blank">
+<a {style} {href} rel="noopener noreferrer nofollow" target="_blank">
 	<slot />
 </a>
 
