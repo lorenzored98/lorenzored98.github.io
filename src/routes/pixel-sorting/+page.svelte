@@ -39,7 +39,7 @@
 			sRGB is not the best color space for a color difference function. In
 			this demo, I converted the colors to <BlankLink
 				href="https://bottosson.github.io/posts/oklab/">Oklab</BlankLink
-			> which is much better suited.
+			>.
 		</p>
 
 		<p>The orientation and result of this effect is a combination of:</p>
