@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1671293489}>RPG Equipment Requirements</Title>
+		<Title timestamp={1672335496}>RPG Equipment Requirements</Title>
 
 		<p>
 			This is strictly about single-player games, and although it may

@@ -17,7 +17,7 @@
 	<ol>
 		<IndexListItem
 			href="/rpg-equipment-requirements"
-			timestamp={1671293489}
+			timestamp={1672335496}
 		>
 			RPG Equipment Requirements
 		</IndexListItem>
