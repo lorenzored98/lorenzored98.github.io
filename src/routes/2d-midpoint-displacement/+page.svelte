@@ -1,9 +1,7 @@
 <script>
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import MidpointDisplacement from "./MidpointDisplacement.svelte";
 </script>
@@ -17,11 +15,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1652500800}>2D Midpoint Displacement</Title>
-		<p>Exploring terrain generation algorithms.</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			I discovered this algorithm while researching procedural terrain
@@ -41,5 +34,3 @@
 		<MidpointDisplacement />
 	</Section>
 </Main>
-
-<Footer />

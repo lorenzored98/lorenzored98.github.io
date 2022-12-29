@@ -3,8 +3,6 @@
 	import Title from "$lib/Title.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Seo from "$lib/Seo.svelte";
 </script>
 
@@ -21,10 +19,6 @@
 			A simple and minimal file for building your static Github pages
 			website via Github actions.
 		</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="yaml-file">The YAML File</Subtitle>
 
 		<p>This file is intented to work with a node/npm based build step.</p>
 
@@ -111,5 +105,3 @@ jobs:
 		</p>
 	</Section>
 </Main>
-
-<Footer />

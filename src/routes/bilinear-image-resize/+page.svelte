@@ -1,10 +1,8 @@
 <script>
 	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import BilinearImageResize from "./BilinearImageResize.svelte";
 </script>
@@ -18,10 +16,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1654056000}>Bilinear Image Resize</Title>
-	</Section>
-
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			Mostly followed a <BlankLink
@@ -46,5 +40,3 @@
 		<BilinearImageResize />
 	</Section>
 </Main>
-
-<Footer />

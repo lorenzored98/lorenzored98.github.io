@@ -1,10 +1,8 @@
 <script>
 	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import DiamondSquare from "./DiamondSquare.svelte";
 </script>
@@ -18,11 +16,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1652500800}>Diamond Square</Title>
-		<p>Exploring terrain generation algorithms.</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			From <BlankLink
@@ -53,5 +46,3 @@
 		<DiamondSquare />
 	</Section>
 </Main>
-
-<Footer />

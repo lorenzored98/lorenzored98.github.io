@@ -3,7 +3,6 @@
 	import Title from "$lib/Title.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Subtitle from "$lib/Subtitle.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import NaiveDistribution from ".//NaiveDistribution.svelte";
@@ -25,10 +24,7 @@
 			every point in an n-dimensional space, the distance between a point
 			and every other point is not smaller than a given distance.
 		</p>
-	</Section>
 
-	<Section>
-		<Subtitle id="naive-approach">The Naive Approach</Subtitle>
 		<p>
 			At first glance, the problem doesn't seem worthy of a strange name
 			like Poisson Disk Sampling, so let's try to solve it in the easiest
@@ -238,15 +234,5 @@ for (let i = 0; i < 25; i++) {
 		</p>
 
 		<PoissonDiskSampling />
-
-		<p>
-			The full code for my implementation of Poisson Disk Sampling is
-			available <BlankLink
-				href="https://github.com/lorenzored98/Blog/blob/main/src/lib/PoissonDiskSampling/PoissonDiskSampling.svelte#L27"
-				>here</BlankLink
-			>.
-		</p>
 	</Section>
 </Main>
-
-<Footer />

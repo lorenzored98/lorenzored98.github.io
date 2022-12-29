@@ -1,12 +1,9 @@
 <script>
 	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
-	import QuadWithoutVertices from "./QuadWithoutVertices.svelte";
 </script>
 
 <Seo
@@ -18,19 +15,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1668709650}>Quad Without Vertices</Title>
-		<p>A neat trick.</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="how-it-works">How It Works</Subtitle>
-		<p>
-			There are different ways of rendering a quad on the GPU. The most
-			frequently used one is rendering two triangles that share some
-			vertices together to form a quad. When the quad is as big as the
-			screen there's also a way of using a rectangle triangle and scaling
-			it so that only the rectangle inscribed inside is shown in the
-			viewport.
-		</p>
 		<p>
 			While researching for a tile-based monospaced font rendering I found
 			this <BlankLink href="https://github.com/cmuratori/refterm"
@@ -110,8 +94,5 @@ gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 vec2 uv = vec2(float(gl_VertexID & 1), 1.0 - float(gl_VertexID >> 1));
 		`}
 		/>
-		<QuadWithoutVertices />
 	</Section>
 </Main>
-
-<Footer />

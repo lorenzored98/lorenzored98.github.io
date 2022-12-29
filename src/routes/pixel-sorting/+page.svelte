@@ -1,10 +1,8 @@
 <script>
 	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import PixelSorting from "./PixelSorting.svelte";
 </script>
@@ -23,10 +21,6 @@
 				>Kjetil Golid</BlankLink
 			> pixel/color sorting.
 		</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
 
 		<p>
 			For every pixel in the image, compute the average color of the
@@ -36,8 +30,8 @@
 		</p>
 
 		<p>
-			sRGB is not the best color space for a color difference function. In
-			this demo, I converted the colors to <BlankLink
+			sRGB is not the best color space for a color difference function. I
+			converted the colors to <BlankLink
 				href="https://bottosson.github.io/posts/oklab/">Oklab</BlankLink
 			>.
 		</p>
@@ -58,5 +52,3 @@
 		<PixelSorting />
 	</Section>
 </Main>
-
-<Footer />

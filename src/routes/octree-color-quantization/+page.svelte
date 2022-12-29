@@ -3,7 +3,6 @@
 	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import OctreeColorQuantization from "./OctreeColorQuantization.svelte";
 </script>
@@ -17,11 +16,7 @@
 <Main>
 	<Section>
 		<Title timestamp={1652328000}>Octree Color Quantization</Title>
-		<p>A color matrioska.</p>
-	</Section>
 
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
 		<p>
 			To get an idea of how this work. Imagine an Octree as an XYZ axes
 			plot. We can insert an RGB color by using each channel as a
@@ -34,5 +29,3 @@
 		<OctreeColorQuantization />
 	</Section>
 </Main>
-
-<Footer />

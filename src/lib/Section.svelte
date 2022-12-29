@@ -7,6 +7,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 </style>

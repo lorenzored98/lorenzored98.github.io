@@ -5,21 +5,45 @@
 	const { date, datetime } = timestampToDate(timestamp);
 </script>
 
-<div>
+<div class="container">
+	<div class="not_the_title">
+		<a href="/">Back</a>
+		<time {datetime}>{date}</time>
+	</div>
 	<h1><slot /></h1>
-	<time {datetime}>{date}</time>
 </div>
 
 <style>
-	div {
+	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		width: 100%;
 	}
 
-	h1 {
-		margin-bottom: 1rem;
+	.not_the_title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: var(--link);
+		font-family: "JetBrainsMono";
+		margin-right: 1rem;
+	}
+
+	a,
+	time {
+		font-size: 1.6rem;
+	}
+
+	a:hover,
+	a:focus {
+		color: var(--link-highlight);
 	}
 </style>

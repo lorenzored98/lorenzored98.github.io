@@ -15,7 +15,7 @@
 
 <style>
 	div {
-		margin: 2rem 0 3rem 0;
+		margin: 2rem 0 2rem 0;
 		width: 100%;
 		font-family: "JetBrainsMono";
 	}

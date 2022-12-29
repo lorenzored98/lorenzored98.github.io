@@ -4,7 +4,6 @@
 	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import PostImage from "$lib/PostImage.svelte";
 	import LUT from "./LUT.svelte";
@@ -19,10 +18,6 @@
 <Main>
 	<Section>
 		<Title timestamp={1667670429}>LUT</Title>
-	</Section>
-
-	<Section>
-		<Subtitle id="how-it-works">How It Works</Subtitle>
 		<p>
 			This is a <strong>L</strong>ook<strong>u</strong>p
 			<strong>T</strong>able texture.
@@ -225,5 +220,3 @@ void main() {
 
 	<LUT />
 </Main>
-
-<Footer />
