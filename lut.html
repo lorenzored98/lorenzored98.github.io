@@ -7,22 +7,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_page-bc689196.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Subtitle-69ce1f96.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/lut/_page.svelte-2ec17570.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-fce9b211.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/gl-055e8196.js"><title>LUT</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Color lookup table WebGL2"><meta name="keywords" content="Javascript, WebGL, LUT, Filters, PostProcessing, Creative, Shaders"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="LUT"><meta property="og:description" content="Color lookup table WebGL2"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/lut/_page.svelte-3c09671a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-db4a2256.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-12401f72.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-02f198f6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-767509e5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/gl-a52fa1b4.js"><title>LUT</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Color lookup table WebGL2"><meta name="keywords" content="Javascript, WebGL, LUT, Filters, PostProcessing, Creative, Shaders"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="LUT"><meta property="og:description" content="Color lookup table WebGL2"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -30,13 +33,10 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">LUT</h1>
-	<time datetime="2022-11-5">05/11/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-11-5" class="svelte-eoh7we">05/11/2022</time></div>
+	<h1>LUT</h1>
 </div>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#how-it-works" id="how-it-works">How It Works</a>
-</h2>
 		<p>This is a <strong>L</strong>ook<strong>u</strong>p
 			<strong>T</strong>able texture.
 		</p>
@@ -85,20 +85,20 @@
 		</p>
 </section>
 
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#texture-3d" id="texture-3d">Texture3D</a>
+	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#texture-3d" id="texture-3d">Texture3D</a>
 </h2>
 		<p>Using WebGL2 we have access to 3D textures. Using <var>texStorage3D()</var>
 			and <var>texSubImage3D()</var> WebGL2 will construct the volume cube
 			by for us. After that we need a simple shader that takes the
 			original texture color and uses it to index the cube. There is a
 			good
-			<a href="https://stackoverflow.com/a/65161148" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">stackoverflow answer
+			<a href="https://stackoverflow.com/a/65161148" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">stackoverflow answer
 </a>
 			that outlines how to do this.
 		</p>
 </section>
 
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#shader-lookup" id="shader-lookup">Shader Lookup</a>
+	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#shader-lookup" id="shader-lookup">Shader Lookup</a>
 </h2>
 		<p>For those who have to support WebGL1, or for whatever reason don&#39;t
 			want to use a 3D texture, there is a way of doing it inside a
@@ -107,60 +107,60 @@
 
 		<p>Here&#39;s the shader:</p>
 
-		<pre><code><span><span style="color: #24292EFF">#version </span><span style="color: #1976D2">300</span><span style="color: #24292EFF"> es</span></span>
+		<pre><code><span><span style="color: #24292F">#version </span><span style="color: #0550AE">300</span><span style="color: #24292F"> es</span></span>
 <span></span>
-<span><span style="color: #24292EFF">precision highp </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF">;</span></span>
+<span><span style="color: #24292F">precision highp </span><span style="color: #CF222E">float</span><span style="color: #24292F">;</span></span>
 <span></span>
-<span><span style="color: #D32F2F">uniform</span><span style="color: #24292EFF"> vec2 uRes;</span></span>
-<span><span style="color: #D32F2F">uniform</span><span> </span><span style="color: #1976D2">sampler2D</span><span style="color: #24292EFF"> uTex;</span></span>
-<span><span style="color: #D32F2F">uniform</span><span> </span><span style="color: #1976D2">sampler2D</span><span style="color: #24292EFF"> uLUT;</span></span>
-<span><span style="color: #D32F2F">uniform</span><span> </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> uLUTSize;</span></span>
-<span><span style="color: #D32F2F">uniform</span><span> </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> uStrength;</span></span>
+<span><span style="color: #CF222E">uniform</span><span style="color: #24292F"> vec2 uRes;</span></span>
+<span><span style="color: #CF222E">uniform</span><span> </span><span style="color: #0550AE">sampler2D</span><span style="color: #24292F"> uTex;</span></span>
+<span><span style="color: #CF222E">uniform</span><span> </span><span style="color: #0550AE">sampler2D</span><span style="color: #24292F"> uLUT;</span></span>
+<span><span style="color: #CF222E">uniform</span><span> </span><span style="color: #CF222E">float</span><span style="color: #24292F"> uLUTSize;</span></span>
+<span><span style="color: #CF222E">uniform</span><span> </span><span style="color: #CF222E">float</span><span style="color: #24292F"> uStrength;</span></span>
 <span></span>
-<span><span style="color: #D32F2F">out</span><span style="color: #24292EFF"> vec4 outColor;</span></span>
+<span><span style="color: #CF222E">out</span><span style="color: #24292F"> vec4 outColor;</span></span>
 <span></span>
-<span><span style="color: #D32F2F">void</span><span> </span><span style="color: #6F42C1">main</span><span style="color: #24292EFF">() {</span></span>
-<span><span style="color: #24292EFF">    vec2 uv = gl_FragCoord.xy / uRes;</span></span>
-<span><span style="color: #24292EFF">    vec4 tex = </span><span style="color: #6F42C1">texture</span><span style="color: #24292EFF">(uTex, uv);</span></span>
+<span><span style="color: #CF222E">void</span><span> </span><span style="color: #0550AE">main</span><span style="color: #24292F">() {</span></span>
+<span><span style="color: #24292F">    vec2 uv = gl_FragCoord.xy / uRes;</span></span>
+<span><span style="color: #24292F">    vec4 tex = </span><span style="color: #0550AE">texture</span><span style="color: #24292F">(uTex, uv);</span></span>
 <span></span>
-<span><span style="color: #24292EFF">    tex.r = </span><span style="color: #6F42C1">clamp</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">0.0</span><span style="color: #24292EFF">, </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF">, tex.r);</span></span>
-<span><span style="color: #24292EFF">    tex.g = </span><span style="color: #6F42C1">clamp</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">0.0</span><span style="color: #24292EFF">, </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF">, tex.g);</span></span>
-<span><span style="color: #24292EFF">    tex.b = </span><span style="color: #6F42C1">clamp</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">0.0</span><span style="color: #24292EFF">, </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF">, tex.b);</span></span>
+<span><span style="color: #24292F">    tex.r = </span><span style="color: #0550AE">clamp</span><span style="color: #24292F">(</span><span style="color: #0550AE">0.0</span><span style="color: #24292F">, </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">, tex.r);</span></span>
+<span><span style="color: #24292F">    tex.g = </span><span style="color: #0550AE">clamp</span><span style="color: #24292F">(</span><span style="color: #0550AE">0.0</span><span style="color: #24292F">, </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">, tex.g);</span></span>
+<span><span style="color: #24292F">    tex.b = </span><span style="color: #0550AE">clamp</span><span style="color: #24292F">(</span><span style="color: #0550AE">0.0</span><span style="color: #24292F">, </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">, tex.b);</span></span>
 <span><span>    </span></span>
-<span><span style="color: #24292EFF">    vec4 lut = </span><span style="color: #6F42C1">texture</span><span style="color: #24292EFF">(uLUT, uv);</span></span>
+<span><span style="color: #24292F">    vec4 lut = </span><span style="color: #0550AE">texture</span><span style="color: #24292F">(uLUT, uv);</span></span>
 <span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> maxSize = uLUTSize - </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF">;</span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> maxCellCoord = </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF"> - (</span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF"> / uLUTSize);</span></span>
-<span><span style="color: #24292EFF">    vec2 halfTexel = </span><span style="color: #1976D2">0.5</span><span style="color: #24292EFF"> / </span><span style="color: #6F42C1">vec2</span><span style="color: #24292EFF">(uLUTSize * uLUTSize, uLUTSize);</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> maxSize = uLUTSize - </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">;</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> maxCellCoord = </span><span style="color: #0550AE">1.0</span><span style="color: #24292F"> - (</span><span style="color: #0550AE">1.0</span><span style="color: #24292F"> / uLUTSize);</span></span>
+<span><span style="color: #24292F">    vec2 halfTexel = </span><span style="color: #0550AE">0.5</span><span style="color: #24292F"> / </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(uLUTSize * uLUTSize, uLUTSize);</span></span>
 <span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> redOffset = halfTexel.x + tex.r * (maxCellCoord / uLUTSize);</span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> greenOffset = halfTexel.y + tex.g * maxCellCoord;</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> redOffset = halfTexel.x + tex.r * (maxCellCoord / uLUTSize);</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> greenOffset = halfTexel.y + tex.g * maxCellCoord;</span></span>
 <span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> blue = tex.b * maxSize;</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> blue = tex.b * maxSize;</span></span>
 <span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> leftCell = </span><span style="color: #6F42C1">floor</span><span style="color: #24292EFF">(blue);</span></span>
-<span><span>    </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF"> rightCell = </span><span style="color: #6F42C1">ceil</span><span style="color: #24292EFF">(blue);</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> leftCell = </span><span style="color: #0550AE">floor</span><span style="color: #24292F">(blue);</span></span>
+<span><span>    </span><span style="color: #CF222E">float</span><span style="color: #24292F"> rightCell = </span><span style="color: #0550AE">ceil</span><span style="color: #24292F">(blue);</span></span>
 <span></span>
-<span><span style="color: #24292EFF">    vec2 left = </span><span style="color: #6F42C1">vec2</span><span style="color: #24292EFF">(</span></span>
-<span><span style="color: #24292EFF">        leftCell / uLUTSize + redOffset,</span></span>
-<span><span style="color: #24292EFF">        greenOffset</span></span>
-<span><span style="color: #24292EFF">    );</span></span>
+<span><span style="color: #24292F">    vec2 left = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span></span>
+<span><span style="color: #24292F">        leftCell / uLUTSize + redOffset,</span></span>
+<span><span style="color: #24292F">        greenOffset</span></span>
+<span><span style="color: #24292F">    );</span></span>
 <span></span>
-<span><span style="color: #24292EFF">    vec2 right = </span><span style="color: #6F42C1">vec2</span><span style="color: #24292EFF">(</span></span>
-<span><span style="color: #24292EFF">        rightCell / uLUTSize + redOffset,</span></span>
-<span><span style="color: #24292EFF">        greenOffset</span></span>
-<span><span style="color: #24292EFF">    );</span></span>
+<span><span style="color: #24292F">    vec2 right = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span></span>
+<span><span style="color: #24292F">        rightCell / uLUTSize + redOffset,</span></span>
+<span><span style="color: #24292F">        greenOffset</span></span>
+<span><span style="color: #24292F">    );</span></span>
 <span></span>
-<span><span style="color: #24292EFF">    vec3 color = </span><span style="color: #6F42C1">mix</span><span style="color: #24292EFF">(</span></span>
-<span><span>        </span><span style="color: #6F42C1">texture</span><span style="color: #24292EFF">(uLUT, left).rgb,</span></span>
-<span><span>        </span><span style="color: #6F42C1">texture</span><span style="color: #24292EFF">(uLUT, right).rgb,</span></span>
-<span><span>        </span><span style="color: #6F42C1">fract</span><span style="color: #24292EFF">(blue)</span></span>
-<span><span style="color: #24292EFF">    );</span></span>
+<span><span style="color: #24292F">    vec3 color = </span><span style="color: #0550AE">mix</span><span style="color: #24292F">(</span></span>
+<span><span>        </span><span style="color: #0550AE">texture</span><span style="color: #24292F">(uLUT, left).rgb,</span></span>
+<span><span>        </span><span style="color: #0550AE">texture</span><span style="color: #24292F">(uLUT, right).rgb,</span></span>
+<span><span>        </span><span style="color: #0550AE">fract</span><span style="color: #24292F">(blue)</span></span>
+<span><span style="color: #24292F">    );</span></span>
 <span></span>
-<span><span style="color: #24292EFF">    color = </span><span style="color: #6F42C1">mix</span><span style="color: #24292EFF">(tex.rgb, color, uStrength);    </span></span>
+<span><span style="color: #24292F">    color = </span><span style="color: #0550AE">mix</span><span style="color: #24292F">(tex.rgb, color, uStrength);    </span></span>
 <span></span>
-<span><span style="color: #24292EFF">    outColor = </span><span style="color: #6F42C1">vec4</span><span style="color: #24292EFF">(color, tex.a);</span></span>
-<span><span style="color: #24292EFF">}</span></span>
+<span><span style="color: #24292F">    outColor = </span><span style="color: #0550AE">vec4</span><span style="color: #24292F">(color, tex.a);</span></span>
+<span><span style="color: #24292F">}</span></span>
 </code></pre>
 
 		<ul><li>This is often a post-processing effect, so it makes sense to
@@ -201,7 +201,7 @@
 			</li></ul>
 </section>
 
-	<div class="demo-container svelte-14j5zis" id="lut-demo"><figure><figcaption class="svelte-14j5zis">LUT</figcaption>
+	<div class="demo-container svelte-k8af6f" id="lut-demo"><figure><figcaption class="svelte-k8af6f">LUT</figcaption>
 		<canvas slot="canvas" class="svelte-1540kvn"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group lut svelte-1540kvn"><img id="lut" src="/lut/neutral.webp" width="0" height="0" alt="Look up table texture"></div>
 		<div class="demo-input-group"><label for="texture">LUT Texture</label>
@@ -219,34 +219,20 @@
 </div>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="2dsd30">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="1f7vxcz">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1f7vxcz"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 9],
-					params: {},
-					route: {"id":"/lut"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="2dsd30"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>

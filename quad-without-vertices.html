@@ -6,21 +6,18 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-53fdd47f.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertices/_page.svelte-fd54d805.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/gl-055e8196.js"><title>Quad Without Vertices</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="WebGL Quad without vertices trick"><meta name="keywords" content="Javascript, WebGL2, Gamedev, Shaders, GPU, Geometry, Instancing, Tricks, Triangle Strip"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quad Without Vertices"><meta property="og:description" content="WebGL Quad without vertices trick"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertices/_page.svelte-37450e61.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-db4a2256.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js"><title>Quad Without Vertices</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="WebGL Quad without vertices trick"><meta name="keywords" content="Javascript, WebGL2, Gamedev, Shaders, GPU, Geometry, Instancing, Tricks, Triangle Strip"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quad Without Vertices"><meta property="og:description" content="WebGL Quad without vertices trick"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -28,33 +25,22 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Quad Without Vertices</h1>
-	<time datetime="2022-11-17">17/11/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-11-17" class="svelte-eoh7we">17/11/2022</time></div>
+	<h1>Quad Without Vertices</h1>
 </div>
-		<p>A neat trick.</p>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#how-it-works" id="how-it-works">How It Works</a>
-</h2>
-		<p>There are different ways of rendering a quad on the GPU. The most
-			frequently used one is rendering two triangles that share some
-			vertices together to form a quad. When the quad is as big as the
-			screen there&#39;s also a way of using a rectangle triangle and scaling
-			it so that only the rectangle inscribed inside is shown in the
-			viewport.
-		</p>
 		<p>While researching for a tile-based monospaced font rendering I found
-			this <a href="https://github.com/cmuratori/refterm" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">GitHub repo
+			this <a href="https://github.com/cmuratori/refterm" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">GitHub repo
 </a> containing code similar to this:
 		</p>
 
-		<pre><code><span><span style="color: #24292EFF">vec2 pos = </span><span style="color: #6F42C1">vec2</span><span style="color: #24292EFF">(</span></span>
-<span><span>    </span><span style="color: #1976D2">2.0</span><span style="color: #24292EFF"> * (</span><span style="color: #D32F2F">float</span><span style="color: #24292EFF">(gl_VertexID &amp; </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">) - </span><span style="color: #1976D2">0.5</span><span style="color: #24292EFF">), </span></span>
-<span><span style="color: #24292EFF">    -(</span><span style="color: #D32F2F">float</span><span style="color: #24292EFF">(gl_VertexID &gt;&gt; </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">) - </span><span style="color: #1976D2">0.5</span><span style="color: #24292EFF">) * </span><span style="color: #1976D2">2.0</span></span>
-<span><span style="color: #24292EFF">);</span></span>
+		<pre><code><span><span style="color: #24292F">vec2 pos = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span></span>
+<span><span>    </span><span style="color: #0550AE">2.0</span><span style="color: #24292F"> * (</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">) - </span><span style="color: #0550AE">0.5</span><span style="color: #24292F">), </span></span>
+<span><span style="color: #24292F">    -(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">) - </span><span style="color: #0550AE">0.5</span><span style="color: #24292F">) * </span><span style="color: #0550AE">2.0</span></span>
+<span><span style="color: #24292F">);</span></span>
 </code></pre>
 
-		<pre><code><span><span style="color: #1976D2">gl</span><span style="color: #6F42C1">.drawArrays</span><span style="color: #24292EFF">(</span><span style="color: #1976D2">gl</span><span style="color: #24292EFF">.</span><span style="color: #1976D2">TRIANGLE_STRIP</span><span style="color: #212121">,</span><span> </span><span style="color: #1976D2">0</span><span style="color: #212121">,</span><span> </span><span style="color: #1976D2">4</span><span style="color: #24292EFF">);</span></span>
+		<pre><code><span><span style="color: #24292F">gl.</span><span style="color: #8250DF">drawArrays</span><span style="color: #24292F">(gl.</span><span style="color: #0550AE">TRIANGLE_STRIP</span><span style="color: #24292F">, </span><span style="color: #0550AE">0</span><span style="color: #24292F">, </span><span style="color: #0550AE">4</span><span style="color: #24292F">);</span></span>
 </code></pre>
 
 		<p></p>
@@ -96,43 +82,25 @@
 			it.
 		</p>
 
-		<pre><code><span><span style="color: #24292EFF">vec2 uv = </span><span style="color: #6F42C1">vec2</span><span style="color: #24292EFF">(</span><span style="color: #D32F2F">float</span><span style="color: #24292EFF">(gl_VertexID &amp; </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">), </span><span style="color: #1976D2">1.0</span><span style="color: #24292EFF"> - </span><span style="color: #D32F2F">float</span><span style="color: #24292EFF">(gl_VertexID &gt;&gt; </span><span style="color: #1976D2">1</span><span style="color: #24292EFF">));</span></span>
+		<pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #0550AE">1.0</span><span style="color: #24292F"> - </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">));</span></span>
 </code></pre>
-		<div class="demo-container svelte-14j5zis"><figure><figcaption class="svelte-14j5zis">Quads Without Vertices</figcaption>
-		<canvas slot="canvas" class="svelte-10p45u9"></canvas></figure>
-	
-</div>
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="g6iv42">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="1t0tm3e">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1t0tm3e"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 13],
-					params: {},
-					route: {"id":"/quad-without-vertices"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="g6iv42"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>

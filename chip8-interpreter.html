@@ -7,19 +7,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_page-9f1a508a.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/chip8-interpreter/_page.svelte-877f38a2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js"><title>CHIP-8 Interpreter</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Javascript CHIP-8 Interpreter"><meta name="keywords" content="CHIP-8, Javascript, Emulator, Interpreter"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="CHIP-8 Interpreter"><meta property="og:description" content="Javascript CHIP-8 Interpreter"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/chip8-interpreter/_page.svelte-f064ab10.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-02f198f6.js"><title>CHIP-8 Interpreter</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Javascript CHIP-8 Interpreter"><meta name="keywords" content="CHIP-8, Javascript, Emulator, Interpreter"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="CHIP-8 Interpreter"><meta property="og:description" content="Javascript CHIP-8 Interpreter"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -27,21 +26,17 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">CHIP-8 Interpreter</h1>
-	<time datetime="2022-6-18">18/06/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-6-18" class="svelte-eoh7we">18/06/2022</time></div>
+	<h1>CHIP-8 Interpreter</h1>
 </div>
-		<p>I wanted to code a NES emulator but here we are.</p>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
-</h2>
 		<p>It&#39;s my first time coding an emulator/interpreter. I&#39;ve heard that
 			this is a very common starter project for people who want to try
-			their hands at something more complex like a NES or a GBA maybe.
+			their hands at something more complex like a NES or a GBA.
 		</p>
 		<p>Didn&#39;t implement audio.</p>
 		<p>Breakout demo: use <var>q</var> and <var>e</var> to move.</p>
-		<div class="demo-container svelte-14j5zis" id="container"><figure><figcaption class="svelte-14j5zis">CHIP-8 Interpreter</figcaption>
+		<div class="demo-container svelte-k8af6f" id="container"><figure><figcaption class="svelte-k8af6f">CHIP-8 Interpreter</figcaption>
 		<canvas slot="canvas" class="svelte-nzknsg"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="rom">ROM</label>
 			<select id="rom"><option default value="/chip8/ibm_logo.ch8">IBM Logo</option><option value="/chip8/test_opcode.ch8">Test Opcode</option><option value="/chip8/maze.rom">Maze</option><option value="/chip8/breakout.rom">Breakout</option></select></div>
@@ -51,34 +46,20 @@
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="wzjsc5">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="oo4wuc">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="oo4wuc"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 5],
-					params: {},
-					route: {"id":"/chip8-interpreter"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="wzjsc5"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>

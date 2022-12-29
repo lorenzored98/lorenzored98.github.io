@@ -7,23 +7,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_page-3fc388c2.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/pixel-sorting/_page.svelte-6be58155.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/math-fcbdfd63.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-fce9b211.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-d00fa4b4.js"><title>Pixel Sorting</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Sort image colors by similarity"><meta name="keywords" content="Pixel Sorting, Color Sorting, Javascript"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Pixel Sorting"><meta property="og:description" content="Sort image colors by similarity"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/pixel-sorting/_page.svelte-e09613fa.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-db4a2256.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/math-4278f00e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-02f198f6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-767509e5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-24d6df7c.js"><title>Pixel Sorting</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Sort image colors by similarity"><meta name="keywords" content="Pixel Sorting, Color Sorting, Javascript"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Pixel Sorting"><meta property="og:description" content="Sort image colors by similarity"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -31,16 +32,13 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Pixel Sorting</h1>
-	<time datetime="2022-5-6">06/05/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-5-6" class="svelte-eoh7we">06/05/2022</time></div>
+	<h1>Pixel Sorting</h1>
 </div>
-		<p>Implementing <a href="https://twitter.com/kGolid" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Kjetil Golid
+		<p>Implementing <a href="https://twitter.com/kGolid" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">Kjetil Golid
 </a> pixel/color sorting.
 		</p>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
-</h2>
 
 		<p>For every pixel in the image, compute the average color of the
 			current pixel&#39;s surrounding pixels. Within a maximum number of
@@ -48,9 +46,9 @@
 			color to the computed average and swap them.
 		</p>
 
-		<p>sRGB is not the best color space for a color difference function. In
-			this demo, I converted the colors to <a href="https://bottosson.github.io/posts/oklab/" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Oklab
-</a> which is much better suited.
+		<p>sRGB is not the best color space for a color difference function. I
+			converted the colors to <a href="https://bottosson.github.io/posts/oklab/" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">Oklab
+</a>.
 		</p>
 
 		<p>The orientation and result of this effect is a combination of:</p>
@@ -62,7 +60,7 @@
 				compute the color difference. In this demo, I&#39;m using the
 				top-left, top, and left pixels.
 			</li></ul>
-		<div class="demo-container svelte-14j5zis" id="pixel-sorting-demo"><figure><figcaption class="svelte-14j5zis">Pixel Sorting</figcaption>
+		<div class="demo-container svelte-k8af6f" id="pixel-sorting-demo"><figure><figcaption class="svelte-k8af6f">Pixel Sorting</figcaption>
 		<canvas slot="canvas" class="svelte-1wvpccn"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="pixel-sorting-samples">Samples: (50)</label>
 			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="pixel-sorting-samples" min="1" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 49.494949494949495%, var(--border-color) 49.494949494949495%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
@@ -80,34 +78,20 @@
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="l42efy">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="ntqucp">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="ntqucp"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 11],
-					params: {},
-					route: {"id":"/pixel-sorting"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="l42efy"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>

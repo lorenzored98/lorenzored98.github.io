@@ -6,17 +6,18 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/github-pages-action/_page.svelte-ce5f44f6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js"><title>Github Pages Action</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Automatically deploy github pages static website with github actions"><meta name="keywords" content="Github Pages, Github Actions, Github, Static Website, Deploy"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Github Pages Action"><meta property="og:description" content="Automatically deploy github pages static website with github actions"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/github-pages-action/_page.svelte-06b14654.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-db4a2256.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js"><title>Github Pages Action</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Automatically deploy github pages static website with github actions"><meta name="keywords" content="Github Pages, Github Actions, Github, Static Website, Deploy"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Github Pages Action"><meta property="og:description" content="Automatically deploy github pages static website with github actions"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -24,38 +25,35 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Github Pages Action</h1>
-	<time datetime="2022-8-26">26/08/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-8-26" class="svelte-eoh7we">26/08/2022</time></div>
+	<h1>Github Pages Action</h1>
 </div>
 		<p>A simple and minimal file for building your static Github pages
 			website via Github actions.
 		</p>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#yaml-file" id="yaml-file">The YAML File</a>
-</h2>
 
 		<p>This file is intented to work with a node/npm based build step.</p>
 
-		<pre><code><span><span style="color: #D32F2F">name</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">Build And Deploy</span></span>
-<span><span style="color: #1976D2">on</span><span style="color: #D32F2F">:</span></span>
-<span><span>    </span><span style="color: #D32F2F">push</span><span style="color: #D32F2F">:</span></span>
-<span><span>        </span><span style="color: #D32F2F">branches</span><span style="color: #D32F2F">:</span><span style="color: #24292EFF"> [</span><span style="color: #2B5581">main</span><span style="color: #24292EFF">]</span></span>
-<span><span style="color: #D32F2F">jobs</span><span style="color: #D32F2F">:</span></span>
-<span><span>    </span><span style="color: #D32F2F">bd</span><span style="color: #D32F2F">:</span></span>
-<span><span>        </span><span style="color: #D32F2F">runs-on</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">ubuntu-latest</span></span>
-<span><span>        </span><span style="color: #D32F2F">steps</span><span style="color: #D32F2F">:</span></span>
-<span><span style="color: #24292EFF">            - </span><span style="color: #D32F2F">uses</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">actions/checkout@v3</span></span>
-<span><span style="color: #24292EFF">            - </span><span style="color: #D32F2F">uses</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">actions/setup-node@v3</span></span>
-<span><span>              </span><span style="color: #D32F2F">with</span><span style="color: #D32F2F">:</span></span>
-<span><span>                  </span><span style="color: #D32F2F">node-version</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #1976D2">16</span></span>
-<span><span style="color: #24292EFF">            - </span><span style="color: #D32F2F">run</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">npm install</span></span>
-<span><span style="color: #24292EFF">            - </span><span style="color: #D32F2F">run</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">npm run build</span></span>
-<span><span style="color: #24292EFF">            - </span><span style="color: #D32F2F">uses</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">peaceiris/actions-gh-pages@v3</span></span>
-<span><span>              </span><span style="color: #D32F2F">if</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">${{ github.ref == &#39;refs/heads/main&#39; }}</span></span>
-<span><span>              </span><span style="color: #D32F2F">with</span><span style="color: #D32F2F">:</span></span>
-<span><span>                  </span><span style="color: #D32F2F">github_token</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">${{ secrets.GITHUB_TOKEN }}</span></span>
-<span><span>                  </span><span style="color: #D32F2F">publish_dir</span><span style="color: #D32F2F">:</span><span> </span><span style="color: #22863A">./build</span></span>
+		<pre><code><span><span style="color: #116329">name</span><span style="color: #24292F">: </span><span style="color: #0A3069">Build And Deploy</span></span>
+<span><span style="color: #0550AE">on</span><span style="color: #24292F">:</span></span>
+<span><span>    </span><span style="color: #116329">push</span><span style="color: #24292F">:</span></span>
+<span><span>        </span><span style="color: #116329">branches</span><span style="color: #24292F">: [</span><span style="color: #0A3069">main</span><span style="color: #24292F">]</span></span>
+<span><span style="color: #116329">jobs</span><span style="color: #24292F">:</span></span>
+<span><span>    </span><span style="color: #116329">bd</span><span style="color: #24292F">:</span></span>
+<span><span>        </span><span style="color: #116329">runs-on</span><span style="color: #24292F">: </span><span style="color: #0A3069">ubuntu-latest</span></span>
+<span><span>        </span><span style="color: #116329">steps</span><span style="color: #24292F">:</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">actions/checkout@v3</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">actions/setup-node@v3</span></span>
+<span><span>              </span><span style="color: #116329">with</span><span style="color: #24292F">:</span></span>
+<span><span>                  </span><span style="color: #116329">node-version</span><span style="color: #24292F">: </span><span style="color: #0550AE">16</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">run</span><span style="color: #24292F">: </span><span style="color: #0A3069">npm install</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">run</span><span style="color: #24292F">: </span><span style="color: #0A3069">npm run build</span></span>
+<span><span style="color: #24292F">            - </span><span style="color: #116329">uses</span><span style="color: #24292F">: </span><span style="color: #0A3069">peaceiris/actions-gh-pages@v3</span></span>
+<span><span>              </span><span style="color: #116329">if</span><span style="color: #24292F">: </span><span style="color: #0A3069">${{ github.ref == &#39;refs/heads/main&#39; }}</span></span>
+<span><span>              </span><span style="color: #116329">with</span><span style="color: #24292F">:</span></span>
+<span><span>                  </span><span style="color: #116329">github_token</span><span style="color: #24292F">: </span><span style="color: #0A3069">${{ secrets.GITHUB_TOKEN }}</span></span>
+<span><span>                  </span><span style="color: #116329">publish_dir</span><span style="color: #24292F">: </span><span style="color: #0A3069">./build</span></span>
 </code></pre>
 
 		<p>If you can understand everything that&#39;s going on here is no need to
@@ -67,12 +65,12 @@
 			</li>
 			<li><var>actions/checkout@v3</var> : This is an official Github
 				action. It will checkout our repository so that it can be used
-				by the other steps. Here&#39;s the <a href="https://github.com/actions/checkout" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">repo
+				by the other steps. Here&#39;s the <a href="https://github.com/actions/checkout" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">repo
 </a>.
 			</li>
 			<li><var>peaceiris/actions-gh-pages@v3</var> : This is an unofficial
 				action that will allow us to deploy static files to the gh-pages
-				branch. Here&#39;s the <a href="https://github.com/peaceiris/actions-gh-pages" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">repo
+				branch. Here&#39;s the <a href="https://github.com/peaceiris/actions-gh-pages" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">repo
 </a>.
 			</li>
 			<li><var>if</var> : Checking that we are on main branch in this case.
@@ -88,7 +86,7 @@
 			</li></ul>
 
 		<p>Most of the other syntax is self-explanatory and the
-			<a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">workflow syntax doc
+			<a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">workflow syntax doc
 </a> does a much better job of explaining it.
 		</p>
 
@@ -100,34 +98,20 @@
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="ps3hms">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="oqau82">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="oqau82"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 8],
-					params: {},
-					route: {"id":"/github-pages-action"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="ps3hms"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>

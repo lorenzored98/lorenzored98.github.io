@@ -7,25 +7,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_page-53fdd47f.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Seo-e99f0078.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/Footer-4e080589.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/DemoContainer-ec9d78b9.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Main-7e223a2b.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Checkbox-cb995005.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-e64ce4ff.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-94ae1f6d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ab66a008.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-ce801f12.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/quadtree-image-compression/_page.svelte-195615a3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-fd8654ed.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Footer-1dc26ee9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-4346ca13.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-d00fa4b4.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-fce9b211.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Checkbox-03d0a2e6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/core-2382e8f7.js"><title>Quadtree Image Compression</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Compress an image using a Quadtree"><meta name="keywords" content="Javascript, Creative Coding, Quadtree, Image Compression, Image Processing"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quadtree Image Compression"><meta property="og:description" content="Compress an image using a Quadtree"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link rel="modulepreload" href="./_app/immutable/start-f63d5d6d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/quadtree-image-compression/_page.svelte-e634b798.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-d501f058.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-02f198f6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-24d6df7c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-767509e5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Checkbox-10baa3e8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/core-ddcb889b.js"><title>Quadtree Image Compression</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Compress an image using a Quadtree"><meta name="keywords" content="Javascript, Creative Coding, Quadtree, Image Compression, Image Processing"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quadtree Image Compression"><meta property="og:description" content="Compress an image using a Quadtree"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -33,19 +32,15 @@
 
 
 
-<main class="svelte-1rvfn7p"><section class="svelte-j2wbbj"><div class="svelte-1moo9sl"><h1 class="svelte-1moo9sl">Quadtree Image Compression</h1>
-	<time datetime="2022-5-10">10/05/2022</time>
+<main class="svelte-1rvfn7p"><section class="svelte-pdvyg4"><div class="container svelte-eoh7we"><div class="not_the_title svelte-eoh7we"><a href="/" class="svelte-eoh7we">Back</a>
+		<time datetime="2022-5-10" class="svelte-eoh7we">10/05/2022</time></div>
+	<h1>Quadtree Image Compression</h1>
 </div>
-		<p>Shades of 360p.</p>
-</section>
-
-	<section class="svelte-j2wbbj"><h2 class="svelte-4np2sa"><a href="#demo" id="demo">Demo</a>
-</h2>
 
 		<p>I&#39;m noticing seams at higher depths. I assume it&#39;s due to a rounding
 			error somewhere.
 		</p>
-		<div class="demo-container svelte-14j5zis" id="quadtree-image-compression-demo"><figure><figcaption class="svelte-14j5zis">Quadtree Image Compression</figcaption>
+		<div class="demo-container svelte-k8af6f" id="quadtree-image-compression-demo"><figure><figcaption class="svelte-k8af6f">Quadtree Image Compression</figcaption>
 		<canvas slot="canvas" class="svelte-10p45u9"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="depth">Depth: (6)</label>
 			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="depth" min="1" max="8" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 71.42857142857143%, var(--border-color) 71.42857142857143%, var(--border-color) 100%)" class="svelte-7715t9" value="6"></div>
@@ -70,34 +65,20 @@
 </section>
 </main>
 
-<footer class="svelte-loha9q"><div class="container svelte-q8fyg5"><div class="svelte-q8fyg5"><a style="margin-right: 1rem;" href="mailto:lorenzopepedev@gmail.com" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">lorenzopepedev@gmail.com
-		
-</a></div>
-	<div class="svelte-q8fyg5"><a href="https://twitter.com/lorenzopepe98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Twitter
-</a>
-		<a style="margin-left: 1rem;" href="https://github.com/lorenzored98" rel="noopener noreferral nofollow" target="_blank" class="svelte-9bdt8p">Github
-</a></div>
-</div>
-</footer>
 
-
-		<script type="module" data-sveltekit-hydrate="1gealpm">
-			import { start } from "./_app/immutable/start-e64ce4ff.js";
+		<script type="module" data-sveltekit-hydrate="xu3zz6">
+			import { start } from "./_app/immutable/start-f63d5d6d.js";
 
 			start({
 				env: {},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="xu3zz6"]').parentNode,
+				version: "1672334517919",
 				hydrate: {
-					status: 200,
-					error: null,
 					node_ids: [0, 14],
-					params: {},
-					route: {"id":"/quadtree-image-compression"},
 					data: [null,null],
 					form: null
-				},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1gealpm"]').parentNode,
-				trailing_slash: "never"
+				}
 			});
 		</script>
 	</div>
