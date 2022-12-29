@@ -58,7 +58,7 @@ async function processCodeBlocks(content) {
 	if (!nodes.length) return content;
 
 	const highlighter = await shiki.getHighlighter({
-		theme: "min-light",
+		theme: "github-light",
 	});
 
 	let offset = 0;
