@@ -1,10 +1,8 @@
 <script>
 	import BlankLink from "$lib/BlankLink.svelte";
 	import Title from "$lib/Title.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
 	import Section from "$lib/Section.svelte";
 	import Main from "$lib/Main.svelte";
-	import Footer from "$lib/Footer.svelte";
 	import Seo from "$lib/Seo.svelte";
 	import DomainWarping from "./DomainWarping.svelte";
 </script>
@@ -17,12 +15,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1665824041}>Domain Warping [1]</Title>
-		<p>Noise exploration.</p>
-	</Section>
-
-	<Section>
-		<Subtitle id="demo">Demo</Subtitle>
+		<Title timestamp={1665824041}>Domain Warping</Title>
 
 		<p>
 			Inigo Quilez's article on <BlankLink
@@ -44,5 +37,3 @@
 		<DomainWarping />
 	</Section>
 </Main>
-
-<Footer />
