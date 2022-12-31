@@ -33,7 +33,6 @@
 	a {
 		text-decoration: underline;
 		color: var(--link);
-		font-family: "JetBrainsMono";
 		margin-right: 1rem;
 	}
 
