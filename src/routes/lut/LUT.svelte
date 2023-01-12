@@ -116,7 +116,7 @@
 			});
 		};
 
-		img.src = "/images/greatwave.webp";
+		img.src = "/images/ukiyo-e.webp";
 
 		window.addEventListener("resize", resize, { passive: true });
 

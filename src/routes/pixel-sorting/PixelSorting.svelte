@@ -20,7 +20,7 @@
 	const minSamples = 1;
 	const maxSamples = 100;
 	let _isRunning = false;
-	let _src = "/images/starrynight.webp";
+	let _src = "/images/ukiyo-e.webp";
 	let imageData = null;
 	let oklabData = null;
 

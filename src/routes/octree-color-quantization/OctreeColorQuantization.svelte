@@ -119,7 +119,7 @@
 	const minK = 1;
 	let _k = 8;
 	const maxK = 255;
-	let _src = "/images/starrynight.webp";
+	let _src = "/images/ukiyo-e.webp";
 	let imageData;
 	let rgba;
 	let colorCubes = [];

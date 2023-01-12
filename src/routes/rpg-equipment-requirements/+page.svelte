@@ -103,9 +103,9 @@
 				</p>
 
 				<p>
-					Farming for better stats on the same item is however fun for
-					many players in such games so it should be kept in the game,
-					just relegated to the end-game content.
+					Farming for better stats on the same item, however, is fun
+					for many players in such games so it should be kept in the
+					game, just relegated to the end-game content.
 				</p>
 			</li>
 

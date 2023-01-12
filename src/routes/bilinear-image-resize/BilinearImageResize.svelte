@@ -16,7 +16,7 @@
 	let h = 0;
 	let img;
 	let rgba;
-	let _src = "/images/starrynight.webp";
+	let _src = "/images/ukiyo-e.webp";
 	let aspect = 0;
 	const minWidth = 1;
 	let _width = 0;

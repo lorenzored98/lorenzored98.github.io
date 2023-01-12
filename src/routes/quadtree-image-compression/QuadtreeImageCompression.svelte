@@ -14,7 +14,7 @@
 	let h = 0;
 	let img;
 	let rgba;
-	let _src = "/images/starrynight.webp";
+	let _src = "/images/ukiyo-e.webp";
 	const minDepth = 1;
 	let _depth = 6;
 	const maxDepth = 8;
