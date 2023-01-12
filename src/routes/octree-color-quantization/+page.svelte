@@ -18,13 +18,13 @@
 		<Title timestamp={1652328000}>Octree Color Quantization</Title>
 
 		<p>
-			To get an idea of how this work. Imagine an Octree as an XYZ axes
-			plot. We can insert an RGB color by using each channel as a
-			position. The r channel is the x coordinate, g is y and b is z.
+			Imagine an Octree as a XYZ axes plot in 3D space. We can insert a
+			RGB color by using each the red, green, and blue channels as its
+			coordinates.
 		</p>
 		<p>
-			Then you have to pick the smallest possible sub-cube that contains
-			the number of colors specified in the <var>quantization</var> function.
+			Then we pick the smallest possible sub-cube that contains the number
+			of colors specified in the <var>quantization</var> function.
 		</p>
 		<OctreeColorQuantization />
 	</Section>
