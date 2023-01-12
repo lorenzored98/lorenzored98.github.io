@@ -11,18 +11,18 @@
 		<link href="./_app/immutable/assets/Main-ea5f00cf.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-cc878dc7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-6be07ad6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e6b3020.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c5a7cb58.js">
+		<link rel="modulepreload" href="./_app/immutable/start-cf04e55d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-3b14b416.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-e913c662.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-2c8dcb8c.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/octree-color-quantization/_page.svelte-da121f2f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Main-e874f9b3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-8afd16e9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-02f198f6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-24d6df7c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-767509e5.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/octree-color-quantization/_page.svelte-5697e0f0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-bd282878.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-3503e59c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DemoContainer-7bda57f4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ImageSelect-5128dae4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/NumberRange-cdc40157.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/core-ddcb889b.js"><title>Octree Color Quantization</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Using an octree to color quantize an image"><meta name="keywords" content="Octree, Javascript, Image Processing, Quantization, Canvas2D"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Octree Color Quantization"><meta property="og:description" content="Using an octree to color quantize an image"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
@@ -36,12 +36,12 @@
 	<h1>Octree Color Quantization</h1>
 </div>
 
-		<p>To get an idea of how this work. Imagine an Octree as an XYZ axes
-			plot. We can insert an RGB color by using each channel as a
-			position. The r channel is the x coordinate, g is y and b is z.
+		<p>Imagine an Octree as a XYZ axes plot in 3D space. We can insert a
+			RGB color by using each the red, green, and blue channels as its
+			coordinates.
 		</p>
-		<p>Then you have to pick the smallest possible sub-cube that contains
-			the number of colors specified in the <var>quantization</var> function.
+		<p>Then we pick the smallest possible sub-cube that contains the number
+			of colors specified in the <var>quantization</var> function.
 		</p>
 		<div class="demo-container svelte-k8af6f" id="octree-color-quantization-demo"><figure><figcaption class="svelte-k8af6f">Octree Color Quantization</figcaption>
 		<canvas slot="canvas" class="svelte-10p45u9"></canvas></figure>
@@ -52,20 +52,20 @@
 </div></div>
 
 		<div class="demo-input-group"><label for="image-select">Source</label>
-<select id="image-select"><option default value="/images/starrynight.webp">Starry Night</option><option value="/images/greatwave.webp">Great Wave</option><option value="/images/akira.webp">Akira</option><option value="/images/dragonquest.webp">Dragon Quest</option></select></div></fieldset>
+<select id="image-select"><option default value="/images/ukiyo-e.webp">Ukiyo-e</option><option value="/images/arcane.webp">Arcane</option><option value="/images/akira.webp">Akira</option><option value="/images/jargon.webp">Jargon</option></select></div></fieldset>
 </div>
 </section>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="125y6fv">
-			import { start } from "./_app/immutable/start-cc878dc7.js";
+		<script type="module" data-sveltekit-hydrate="gedocq">
+			import { start } from "./_app/immutable/start-cf04e55d.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="125y6fv"]').parentNode,
-				version: "1672496911547",
+				target: document.querySelector('[data-sveltekit-hydrate="gedocq"]').parentNode,
+				version: "1673515260352",
 				hydrate: {
 					node_ids: [0, 10],
 					data: [null,null],
