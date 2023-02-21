@@ -89,9 +89,8 @@
 				>texStorage3D()</var
 			>
 			and <var>texSubImage3D()</var> WebGL2 will construct the volume cube
-			by for us. After that we need a simple shader that takes the
-			original texture color and uses it to index the cube. There is a
-			good
+			for us. After that we need a simple shader that takes the original
+			texture color and uses it to index the cube. There is a good
 			<BlankLink href="https://stackoverflow.com/a/65161148"
 				>stackoverflow answer</BlankLink
 			>
