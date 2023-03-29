@@ -72,7 +72,7 @@
 				there needs to be some agency for it to work. One example that
 				comes to mind is a situation in which you have a "broken" item
 				and you have to do certain steps to fix it. It's much different
-				than asking the user to grind levels.
+				than asking the player to grind levels.
 			</li>
 		</ul>
 	</Section>
