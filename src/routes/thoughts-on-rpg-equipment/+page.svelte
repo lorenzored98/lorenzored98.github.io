@@ -7,14 +7,14 @@
 </script>
 
 <Seo
-	title="RPG Equipment Requirements"
+	title="Thoughts on RPG equipment"
 	description="Toughts on  hard/soft requirements for equipment in videogames"
 	keywords="Game Design, Equipment, Level, Attributes, RPG, Gamedev"
 />
 
 <Main>
 	<Section>
-		<Title timestamp={1672335496}>RPG Equipment Requirements</Title>
+		<Title timestamp={1672335496}>Thoughts on RPG equipment</Title>
 
 		<p>
 			This is strictly about single-player games, and although it may
