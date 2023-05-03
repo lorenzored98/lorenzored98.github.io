@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1668709650}>Quad Without Vertices</Title>
+		<Title timestamp={1668709650}>Quad without vertices</Title>
 		<p>
 			While researching for a tile-based monospaced font rendering I found
 			this <BlankLink href="https://github.com/cmuratori/refterm"

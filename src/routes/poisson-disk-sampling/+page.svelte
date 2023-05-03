@@ -18,7 +18,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1653748371}>Poisson Disk Sampling</Title>
+		<Title timestamp={1653748371}>Poisson disk sampling</Title>
 		<p>
 			Poisson Disk Sampling is an algorithm that guarantees that, for
 			every point in an n-dimensional space, the distance between a point

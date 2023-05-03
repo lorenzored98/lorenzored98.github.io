@@ -15,7 +15,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1654056000}>Bilinear Image Resize</Title>
+		<Title timestamp={1654056000}>Bilinear image resize</Title>
 
 		<p>
 			Mostly followed a <BlankLink

@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1661509919}>Github Pages Action</Title>
+		<Title timestamp={1661509919}>Github pages action</Title>
 		<p>
 			A simple and minimal file for building your static Github pages
 			website via Github actions.

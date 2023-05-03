@@ -12,7 +12,7 @@
 			<slot />
 		</h2>
 	</a>
-	<time {datetime}>{date} </time>
+	<time {datetime}>{date}</time>
 </li>
 
 <style>

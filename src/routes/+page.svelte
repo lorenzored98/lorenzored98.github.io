@@ -15,60 +15,57 @@
 </header>
 <main>
 	<ol>
-		<IndexListItem
-			href="/rpg-equipment-requirements"
-			timestamp={1672335496}
-		>
-			RPG Equipment Requirements
+		<IndexListItem href="/thoughts-on-rpg-equipment" timestamp={1672335496}>
+			Thoughts on RPG equipment
 		</IndexListItem>
 
 		<IndexListItem href="/quad-without-vertices" timestamp={1668709650}>
-			Quad Without Vertices
+			Quad without vertices
 		</IndexListItem>
 
 		<IndexListItem href="/lut" timestamp={1667670429}>LUT</IndexListItem>
 
 		<IndexListItem href="/domain-warping" timestamp={1665824041}>
-			Domain Warping
+			Domain warping
 		</IndexListItem>
 
 		<IndexListItem href="/github-pages-action" timestamp={1661509919}>
-			Github Pages Action
+			GitHub Pages action
 		</IndexListItem>
 
 		<IndexListItem href="/chip8-interpreter" timestamp={1655577363}>
-			CHIP-8 Interpreter
+			CHIP-8 interpreter
 		</IndexListItem>
 
 		<IndexListItem href="/bilinear-image-resize" timestamp={1654056000}>
-			Bilinear Image Resize
+			Bilinear image resize
 		</IndexListItem>
 
 		<IndexListItem href="/poisson-disk-sampling" timestamp={1653748371}>
-			Poisson Disk Sampling
+			Poisson disk sampling
 		</IndexListItem>
 
 		<IndexListItem href="/diamond-square" timestamp={1652500800}>
-			Diamond Square
+			Diamond-square
 		</IndexListItem>
 
 		<IndexListItem href="/2d-midpoint-displacement" timestamp={1652500800}>
-			2D Midpoint Displacement
+			2D Midpoint displacement
 		</IndexListItem>
 
 		<IndexListItem href="/octree-color-quantization" timestamp={1652328000}>
-			Octree Color Quantization
+			Octree color quantization
 		</IndexListItem>
 
 		<IndexListItem
 			href="/quadtree-image-compression"
 			timestamp={1652155200}
 		>
-			Quadtree Image Compression
+			Quadtree image compression
 		</IndexListItem>
 
 		<IndexListItem href="/pixel-sorting" timestamp={1651809600}>
-			Pixel Sorting
+			Pixel sorting
 		</IndexListItem>
 	</ol>
 </main>

@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1655577363}>CHIP-8 Interpreter</Title>
+		<Title timestamp={1655577363}>CHIP-8 interpreter</Title>
 		<p>
 			It's my first time coding an emulator/interpreter. I've heard that
 			this is a very common starter project for people who want to try

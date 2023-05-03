@@ -15,7 +15,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1651809600}>Pixel Sorting</Title>
+		<Title timestamp={1651809600}>Pixel sorting</Title>
 		<p>
 			Implementing <BlankLink href="https://twitter.com/kGolid"
 				>Kjetil Golid</BlankLink

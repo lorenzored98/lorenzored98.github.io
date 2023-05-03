@@ -8,14 +8,14 @@
 </script>
 
 <Seo
-	title="Diamond Square"
+	title="Diamond-square"
 	description="Generate noise-like patterns using diamond square algorithm"
 	keywords="Noise, Javascript, Creative Coding, Algorithm, Diamond Square"
 />
 
 <Main>
 	<Section>
-		<Title timestamp={1652500800}>Diamond Square</Title>
+		<Title timestamp={1652500800}>Diamond-square</Title>
 
 		<p>
 			From <BlankLink

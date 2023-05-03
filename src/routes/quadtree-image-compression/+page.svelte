@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1652155200}>Quadtree Image Compression</Title>
+		<Title timestamp={1652155200}>Quadtree image compression</Title>
 
 		<p>
 			I'm noticing seams at higher depths. I assume it's due to a rounding

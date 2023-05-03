@@ -15,7 +15,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1652328000}>Octree Color Quantization</Title>
+		<Title timestamp={1652328000}>Octree color quantization</Title>
 
 		<p>
 			Imagine an Octree as a XYZ axes plot in 3D space. We can insert a

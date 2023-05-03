@@ -15,7 +15,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1665824041}>Domain Warping</Title>
+		<Title timestamp={1665824041}>Domain warping</Title>
 
 		<p>
 			Inigo Quilez's article on <BlankLink

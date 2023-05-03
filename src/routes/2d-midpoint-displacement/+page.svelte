@@ -14,7 +14,7 @@
 
 <Main>
 	<Section>
-		<Title timestamp={1652500800}>2D Midpoint Displacement</Title>
+		<Title timestamp={1652500800}>2D Midpoint displacement</Title>
 
 		<p>
 			I discovered this algorithm while researching procedural terrain
