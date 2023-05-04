@@ -154,7 +154,8 @@ pre {
 }
 
 code,
-var {
+var,
+blockquote {
 	font-family: "JetBrainsMono";
 	font-size: 1.4rem;
 	font-weight: 400;
@@ -167,7 +168,7 @@ var {
 }
 
 blockquote {
-	padding: 1rem 2rem 0 2rem;
+	padding: 1rem 2rem 1rem 2rem;
 	border: var(--border);
 	border-radius: var(--border-radius);
 	margin-bottom: 1rem;
