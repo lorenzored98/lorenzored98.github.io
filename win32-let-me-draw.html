@@ -8,13 +8,13 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/Main-ea5f00cf.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-57e0e2d6.js">
+		<link rel="modulepreload" href="./_app/immutable/start-f840872e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-fbdc19c0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-6e410262.js">
 		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-9db6fb21.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/win32-let-me-draw/_page.svelte-5dd5a900.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/win32-let-me-draw/_page.svelte-cd9b6f2b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Main-a1a4e12e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-62a0eda8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-875203ee.js"><title>Win32 let me draw</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="Simplest code for drawing to a window in win32"><meta name="keywords" content="win32, windows, win32 bitmap, win32 draw to window, win32 gdi, win32 DBI"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Win32 let me draw"><meta property="og:description" content="Simplest code for drawing to a window in win32"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
@@ -30,76 +30,73 @@
 	<h1>Win32 let me draw</h1>
 </div>
 
-		<p>Assuming you are using win32 to create a window and would like to
-			call <var>give_me_a_buffer_to_draw_to()</var>, here&#39;s
-			<a href="https://gist.github.com/lorenzored98/093f517abceccb2b952e289a04730a67" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">some code
+    <p>Assuming you are using win32 to create a window and would like to call <var>give_me_a_buffer_to_draw_to()</var>, here&#39;s
+      <a href="https://gist.github.com/lorenzored98/093f517abceccb2b952e289a04730a67" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">some code
 </a> that does that.
-		</p>
-		<p>I&#39;ve compiled it with <var>clang++ main.cpp -luser32 -lgdi32</var>,
-			you can use your favorite compiler.
-		</p>
-		<p>The code is fairly straightforward, but I&#39;d like to highlight some
-			points:
-		</p>
-		<ul><li>It repaints the bitmap every frame. The snippets I&#39;ve seen from
-				the Microsoft docs had a copy of the bitmap blitting code
-				duplicated inside the <var>WM_PAINT</var> event. I didn&#39;t find any
-				info as to why this is needed so I&#39;ve decided to not do that.
-			</li>
-			<li>I wasn&#39;t sure how to handle minimizing a window so it just loops
-				until it&#39;s not minimized.
-			</li>
-			<li>The <var>resizeBitmap()</var> function is quite overloaded and not
-				properly named. It currently handles creating, deleting, and resizing
-				(by deleting and recreating) the bitmap. It could be split into different
-				functions.
-			</li>
-			<li>I&#39;ve seen some code handling deleting the bitmap memory by
-				getting the old handle from the return value of <var>SelectObject()</var>. It didn&#39;t work for me, so I store the bitmap&#39;s handle.
-			</li>
-			<li>One point of confusion was that I allocated the buffer memory
-				myself leading to memory leaks and errors. <var>CreateDIBSection</var> handles allocating the memory by itself.
-			</li>
-			<li>I use <var>biBitCount = 32</var> even if I don&#39;t necessarily
-				need the alpha byte. I just think the advantage of not having to
-				align the width to the nearest <var>DWORD</var> is a nicer API.
-				If you were concerned about memory and wanted to use 24 bits
-				there is a simple formula for the alignment and some additional
-				info on the <a href="https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader#calculating-surface-stride" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">documentation
+    </p>
+    <p>I&#39;ve compiled it with <var>clang++ main.cpp -luser32 -lgdi32</var>, you
+      can use your favorite compiler.
+    </p>
+    <p>The code is fairly straightforward, but I&#39;d like to highlight some points:
+    </p>
+    <ul><li>It repaints the bitmap every frame. The snippets I&#39;ve seen from the
+        Microsoft docs had a copy of the bitmap blitting code duplicated inside
+        the <var>WM_PAINT</var> event. I didn&#39;t find any info as to why this is needed
+        so I&#39;ve decided to not do that.
+      </li>
+      <li>I wasn&#39;t sure how to handle minimizing a window so it just loops until
+        it&#39;s not minimized.
+      </li>
+      <li>The <var>resizeBitmap()</var> function is quite overloaded and not properly
+        named. It currently handles creating, deleting, and resizing (by deleting
+        and recreating) the bitmap. It could be split into different functions.
+      </li>
+      <li>I&#39;ve seen some code handling deleting the bitmap memory by getting the
+        old handle from the return value of <var>SelectObject()</var>. It didn&#39;t
+        work for me, so I store the bitmap&#39;s handle.
+      </li>
+      <li>One point of confusion was that I allocated the buffer memory myself
+        leading to memory leaks and errors. <var>CreateDIBSection</var> handles allocating
+        the memory by itself.
+      </li>
+      <li>I use <var>biBitCount = 32</var> even if I don&#39;t necessarily need the
+        alpha byte. I just think the advantage of not having to align the width
+        to the nearest <var>DWORD</var> is a nicer API. If you were concerned
+        about memory and wanted to use 24 bits there is a simple formula for the
+        alignment and some additional info on the <a href="https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader#calculating-surface-stride" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">documentation
 </a>.
-			</li></ul>
+      </li></ul>
 
-		<p>Since this post is quite short, I&#39;m going to pad it out with the AI
-			overlord (Chat GPT 3.5) thoughts on the code:
-		</p>
-		<blockquote>The code looks straightforward and relatively simple. It creates a
-			window using the Win32 API, registers a window class, and sets up a
-			message loop to handle messages sent to the window. The code also
-			defines a WinBuffer struct to hold information about the buffer used
-			for drawing, and a function resizeBitmap to handle resizing of the
-			window and the buffer. The function WindowProc handles messages sent
-			to the window, including the WM_SIZE message that triggers a resize
-			of the window and the buffer. The message loop in the wWinMain
-			function uses PeekMessage to check for messages in the message
-			queue, and if there are none, it updates the buffer with a simple
-			gradient and draws it to the screen using BitBlt. Overall, the code
-			looks like a good starting point for creating a window and drawing
-			to a buffer in Win32.
-		</blockquote>
+    <p>Since this post is quite short, I&#39;m going to pad it out with the AI
+      overlord (ChatGPT 3.5) thoughts on the code:
+    </p>
+    <blockquote>The code looks straightforward and relatively simple. It creates a window
+      using the Win32 API, registers a window class, and sets up a message loop
+      to handle messages sent to the window. The code also defines a WinBuffer
+      struct to hold information about the buffer used for drawing, and a
+      function resizeBitmap to handle resizing of the window and the buffer. The
+      function WindowProc handles messages sent to the window, including the
+      WM_SIZE message that triggers a resize of the window and the buffer. The
+      message loop in the wWinMain function uses PeekMessage to check for
+      messages in the message queue, and if there are none, it updates the
+      buffer with a simple gradient and draws it to the screen using BitBlt.
+      Overall, the code looks like a good starting point for creating a window
+      and drawing to a buffer in Win32.
+    </blockquote>
 
-		<p>AI approved, I&#39;m safe!</p>
+    <p>AI approved, I&#39;m safe!</p>
 </section>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="1dqvlcn">
-			import { start } from "./_app/immutable/start-57e0e2d6.js";
+		<script type="module" data-sveltekit-hydrate="1bs05tp">
+			import { start } from "./_app/immutable/start-f840872e.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1dqvlcn"]').parentNode,
-				version: "1683225556949",
+				target: document.querySelector('[data-sveltekit-hydrate="1bs05tp"]').parentNode,
+				version: "1683225848554",
 				hydrate: {
 					node_ids: [0, 16],
 					data: [null,null],
