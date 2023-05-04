@@ -19,8 +19,11 @@
 			Thoughts on RPG equipment
 		</IndexListItem>
 
-		<IndexListItem href="/quad-without-vertices" timestamp={1668709650}>
-			Quad without vertices
+		<IndexListItem
+			href="/quad-without-vertex-buffer"
+			timestamp={1668709650}
+		>
+			Quad without vertex buffer
 		</IndexListItem>
 
 		<IndexListItem href="/lut" timestamp={1667670429}>LUT</IndexListItem>
