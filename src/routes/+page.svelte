@@ -15,6 +15,10 @@
 </header>
 <main>
 	<ol>
+		<IndexListItem href="/win32-let-me-draw" timestamp={1683225504}>
+			Win32 let me draw
+		</IndexListItem>
+
 		<IndexListItem href="/thoughts-on-rpg-equipment" timestamp={1672335496}>
 			Thoughts on RPG equipment
 		</IndexListItem>
