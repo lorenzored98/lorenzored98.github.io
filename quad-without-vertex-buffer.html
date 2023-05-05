@@ -9,13 +9,13 @@
 		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Main-ea5f00cf.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Subtitle-69ce1f96.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-15d65c02.js">
+		<link rel="modulepreload" href="./_app/immutable/start-2731c812.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-cc72a6df.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d982c61e.js">
 		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-7b7f8304.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertex-buffer/_page.svelte-f1743f39.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertex-buffer/_page.svelte-49b244f2.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-67e3b987.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Main-b5bd4390.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-89a4dbfb.js">
@@ -40,23 +40,24 @@
 </section>
   <section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#arbitrary-sized" id="arbitrary-sized">Arbitrary Sized</a>
 </h2>
-    <p>The way to achieve a no-buffer quad a combination of simple math, <var>gl_VertexID</var>
+    <p>The way to achieve a no-buffer quad is a combination of simple math, <var>gl_VertexID</var>
       and, <var>gl.TRIANGLE_STRIP</var>.
     </p>
 
     <p>In Javascript land the only thing that changes from a hello-triangle WebGL
-      program is that we call
-      <var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var>. Right now, interpret
-      this as sending <var>4</var> nonexistent vertices to the vertex shader.
+      program is calling
+      <var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var> in the draw function.
+      Right now, interpret this as sending <var>4</var> nonexistent vertices to the
+      vertex shader.
     </p>
 
     <p>Note that we don&#39;t even need to bind a <var>VAO</var> in WebGL. In OpenGL you
       do need to bind it, but you can just create an empty one, and it will work.
     </p>
 
-    <p>In the vertex shader <var>gl_VertexID</var> is the zero-based integer index
-      of the current vertex. By interpreting the index as a 2-bit binary number we
-      get:
+    <p><var>gl_VertexID</var> is the zero-based integer index of the current vertex
+      that is being processed in the vertex shader. By interpreting the index as
+      a 2-bit binary number we get:
     </p>
     <ul><li>Index 0 = <var>0b00</var> = bottom-left</li>
       <li>Index 1 = <var>0b01</var> = bottom-right</li>
@@ -69,13 +70,14 @@
       <var>RIGHT SHIFT</var> by 1 to compute the <var>v</var>.
     </p>
 
-    <pre><code><span><span style="color: undefined">2---3    0 = 00  | x = (00 &amp; 01) = 0   |  y = (00 &gt;&gt; 1) = 0</span></span>
-<span><span style="color: undefined">|\  |    1 = 01  | x = (01 &amp; 01) = 1   |  y = (01 &gt;&gt; 1) = 0</span></span>
-<span><span style="color: undefined">| \ |    2 = 10  | x = (10 &amp; 01) = 0   |  y = (10 &gt;&gt; 1) = 1</span></span>
-<span><span style="color: undefined">0---1    3 = 11  | x = (11 &amp; 01) = 1   |  y = (11 &gt;&gt; 1) = 1</span></span>
+    <pre><code><span><span style="color: undefined">2---3    0 = 00  | u = (00 &amp; 01) = 0   |  v = (00 &gt;&gt; 1) = 0</span></span>
+<span><span style="color: undefined">|\  |    1 = 01  | u = (01 &amp; 01) = 1   |  v = (01 &gt;&gt; 1) = 0</span></span>
+<span><span style="color: undefined">| \ |    2 = 10  | u = (10 &amp; 01) = 0   |  v = (10 &gt;&gt; 1) = 1</span></span>
+<span><span style="color: undefined">0---1    3 = 11  | u = (11 &amp; 01) = 1   |  v = (11 &gt;&gt; 1) = 1</span></span>
 </code></pre>
 
-    <p>Remapping the uv to a <var>[-1, 1]</var> range computes a fullscreen quad.
+    <p>Remapping the uv to a <var>[-1, 1]</var> range computes the 4 vertices of a
+      fullscreen quad.
     </p>
 
     <pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">));</span></span>
@@ -131,14 +133,14 @@
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="jza5om">
-			import { start } from "./_app/immutable/start-15d65c02.js";
+		<script type="module" data-sveltekit-hydrate="10zqwnc">
+			import { start } from "./_app/immutable/start-2731c812.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="jza5om"]').parentNode,
-				version: "1683300847344",
+				target: document.querySelector('[data-sveltekit-hydrate="10zqwnc"]').parentNode,
+				version: "1683301104497",
 				hydrate: {
 					node_ids: [0, 13],
 					data: [null,null],
