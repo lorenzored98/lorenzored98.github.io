@@ -30,7 +30,7 @@
   <Section>
     <Subtitle id="arbitrary-sized">Arbitrary Sized</Subtitle>
     <p>
-      The way to achieve a no-buffer quad a combination of simple math, <var
+      The way to achieve a no-buffer quad is a combination of simple math, <var
         >gl_VertexID</var
       >
       and, <var>gl.TRIANGLE_STRIP</var>.
@@ -38,9 +38,10 @@
 
     <p>
       In Javascript land the only thing that changes from a hello-triangle WebGL
-      program is that we call
-      <var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var>. Right now, interpret
-      this as sending <var>4</var> nonexistent vertices to the vertex shader.
+      program is calling
+      <var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var> in the draw function.
+      Right now, interpret this as sending <var>4</var> nonexistent vertices to the
+      vertex shader.
     </p>
 
     <p>
@@ -49,9 +50,9 @@
     </p>
 
     <p>
-      In the vertex shader <var>gl_VertexID</var> is the zero-based integer index
-      of the current vertex. By interpreting the index as a 2-bit binary number we
-      get:
+      <var>gl_VertexID</var> is the zero-based integer index of the current vertex
+      that is being processed in the vertex shader. By interpreting the index as
+      a 2-bit binary number we get:
     </p>
     <ul>
       <li>Index 0 = <var>0b00</var> = bottom-left</li>
@@ -72,15 +73,16 @@
     <code
       data-lang="text"
       data-code={`
-2---3    0 = 00  | x = (00 & 01) = 0   |  y = (00 >> 1) = 0
-|\\  |    1 = 01  | x = (01 & 01) = 1   |  y = (01 >> 1) = 0
-| \\ |    2 = 10  | x = (10 & 01) = 0   |  y = (10 >> 1) = 1
-0---1    3 = 11  | x = (11 & 01) = 1   |  y = (11 >> 1) = 1
+2---3    0 = 00  | u = (00 & 01) = 0   |  v = (00 >> 1) = 0
+|\\  |    1 = 01  | u = (01 & 01) = 1   |  v = (01 >> 1) = 0
+| \\ |    2 = 10  | u = (10 & 01) = 0   |  v = (10 >> 1) = 1
+0---1    3 = 11  | u = (11 & 01) = 1   |  v = (11 >> 1) = 1
 `}
     />
 
     <p>
-      Remapping the uv to a <var>[-1, 1]</var> range computes a fullscreen quad.
+      Remapping the uv to a <var>[-1, 1]</var> range computes the 4 vertices of a
+      fullscreen quad.
     </p>
 
     <code
