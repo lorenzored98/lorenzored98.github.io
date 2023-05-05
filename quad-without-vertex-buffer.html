@@ -9,17 +9,17 @@
 		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Main-ea5f00cf.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Subtitle-69ce1f96.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-f840872e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-fbdc19c0.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-6e410262.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-9db6fb21.js">
+		<link rel="modulepreload" href="./_app/immutable/start-15d65c02.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-cc72a6df.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d982c61e.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-7b7f8304.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertex-buffer/_page.svelte-f05f5ee5.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-875203ee.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Main-a1a4e12e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-62a0eda8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-ccdefec3.js"><title>Quad Without Vertex Buffer</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="WebGL Quad without vertex buffer trick"><meta name="keywords" content="Javascript, WebGL2, Gamedev, Shaders, GPU, Geometry, Instancing, Tricks, Triangle Strip"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quad Without Vertex Buffer"><meta property="og:description" content="WebGL Quad without vertex buffer trick"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/quad-without-vertex-buffer/_page.svelte-f1743f39.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-67e3b987.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Main-b5bd4390.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-89a4dbfb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Subtitle-8c0c7f17.js"><title>Quad Without Vertex Buffer</title><!-- HEAD_svelte-7fzk99_START --><meta name="description" content="WebGL Quad without vertex buffer trick"><meta name="keywords" content="Javascript, WebGL2, Gamedev, Shaders, GPU, Geometry, Instancing, Tricks, Triangle Strip"><meta name="author" content="Pepe Lorenzo"><meta property="og:title" content="Quad Without Vertex Buffer"><meta property="og:description" content="WebGL Quad without vertex buffer trick"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><!-- HEAD_svelte-7fzk99_END -->
 	</head>
 	<body>
 		<div id="app">
@@ -31,121 +31,114 @@
 		<time datetime="2022-11-17" class="svelte-i18vmk">17/11/2022</time></div>
 	<h1>Quad without vertex buffer</h1>
 </div>
-		<p>While I was looking through some code on GitHub, I found a <a href="https://github.com/cmuratori/refterm/blob/main/refterm.hlsl#L93" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">repo
-</a>, that draws quads without having to populate a vertex buffer with
-			data.
-		</p>
-		<p>The repo uses D3D11 and HLSL, so there are some small differences
-			with the WebGL version of this post, but the core concept is the
-			same.
-		</p>
+    <p>While I was looking through some code on GitHub, I found a <a href="https://github.com/cmuratori/refterm/blob/main/refterm.hlsl#L93" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">repo
+</a>, that draws quads without having to populate a vertex buffer with data.
+    </p>
+    <p>The repo uses D3D11 and HLSL, so there are some small differences with the
+      WebGL version of this post, but the core concept is the same.
+    </p>
 </section>
-	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#arbitrary-sized" id="arbitrary-sized">Arbitrary Sized</a>
+  <section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#arbitrary-sized" id="arbitrary-sized">Arbitrary Sized</a>
 </h2>
-		<p>The way to achieve a no-buffer quad a combination of simple math, <var>gl_VertexID</var>
-			and, <var>gl.TRIANGLE_STRIP</var>.
-		</p>
+    <p>The way to achieve a no-buffer quad a combination of simple math, <var>gl_VertexID</var>
+      and, <var>gl.TRIANGLE_STRIP</var>.
+    </p>
 
-		<p>In Javascript land the only thing that changes from a hello-triangle
-			WebGL program is that we call
-			<var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var>. Right now,
-			interpret this as sending <var>4</var> nonexistent vertices to the vertex
-			shader.
-		</p>
+    <p>In Javascript land the only thing that changes from a hello-triangle WebGL
+      program is that we call
+      <var>gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)</var>. Right now, interpret
+      this as sending <var>4</var> nonexistent vertices to the vertex shader.
+    </p>
 
-		<p>Note that we don&#39;t even need to bind a <var>VAO</var> in WebGL. In OpenGL
-			you do need to bind it, but you can just create an empty one, and it
-			will work.
-		</p>
+    <p>Note that we don&#39;t even need to bind a <var>VAO</var> in WebGL. In OpenGL you
+      do need to bind it, but you can just create an empty one, and it will work.
+    </p>
 
-		<p>In the vertex shader <var>gl_VertexID</var> is the zero-based integer
-			index of the current vertex. By interpreting the index as a 2-bit binary
-			number we get:
-		</p>
-		<ul><li>Index 0 = <var>0b00</var> = bottom-left</li>
-			<li>Index 1 = <var>0b01</var> = bottom-right</li>
-			<li>Index 2 = <var>0b10</var> = top-left</li>
-			<li>Index 3 = <var>0b11</var> = top-right</li></ul>
+    <p>In the vertex shader <var>gl_VertexID</var> is the zero-based integer index
+      of the current vertex. By interpreting the index as a 2-bit binary number we
+      get:
+    </p>
+    <ul><li>Index 0 = <var>0b00</var> = bottom-left</li>
+      <li>Index 1 = <var>0b01</var> = bottom-right</li>
+      <li>Index 2 = <var>0b10</var> = top-left</li>
+      <li>Index 3 = <var>0b11</var> = top-right</li></ul>
 
-		<p>We can easily get the UV coordinates from this data by using a
-			binary <var>AND</var> with <var>1</var> to compute the <var>u</var>
-			and a
-			<var>RIGHT SHIFT</var> by 1 to compute the <var>v</var>.
-		</p>
+    <p>We can easily get the UV coordinates from this data by using a binary <var>AND</var>
+      with <var>1</var> to compute the <var>u</var>
+      and a
+      <var>RIGHT SHIFT</var> by 1 to compute the <var>v</var>.
+    </p>
 
-		<pre><code><span><span style="color: undefined">2---3    0 = 00  | x = (00 &amp; 01) = 0   |  y = (00 &gt;&gt; 1) = 0</span></span>
+    <pre><code><span><span style="color: undefined">2---3    0 = 00  | x = (00 &amp; 01) = 0   |  y = (00 &gt;&gt; 1) = 0</span></span>
 <span><span style="color: undefined">|\  |    1 = 01  | x = (01 &amp; 01) = 1   |  y = (01 &gt;&gt; 1) = 0</span></span>
 <span><span style="color: undefined">| \ |    2 = 10  | x = (10 &amp; 01) = 0   |  y = (10 &gt;&gt; 1) = 1</span></span>
 <span><span style="color: undefined">0---1    3 = 11  | x = (11 &amp; 01) = 1   |  y = (11 &gt;&gt; 1) = 1</span></span>
 </code></pre>
 
-		<p>Remapping the uv to a <var>[-1, 1]</var> range computes a fullscreen
-			quad.
-		</p>
+    <p>Remapping the uv to a <var>[-1, 1]</var> range computes a fullscreen quad.
+    </p>
 
-		<pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">));</span></span>
+    <pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">));</span></span>
 <span><span style="color: #24292F">vec2 pos = uv * </span><span style="color: #0550AE">2.0</span><span style="color: #24292F"> - </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">;</span></span>
 </code></pre>
 
-		<p><var>gl.TRIANGLE_STRIP</var> is the key to making this work. This
-			triangle primitive will use vertices <var>[0,1,2]</var> and vertices
-			<var>[1, 2, 3]</var> to draw the triangles.
-		</p>
+    <p><var>gl.TRIANGLE_STRIP</var> is the key to making this work. This triangle
+      primitive will use vertices <var>[0, 1, 2]</var> and vertices
+      <var>[1, 2, 3]</var> to draw the triangles.
+    </p>
 
-		<p>Vertices <var>[1, 2, 3]</var>
-			do not respect the correct winding order, luckily
-			<var>gl.TRIANGLE_STRIP</var>
-			draw order will be reversed for every triangle beside the first, effectively
-			drawing in this case <var>[2, 1, 3]</var>.
-		</p>
+    <p>Vertices <var>[1, 2, 3]</var>
+      do not respect the correct winding order, luckily
+      <var>gl.TRIANGLE_STRIP</var>
+      draw order will be reversed for every triangle beside the first, effectively
+      drawing in this case <var>[2, 1, 3]</var>.
+    </p>
 
-		<p>Other modes do not follow the same rules and vertex order, so it
-			won&#39;t work. Check out the
-			<a href="https://www.khronos.org/opengl/wiki/Primitive" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">triangle primitives
+    <p>Other modes do not follow the same rules and vertex order, so it won&#39;t
+      work. Check out the
+      <a href="https://www.khronos.org/opengl/wiki/Primitive" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">triangle primitives
 </a> section on the wiki for more details.
-		</p>
+    </p>
 
-		<p>Note that this is a full-fledged quad, we can apply any transform we
-			want to the newly created vertices. It also works with any number of
-			quads, just make sure to use the right amount of vertices in <var>gl.drawArrays()</var>.
-		</p>
+    <p>Note that this is a full-fledged quad, we can apply any transform we want
+      to the newly created vertices. It also works with any number of quads,
+      just make sure to use the right amount of vertices in <var>gl.drawArrays()</var>.
+    </p>
 
-		<p>Source code <a href="https://gist.github.com/lorenzored98/56dce409d510417042ccdc97c1f3f72a" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">here
+    <p>Source code <a href="https://gist.github.com/lorenzored98/56dce409d510417042ccdc97c1f3f72a" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">here
 </a>.
-		</p>
+    </p>
 </section>
 
-	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#full-screen-only" id="full-screen-only">Full screen only</a>
+  <section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#full-screen-only" id="full-screen-only">Full screen only</a>
 </h2>
-		<p>If we are only ever going to need a fullscreen quad, there is an
-			even simpler version that uses only 3 vertices to create a big
-			triangle and computes the uv coordinates so that they form a
-			fullscreen quad.
-		</p>
-		<pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">)) * </span><span style="color: #0550AE">2.0</span><span style="color: #24292F">;</span></span>
+    <p>If we are only ever going to need a fullscreen quad, there is an even
+      simpler version that uses only 3 vertices to create a big triangle and
+      computes the uv coordinates so that they form a fullscreen quad.
+    </p>
+    <pre><code><span><span style="color: #24292F">vec2 uv = </span><span style="color: #0550AE">vec2</span><span style="color: #24292F">(</span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &amp; </span><span style="color: #0550AE">1</span><span style="color: #24292F">), </span><span style="color: #CF222E">float</span><span style="color: #24292F">(gl_VertexID &gt;&gt; </span><span style="color: #0550AE">1</span><span style="color: #24292F">)) * </span><span style="color: #0550AE">2.0</span><span style="color: #24292F">;</span></span>
 <span><span style="color: #24292F">vec2 pos = uv * </span><span style="color: #0550AE">2.0</span><span style="color: #24292F"> - </span><span style="color: #0550AE">1.0</span><span style="color: #24292F">;</span></span>
 </code></pre>
 
-		<p>Since we only need 3 vertices for a triangle, it&#39;s not necessary to
-			use <var>gl.TRIANGLE_STRIP</var>, the classic
-			<var>gl.drawArrays(gl.TRIANGLES, 0, 3)</var> works.
-		</p>
+    <p>Since we only need 3 vertices for a triangle, it&#39;s not necessary to use <var>gl.TRIANGLE_STRIP</var>, the classic
+      <var>gl.drawArrays(gl.TRIANGLES, 0, 3)</var> works.
+    </p>
 
-		<p>Source code <a href="https://gist.github.com/lorenzored98/7d7c4bc862f211da0a76954b4b3870eb" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">here
+    <p>Source code <a href="https://gist.github.com/lorenzored98/7d7c4bc862f211da0a76954b4b3870eb" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">here
 </a>.
-		</p>
+    </p>
 </section>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="wko47g">
-			import { start } from "./_app/immutable/start-f840872e.js";
+		<script type="module" data-sveltekit-hydrate="jza5om">
+			import { start } from "./_app/immutable/start-15d65c02.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="wko47g"]').parentNode,
-				version: "1683225848554",
+				target: document.querySelector('[data-sveltekit-hydrate="jza5om"]').parentNode,
+				version: "1683300847344",
 				hydrate: {
 					node_ids: [0, 13],
 					data: [null,null],
