@@ -6,20 +6,20 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-0c7d8862.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-ac9fbdf8.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/BlankLink-baa910b1.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Main-ea5f00cf.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Subtitle-69ce1f96.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/DemoContainer-7e0eb7df.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/NumberRange-c777d2cc.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Checkbox-cb995005.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-2731c812.js">
+		<link rel="modulepreload" href="./_app/immutable/start-0adf0e13.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-cc72a6df.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d982c61e.js">
 		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-7b7f8304.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-e7569b90.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/poisson-disk-sampling/_page.svelte-5d5a7d9f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BlankLink-67e3b987.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Main-b5bd4390.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Seo-89a4dbfb.js">
@@ -39,32 +39,32 @@
 		<time datetime="2022-5-28" class="svelte-i18vmk">28/05/2022</time></div>
 	<h1>Poisson disk sampling</h1>
 </div>
-		<p>Poisson Disk Sampling is an algorithm that guarantees that, for
-			every point in an n-dimensional space, the distance between a point
-			and every other point is not smaller than a given distance.
-		</p>
+    <p>Poisson Disk Sampling is an algorithm that guarantees that, for every
+      point in an n-dimensional space, the distance between a point and every
+      other point is not smaller than a given distance.
+    </p>
 
-		<p>At first glance, the problem doesn&#39;t seem worthy of a strange name
-			like Poisson Disk Sampling, so let&#39;s try to solve it in the easiest
-			possible way.
-		</p>
-		<p>We can use a random function to pick a point in space. If the
-			distance between this point and every other point is greater than
-			the minimum distance, we add it to our points. We then repeat this
-			process for n-times until we have filled the space.
-		</p>
-		<p>If you need a small number of points, it may be worth considering
-			this naive approach just for the sake of simplicity.
-		</p>
+    <p>At first glance, the problem doesn&#39;t seem worthy of a strange name like
+      Poisson Disk Sampling, so let&#39;s try to solve it in the easiest possible
+      way.
+    </p>
+    <p>We can use a random function to pick a point in space. If the distance
+      between this point and every other point is greater than the minimum
+      distance, we add it to our points. We then repeat this process for n-times
+      until we have filled the space.
+    </p>
+    <p>If you need a small number of points, it may be worth considering this
+      naive approach just for the sake of simplicity.
+    </p>
 
-		<p>The problem with our naive approach is that, for every new point,
-			the algorithm becomes increasingly slower. In big O notation, our
-			algorithm has a <var>O(n²)</var> running time, which means it grows exponentially
-			for every new point. Play with the demo below and check out how easy
-			it is to reach millions of iterations.
-		</p>
+    <p>The problem with our naive approach is that, for every new point, the
+      algorithm becomes increasingly slower. In big O notation, our algorithm
+      has a <var>O(n²)</var> running time, which means it grows exponentially for
+      every new point. Play with the demo below and check out how easy it is to reach
+      millions of iterations.
+    </p>
 
-		<div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Naive Distribution</figcaption>
+    <div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Naive Distribution</figcaption>
 		<canvas slot="canvas" class="svelte-1625q6c"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="naive-radius">Radius</label>
 			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="naive-radius" min="20" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 37.5%, var(--border-color) 37.5%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
@@ -82,29 +82,27 @@
 </div>
 </section>
 
-	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#space-subdivision" id="space-subdivision">Space Subdivision</a>
+  <section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#space-subdivision" id="space-subdivision">Space Subdivision</a>
 </h2>
 
-		<p>Visually, it&#39;s easy to see how to fix this. For every new point
-			added, we should only check if there are points inside the circle
-			created with the point as its center and the minimum distance as its
-			radius.
-		</p>
-		<p>To do that, we are going to implement spatial partitioning. The name
-			is scarier than what it actually is, which is just dividing the
-			space into a grid to get a bunch of square cells that will hold our
-			points.
-		</p>
-		<p>Doing this allows us to reduce the area we need to check to just a
-			5x5 grid with the cell that holds our point as its center.
-		</p>
-		<p>The cell size is not chosen randomly, instead, we use the minimum
-			distance between points as its diagonal so that each cell contains
-			at most one point. We then obtain its side by dividing its diagonal
-			by the square root of 2.
-		</p>
+    <p>Visually, it&#39;s easy to see how to fix this. For every new point added, we
+      should only check if there are points inside the circle created with the
+      point as its center and the minimum distance as its radius.
+    </p>
+    <p>To do that, we are going to implement spatial partitioning. The name is
+      scarier than what it actually is, which is just dividing the space into a
+      grid to get a bunch of square cells that will hold our points.
+    </p>
+    <p>Doing this allows us to reduce the area we need to check to just a 5x5
+      grid with the cell that holds our point as its center.
+    </p>
+    <p>The cell size is not chosen randomly, instead, we use the minimum distance
+      between points as its diagonal so that each cell contains at most one
+      point. We then obtain its side by dividing its diagonal by the square root
+      of 2.
+    </p>
 
-		<div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Sample Matrix</figcaption>
+    <div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Sample Matrix</figcaption>
 		<canvas slot="canvas"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="matrix-around-radius">Radius: (50)</label>
 			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="matrix-around-radius" min="30" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 28.57142857142857%, var(--border-color) 28.57142857142857%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
@@ -118,25 +116,24 @@
 </div>
 </section>
 
-	<section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#algorithm" id="algorithm">The Algorithm</a>
+  <section class="svelte-pdvyg4"><h2 class="svelte-4np2sa"><a href="#algorithm" id="algorithm">The Algorithm</a>
 </h2>
-		<p>There are many different ways to implement Poisson Disk Sampling.
-			I&#39;ve decided to implement the one described by Robert Bridson in his
-			<a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">Fast Poisson Disk Sampling in Arbitrary Dimensions
-			
-</a> paper, which, as far as I know, is also the most popular
-			one.
-		</p>
+    <p>There are many different ways to implement Poisson Disk Sampling. I&#39;ve
+      decided to implement the one described by Robert Bridson in his
+      <a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">Fast Poisson Disk Sampling in Arbitrary Dimensions
+      
+</a> paper, which, as far as I know, is also the most popular one.
+    </p>
 
-		<p>The algorithm is composed of three steps.</p>
+    <p>The algorithm is composed of three steps.</p>
 
-		<p>The first step is dividing the space into a grid. The paper uses
-			this grid to create an n-dimensional array to contain the points.
-			I&#39;ve decided to store them in a 1-dimensional array using their x
-			and y coordinates to find their index.
-		</p>
+    <p>The first step is dividing the space into a grid. The paper uses this grid
+      to create an n-dimensional array to contain the points. I&#39;ve decided to
+      store them in a 1-dimensional array using their x and y coordinates to
+      find their index.
+    </p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">side</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">/</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">SQRT2</span><span style="color: #24292F">;</span></span>
+    <pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">side</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">/</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">SQRT2</span><span style="color: #24292F">;</span></span>
 <span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">gridW</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(width </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side) </span><span style="color: #CF222E">+</span><span> </span><span style="color: #0550AE">1</span><span style="color: #24292F">;</span></span>
 <span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">gridH</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(height </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side) </span><span style="color: #CF222E">+</span><span> </span><span style="color: #0550AE">1</span><span style="color: #24292F">;</span></span>
 <span></span>
@@ -150,28 +147,27 @@
 <span><span style="color: #24292F">points[index] </span><span style="color: #CF222E">=</span><span style="color: #24292F"> point;</span></span>
 </code></pre>
 
-		<p>The second step is generating a random point inside the space,
-			inserting it into the points array and into another array which the
-			paper calls the &quot;active list&quot;.
-		</p>
+    <p>The second step is generating a random point inside the space, inserting
+      it into the points array and into another array which the paper calls the
+      &quot;active list&quot;.
+    </p>
 
-		<p>The &quot;active list&quot; is an array that will help us keep track of which
-			point we are using to generate other random points in its proximity.
-			It works similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">queue
-</a>, meaning the first point that goes in is also the first point
-			processed.
-		</p>
+    <p>The &quot;active list&quot; is an array that will help us keep track of which point
+      we are using to generate other random points in its proximity. It works
+      similarly to a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" rel="noopener noreferrer nofollow" target="_blank" class="svelte-9bdt8p">queue
+</a>, meaning the first point that goes in is also the first point processed.
+    </p>
 
-		<p>The last step is the actual algorithm.</p>
+    <p>The last step is the actual algorithm.</p>
 
-		<p>For each point inside the &quot;active list,&quot; we are going to try
-			n-times, where n is our sample variable, to create a random point
-			that has a distance between <code class="inline-code"><span><span style="color: #24292F">r</span></span></code>
-			and <code class="inline-code"><span><span style="color: #24292F">r</span><span style="color: #CF222E">*</span><span style="color: #0550AE">2</span></span></code> from
-			our &quot;active point&quot;.
-		</p>
+    <p>For each point inside the &quot;active list,&quot; we are going to try n-times,
+      where n is our sample variable, to create a random point that has a
+      distance between <code class="inline-code"><span><span style="color: #24292F">r</span></span></code>
+      and <code class="inline-code"><span><span style="color: #24292F">r</span><span style="color: #CF222E">*</span><span style="color: #0550AE">2</span></span></code> from our &quot;active
+      point&quot;.
+    </p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">r</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">+</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">sqrt</span><span style="color: #24292F">(</span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">random</span><span style="color: #24292F">());</span></span>
+    <pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">r</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">+</span><span style="color: #24292F"> radius </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">sqrt</span><span style="color: #24292F">(</span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">random</span><span style="color: #24292F">());</span></span>
 <span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">theta</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">random</span><span style="color: #24292F">() </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">PI</span><span> </span><span style="color: #CF222E">*</span><span> </span><span style="color: #0550AE">2</span><span style="color: #24292F">;</span></span>
 <span></span>
 <span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">newPoint</span><span> </span><span style="color: #CF222E">=</span><span style="color: #24292F"> [</span></span>
@@ -180,23 +176,22 @@
 <span><span style="color: #24292F">];</span></span>
 </code></pre>
 
-		<p>To check if the new point collides, we need to find its cell index.
-			Once we have that, we can check the 5x5 matrix around that cell with
-			a simple for loop and a little bit of math.
-		</p>
+    <p>To check if the new point collides, we need to find its cell index. Once
+      we have that, we can check the 5x5 matrix around that cell with a simple
+      for loop and a little bit of math.
+    </p>
 
-		<p>Using the Euclidean distance function, without squaring as it&#39;s an
-			expensive function, we find if the points collide.
-		</p>
+    <p>Using the Euclidean distance function, without squaring as it&#39;s an
+      expensive function, we find if the points collide.
+    </p>
 
-		<pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">xIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(newPoint[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
+    <pre><code><span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">xIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(newPoint[</span><span style="color: #0550AE">0</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
 <span><span style="color: #CF222E">const</span><span> </span><span style="color: #0550AE">yIndex</span><span> </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">Math</span><span style="color: #24292F">.</span><span style="color: #0550AE">floor</span><span style="color: #24292F">(newPoint[</span><span style="color: #0550AE">1</span><span style="color: #24292F">] </span><span style="color: #CF222E">/</span><span style="color: #24292F"> side);</span></span>
 <span></span>
 <span><span style="color: #6E7781">/**</span></span>
-<span><span style="color: #6E7781"> * I read that no matter where to point is we just need to look</span></span>
-<span><span style="color: #6E7781"> * at the 5x5 grid around our cell.</span></span>
+<span><span style="color: #6E7781"> * No matter where the point is, we just need to look at the 5x5 grid around our cell.</span></span>
 <span><span style="color: #6E7781"> * From my understanding it&#39;s not really a 5x5 as I can avoid checking</span></span>
-<span><span style="color: #6E7781"> * the 4 corners</span></span>
+<span><span style="color: #6E7781"> * the 4 corners since I only check if the distance is smaller than 2r not equal or greater.</span></span>
 <span><span style="color: #6E7781">*/</span></span>
 <span><span style="color: #CF222E">for</span><span style="color: #24292F"> (</span><span style="color: #CF222E">let</span><span style="color: #24292F"> i </span><span style="color: #CF222E">=</span><span> </span><span style="color: #0550AE">0</span><span style="color: #24292F">; i </span><span style="color: #CF222E">&lt;</span><span> </span><span style="color: #0550AE">25</span><span style="color: #24292F">; i</span><span style="color: #CF222E">++</span><span style="color: #24292F">) {</span></span>
 <span><span>    </span><span style="color: #CF222E">if</span><span style="color: #24292F"> (i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">0</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">4</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">20</span><span> </span><span style="color: #CF222E">||</span><span style="color: #24292F"> i </span><span style="color: #CF222E">===</span><span> </span><span style="color: #0550AE">24</span><span style="color: #24292F">) {</span></span>
@@ -227,59 +222,58 @@
 <span><span style="color: #24292F">}</span></span>
 </code></pre>
 
-		<p>If there is a valid new point, we add it to both the points array
-			and the queue. If there isn&#39;t, we remove the current &quot;active point&quot;
-			from the queue.
-		</p>
+    <p>If there is a valid new point, we add it to both the points array and the
+      queue. If there isn&#39;t, we remove the current &quot;active point&quot; from the
+      queue.
+    </p>
 
-		<p>Once the queue is empty the algorithm is finished. All that&#39;s left
-			to do is looping through the points array and removing <code class="inline-code"><span><span style="color: #0550AE">null</span></span></code> values since the algorithm does not guarantee that every cell has
-			a point.
-		</p>
+    <p>Once the queue is empty the algorithm is finished. All that&#39;s left to do
+      is looping through the points array and removing <code class="inline-code"><span><span style="color: #0550AE">null</span></span></code> values since the algorithm does not guarantee that every cell has a point.
+    </p>
 
-		<div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Poisson Disk Sampling</figcaption>
-		<canvas slot="canvas" class="svelte-1625q6c"></canvas></figure>
+    <div class="demo-container svelte-k8af6f"><figure><figcaption class="svelte-k8af6f">Poisson Disk Sampling</figcaption>
+		<canvas slot="canvas" class="svelte-1wnqf7w"></canvas></figure>
 	<fieldset slot="controls"><div class="demo-input-group"><label for="poisson-radius">Radius: (50)</label>
-			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-radius" min="10" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 44.44444444444444%, var(--border-color) 44.44444444444444%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
+      <div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-radius" min="10" max="100" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 44.44444444444444%, var(--border-color) 44.44444444444444%, var(--border-color) 100%)" class="svelte-7715t9" value="50"></div>
 	<div class="ranges svelte-7715t9"><span>10</span>
 		<span>100</span></div>
 </div></div>
-		<div class="demo-input-group"><label for="poisson-samples">Samples: (30)</label>
-			<div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-samples" min="1" max="50" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 59.183673469387756%, var(--border-color) 59.183673469387756%, var(--border-color) 100%)" class="svelte-7715t9" value="30"></div>
+    <div class="demo-input-group"><label for="poisson-samples">Samples: (30)</label>
+      <div class="wrapper svelte-7715t9"><div class="input-wrapper svelte-7715t9"><input type="range" id="poisson-samples" min="1" max="50" step="1" style="background: linear-gradient(to right, var(--link) 0%, var(--link) 59.183673469387756%, var(--border-color) 59.183673469387756%, var(--border-color) 100%)" class="svelte-7715t9" value="30"></div>
 	<div class="ranges svelte-7715t9"><span>1</span>
 		<span>50</span></div>
 </div></div>
 
-		<div class="demo-multi-input-group"><div class="demo-input-group"><label for="poisson-corners">Corners</label>
-				<div class="nofill svelte-goj249"><input id="poisson-corners" type="checkbox" class="svelte-goj249">
+    <div class="demo-multi-input-group"><div class="demo-input-group"><label for="poisson-corners">Corners</label>
+        <div class="nofill svelte-goj249"><input id="poisson-corners" type="checkbox" class="svelte-goj249">
 	<svg xmlns="http://www.w3.org/2000/svg" class="nofill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div>
 
-			<div class="demo-input-group"><label for="poisson-showgrid">Show Grid</label>
-				<div class="fill svelte-goj249"><input id="poisson-showgrid" type="checkbox" class="svelte-goj249" checked>
+      <div class="demo-input-group"><label for="poisson-showgrid">Show Grid</label>
+        <div class="fill svelte-goj249"><input id="poisson-showgrid" type="checkbox" class="svelte-goj249" checked>
 	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div>
 
-			<div class="demo-input-group"><label for="poisson-showradius">Show Radius</label>
-				<div class="fill svelte-goj249"><input id="poisson-showradius" type="checkbox" class="svelte-goj249" checked>
+      <div class="demo-input-group"><label for="poisson-showradius">Show Radius</label>
+        <div class="fill svelte-goj249"><input id="poisson-showradius" type="checkbox" class="svelte-goj249" checked>
 	<svg xmlns="http://www.w3.org/2000/svg" class="fill svelte-goj249" viewBox="0 0 512 512"><title>Checkmark</title><path fill="none" stroke-linecap="square" stroke-miterlimit="10" d="M416 128L192 384l-96-96"></path></svg>
 </div></div></div>
 
-		<div class="demo-input-group run svelte-1625q6c"><button class="svelte-1625q6c">Run</button>
-			<span>Iterations: 0</span></div></fieldset>
+    <div class="demo-input-group run svelte-1wnqf7w"><button class="svelte-1wnqf7w">Run</button>
+      <span>Iterations: 0</span></div></fieldset>
 </div>
 </section>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="h9pav4">
-			import { start } from "./_app/immutable/start-2731c812.js";
+		<script type="module" data-sveltekit-hydrate="cbr8zg">
+			import { start } from "./_app/immutable/start-0adf0e13.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="h9pav4"]').parentNode,
-				version: "1683301104497",
+				target: document.querySelector('[data-sveltekit-hydrate="cbr8zg"]').parentNode,
+				version: "1683882835742",
 				hydrate: {
 					node_ids: [0, 12],
 					data: [null,null],
