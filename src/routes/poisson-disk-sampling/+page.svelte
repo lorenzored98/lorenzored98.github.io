@@ -1,110 +1,107 @@
 <script>
-	import BlankLink from "$lib/BlankLink.svelte";
-	import Title from "$lib/Title.svelte";
-	import Section from "$lib/Section.svelte";
-	import Main from "$lib/Main.svelte";
-	import Subtitle from "$lib/Subtitle.svelte";
-	import Seo from "$lib/Seo.svelte";
-	import NaiveDistribution from ".//NaiveDistribution.svelte";
-	import MatrixAround from ".//MatrixAround.svelte";
-	import PoissonDiskSampling from ".//PoissonDiskSampling.svelte";
+  import BlankLink from "$lib/BlankLink.svelte";
+  import Title from "$lib/Title.svelte";
+  import Section from "$lib/Section.svelte";
+  import Main from "$lib/Main.svelte";
+  import Subtitle from "$lib/Subtitle.svelte";
+  import Seo from "$lib/Seo.svelte";
+  import NaiveDistribution from ".//NaiveDistribution.svelte";
+  import MatrixAround from ".//MatrixAround.svelte";
+  import PoissonDiskSampling from ".//PoissonDiskSampling.svelte";
 </script>
 
 <Seo
-	title="Poisson Disk sampling"
-	description="Poisson Disk Sampling in javascript"
-	keywords="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random"
+  title="Poisson Disk sampling"
+  description="Poisson Disk Sampling in javascript"
+  keywords="PoissonDiskSampling, Javscript, CreativeCoding, Distribution, Random"
 />
 
 <Main>
-	<Section>
-		<Title timestamp={1653748371}>Poisson disk sampling</Title>
-		<p>
-			Poisson Disk Sampling is an algorithm that guarantees that, for
-			every point in an n-dimensional space, the distance between a point
-			and every other point is not smaller than a given distance.
-		</p>
+  <Section>
+    <Title timestamp={1653748371}>Poisson disk sampling</Title>
+    <p>
+      Poisson Disk Sampling is an algorithm that guarantees that, for every
+      point in an n-dimensional space, the distance between a point and every
+      other point is not smaller than a given distance.
+    </p>
 
-		<p>
-			At first glance, the problem doesn't seem worthy of a strange name
-			like Poisson Disk Sampling, so let's try to solve it in the easiest
-			possible way.
-		</p>
-		<p>
-			We can use a random function to pick a point in space. If the
-			distance between this point and every other point is greater than
-			the minimum distance, we add it to our points. We then repeat this
-			process for n-times until we have filled the space.
-		</p>
-		<p>
-			If you need a small number of points, it may be worth considering
-			this naive approach just for the sake of simplicity.
-		</p>
+    <p>
+      At first glance, the problem doesn't seem worthy of a strange name like
+      Poisson Disk Sampling, so let's try to solve it in the easiest possible
+      way.
+    </p>
+    <p>
+      We can use a random function to pick a point in space. If the distance
+      between this point and every other point is greater than the minimum
+      distance, we add it to our points. We then repeat this process for n-times
+      until we have filled the space.
+    </p>
+    <p>
+      If you need a small number of points, it may be worth considering this
+      naive approach just for the sake of simplicity.
+    </p>
 
-		<p>
-			The problem with our naive approach is that, for every new point,
-			the algorithm becomes increasingly slower. In big O notation, our
-			algorithm has a <var>O(n²)</var> running time, which means it grows exponentially
-			for every new point. Play with the demo below and check out how easy
-			it is to reach millions of iterations.
-		</p>
+    <p>
+      The problem with our naive approach is that, for every new point, the
+      algorithm becomes increasingly slower. In big O notation, our algorithm
+      has a <var>O(n²)</var> running time, which means it grows exponentially for
+      every new point. Play with the demo below and check out how easy it is to reach
+      millions of iterations.
+    </p>
 
-		<NaiveDistribution />
-	</Section>
+    <NaiveDistribution />
+  </Section>
 
-	<Section>
-		<Subtitle id="space-subdivision">Space Subdivision</Subtitle>
+  <Section>
+    <Subtitle id="space-subdivision">Space Subdivision</Subtitle>
 
-		<p>
-			Visually, it's easy to see how to fix this. For every new point
-			added, we should only check if there are points inside the circle
-			created with the point as its center and the minimum distance as its
-			radius.
-		</p>
-		<p>
-			To do that, we are going to implement spatial partitioning. The name
-			is scarier than what it actually is, which is just dividing the
-			space into a grid to get a bunch of square cells that will hold our
-			points.
-		</p>
-		<p>
-			Doing this allows us to reduce the area we need to check to just a
-			5x5 grid with the cell that holds our point as its center.
-		</p>
-		<p>
-			The cell size is not chosen randomly, instead, we use the minimum
-			distance between points as its diagonal so that each cell contains
-			at most one point. We then obtain its side by dividing its diagonal
-			by the square root of 2.
-		</p>
+    <p>
+      Visually, it's easy to see how to fix this. For every new point added, we
+      should only check if there are points inside the circle created with the
+      point as its center and the minimum distance as its radius.
+    </p>
+    <p>
+      To do that, we are going to implement spatial partitioning. The name is
+      scarier than what it actually is, which is just dividing the space into a
+      grid to get a bunch of square cells that will hold our points.
+    </p>
+    <p>
+      Doing this allows us to reduce the area we need to check to just a 5x5
+      grid with the cell that holds our point as its center.
+    </p>
+    <p>
+      The cell size is not chosen randomly, instead, we use the minimum distance
+      between points as its diagonal so that each cell contains at most one
+      point. We then obtain its side by dividing its diagonal by the square root
+      of 2.
+    </p>
 
-		<MatrixAround />
-	</Section>
+    <MatrixAround />
+  </Section>
 
-	<Section>
-		<Subtitle id="algorithm">The Algorithm</Subtitle>
-		<p>
-			There are many different ways to implement Poisson Disk Sampling.
-			I've decided to implement the one described by Robert Bridson in his
-			<BlankLink
-				href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
-				>Fast Poisson Disk Sampling in Arbitrary Dimensions
-			</BlankLink> paper, which, as far as I know, is also the most popular
-			one.
-		</p>
+  <Section>
+    <Subtitle id="algorithm">The Algorithm</Subtitle>
+    <p>
+      There are many different ways to implement Poisson Disk Sampling. I've
+      decided to implement the one described by Robert Bridson in his
+      <BlankLink
+        href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
+        >Fast Poisson Disk Sampling in Arbitrary Dimensions
+      </BlankLink> paper, which, as far as I know, is also the most popular one.
+    </p>
 
-		<p>The algorithm is composed of three steps.</p>
+    <p>The algorithm is composed of three steps.</p>
 
-		<p>
-			The first step is dividing the space into a grid. The paper uses
-			this grid to create an n-dimensional array to contain the points.
-			I've decided to store them in a 1-dimensional array using their x
-			and y coordinates to find their index.
-		</p>
+    <p>
+      The first step is dividing the space into a grid. The paper uses this grid
+      to create an n-dimensional array to contain the points. I've decided to
+      store them in a 1-dimensional array using their x and y coordinates to
+      find their index.
+    </p>
 
-		<code
-			data-lang="js"
-			data-code={`
+    <code
+      data-lang="js"
+      data-code={`
 const side = radius / Math.SQRT2;
 const gridW = Math.floor(width / side) + 1;
 const gridH = Math.floor(height / side) + 1;
@@ -118,42 +115,41 @@ const index = Math.floor(yIndex * gridW + xIndex);
 
 points[index] = point;
 			`}
-		/>
+    />
 
-		<p>
-			The second step is generating a random point inside the space,
-			inserting it into the points array and into another array which the
-			paper calls the "active list".
-		</p>
+    <p>
+      The second step is generating a random point inside the space, inserting
+      it into the points array and into another array which the paper calls the
+      "active list".
+    </p>
 
-		<p>
-			The "active list" is an array that will help us keep track of which
-			point we are using to generate other random points in its proximity.
-			It works similarly to a <BlankLink
-				href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)"
-			>
-				queue</BlankLink
-			>, meaning the first point that goes in is also the first point
-			processed.
-		</p>
+    <p>
+      The "active list" is an array that will help us keep track of which point
+      we are using to generate other random points in its proximity. It works
+      similarly to a <BlankLink
+        href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)"
+      >
+        queue</BlankLink
+      >, meaning the first point that goes in is also the first point processed.
+    </p>
 
-		<p>The last step is the actual algorithm.</p>
+    <p>The last step is the actual algorithm.</p>
 
-		<p>
-			For each point inside the "active list," we are going to try
-			n-times, where n is our sample variable, to create a random point
-			that has a distance between <code
-				data-lang="js"
-				data-code={`r`}
-				data-inline={true}
-			/>
-			and <code data-lang="js" data-code={`r*2`} data-inline={true} /> from
-			our "active point".
-		</p>
+    <p>
+      For each point inside the "active list," we are going to try n-times,
+      where n is our sample variable, to create a random point that has a
+      distance between <code
+        data-lang="js"
+        data-code={`r`}
+        data-inline={true}
+      />
+      and <code data-lang="js" data-code={`r*2`} data-inline={true} /> from our "active
+      point".
+    </p>
 
-		<code
-			data-lang="js"
-			data-code={`
+    <code
+      data-lang="js"
+      data-code={`
 const r = radius + radius * Math.sqrt(Math.random());
 const theta = Math.random() * Math.PI * 2;
 
@@ -162,30 +158,29 @@ const newPoint = [
 	point[1] + r * Math.sin(theta),
 ];
 			`}
-		/>
+    />
 
-		<p>
-			To check if the new point collides, we need to find its cell index.
-			Once we have that, we can check the 5x5 matrix around that cell with
-			a simple for loop and a little bit of math.
-		</p>
+    <p>
+      To check if the new point collides, we need to find its cell index. Once
+      we have that, we can check the 5x5 matrix around that cell with a simple
+      for loop and a little bit of math.
+    </p>
 
-		<p>
-			Using the Euclidean distance function, without squaring as it's an
-			expensive function, we find if the points collide.
-		</p>
+    <p>
+      Using the Euclidean distance function, without squaring as it's an
+      expensive function, we find if the points collide.
+    </p>
 
-		<code
-			data-lang="js"
-			data-code={`
+    <code
+      data-lang="js"
+      data-code={`
 const xIndex = Math.floor(newPoint[0] / side);
 const yIndex = Math.floor(newPoint[1] / side);
 
 /**
- * I read that no matter where to point is we just need to look
- * at the 5x5 grid around our cell.
+ * No matter where the point is, we just need to look at the 5x5 grid around our cell.
  * From my understanding it's not really a 5x5 as I can avoid checking
- * the 4 corners
+ * the 4 corners since I only check if the distance is smaller than 2r not equal or greater.
 */
 for (let i = 0; i < 25; i++) {
 	if (i === 0 || i === 4 || i === 20 || i === 24) {
@@ -215,24 +210,23 @@ for (let i = 0; i < 25; i++) {
 	}
 }
 			`}
-		/>
+    />
 
-		<p>
-			If there is a valid new point, we add it to both the points array
-			and the queue. If there isn't, we remove the current "active point"
-			from the queue.
-		</p>
+    <p>
+      If there is a valid new point, we add it to both the points array and the
+      queue. If there isn't, we remove the current "active point" from the
+      queue.
+    </p>
 
-		<p>
-			Once the queue is empty the algorithm is finished. All that's left
-			to do is looping through the points array and removing <code
-				data-lang="js"
-				data-code={`null`}
-				data-inline={true}
-			/> values since the algorithm does not guarantee that every cell has
-			a point.
-		</p>
+    <p>
+      Once the queue is empty the algorithm is finished. All that's left to do
+      is looping through the points array and removing <code
+        data-lang="js"
+        data-code={`null`}
+        data-inline={true}
+      /> values since the algorithm does not guarantee that every cell has a point.
+    </p>
 
-		<PoissonDiskSampling />
-	</Section>
+    <PoissonDiskSampling />
+  </Section>
 </Main>
